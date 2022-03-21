@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  line-height: 42px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  height: 26px;
+  margin: 0 0.5rem;
+}

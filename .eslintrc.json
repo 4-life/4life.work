@@ -27,6 +27,15 @@
     "no-var": "error",
     "react/function-component-definition": 0,
     "react/react-in-jsx-scope": 0,
-    "@next/next/no-img-element": 0
+    "import/extensions": [
+       "error",
+       "ignorePackages",
+       {
+         "js": "never",
+         "jsx": "never",
+         "ts": "never",
+         "tsx": "never"
+       }
+    ]
   }
 }
