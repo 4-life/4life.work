@@ -1,8 +1,37 @@
 .main {
   min-height: 100vh;
-  padding: 5vh 10vw;
+  padding: 0 1vw;
+  width: 900px;
   flex: 1 1;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h1 {
+  color: #27ae60;
+}
+
+.homeLink {
+  padding: 10px 0;
+}
+
+.milestone {
+  display: flex;
+  margin: 15px 0;
+}
+
+.milestone .text {
+  margin: -15px 20px 0 0;
+}
+
+.milestone h2 {
+  white-space: nowrap;
+  line-height: 30pt;
+  margin-right: 20px;
+}

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import { Howl } from 'howler';
+import { throttle } from 'lodash';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Nav.module.css';
 
@@ -20,8 +21,8 @@ export default () => {
 
   useEffect(() => {
     setTimeout(() => setActiveBtn(ActiveBtn.active1), 300);
-    setTimeout(() => setActiveBtn(ActiveBtn.active2), 700);
-    setTimeout(() => setActiveBtn(ActiveBtn.active3), 1000);
+    setTimeout(() => setActiveBtn(ActiveBtn.active2), 600);
+    setTimeout(() => setActiveBtn(ActiveBtn.active3), 900);
     setTimeout(() => {
       setActiveBtn(ActiveBtn.active1);
       ready.current = true;
@@ -29,7 +30,7 @@ export default () => {
   }, []);
 
   const handler = (btn: ActiveBtn) => {
-    if (!ready.current) {
+    if (!ready.current || btn === activeBtn) {
       return;
     }
 
@@ -37,10 +38,10 @@ export default () => {
     SOUND.play();
   };
 
-  const mouseOut = () => setActiveBtn(ActiveBtn.active1);
+  const debouncedHandler = throttle(handler, 100, { leading: true, trailing: false });
 
   return (
-    <nav className={`${styles.nav} ${activeBtn}`} onMouseOut={mouseOut} onBlur={mouseOut}>
+    <nav className={`${styles.nav} ${activeBtn}`}>
       <div className={styles.main}>
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <path
@@ -82,8 +83,8 @@ export default () => {
       <ul className={styles.logo_word}>
         <li
           className={styles.w1}
-          onMouseOver={() => handler(ActiveBtn.active1)}
-          onFocus={() => handler(ActiveBtn.active1)}
+          onMouseOver={() => debouncedHandler(ActiveBtn.active1)}
+          onFocus={() => debouncedHandler(ActiveBtn.active1)}
         >
           <Link href="/">
             <a>
@@ -97,13 +98,22 @@ export default () => {
                   d="m 38,0 -38,23.171875 0,4.029297 0,25.1875 38,0 L 38,24.179688 38,0 Z m 7,0 0,135 39,0 L 84,0 45,0 Z M 0,61.455078 0,92.6875 l 0,2.013672 0,2.015625 38,19.140623 0,-21.156248 0,-2.013672 0,-31.232422 -38,0 z"
                 />
               </svg>
+              <span
+                className={`${styles.mobileNav} ${
+                  activeBtn === ActiveBtn.active1 && styles.mobileNavActive1
+                }`}
+              >
+                Home
+              </span>
             </a>
           </Link>
         </li>
         <li
           className={styles.w2}
-          onMouseOver={() => handler(ActiveBtn.active2)}
-          onFocus={() => handler(ActiveBtn.active2)}
+          onMouseOver={() => debouncedHandler(ActiveBtn.active2)}
+          onFocus={() => debouncedHandler(ActiveBtn.active2)}
+          onMouseOut={() => debouncedHandler(ActiveBtn.active1)}
+          onBlur={() => debouncedHandler(ActiveBtn.active1)}
         >
           <Link href="/portfolio">
             <a>
@@ -117,13 +127,22 @@ export default () => {
                   d="m 0,0 38.099609,44.441406 0,-3.449218 L 38,0 0,0 Z M 0,14.78125 0.09960937,134.90039 36,134.99414 36,135 38,135 38,59.123047 0,14.78125 Z m 49,80.802734 0,38.429686 0,0.88672 0,0.0996 59,0 0,-0.0996 0,-0.88672 0,-38.332029 0,-0.09766 -58,0 -1,0 z"
                 />
               </svg>
+              <span
+                className={`${styles.mobileNav} ${
+                  activeBtn === ActiveBtn.active2 && styles.mobileNavActive2
+                }`}
+              >
+                Portfolio
+              </span>
             </a>
           </Link>
         </li>
         <li
           className={styles.w3}
-          onMouseOver={() => handler(ActiveBtn.active3)}
-          onFocus={() => handler(ActiveBtn.active3)}
+          onMouseOver={() => debouncedHandler(ActiveBtn.active3)}
+          onFocus={() => debouncedHandler(ActiveBtn.active3)}
+          onMouseOut={() => debouncedHandler(ActiveBtn.active1)}
+          onBlur={() => debouncedHandler(ActiveBtn.active1)}
         >
           <Link href="/skills">
             <a>
@@ -137,6 +156,13 @@ export default () => {
                   d="m 38,0 -38,26.798828 0.09960937,0 0,68.5 37.99999963,0 0,-68.5 -0.09961,0 0,-1 L 38,0 Z m 8,0 0,25.898438 61,0 L 107,0 46,0 Z m 0,48 0,26.099609 61,0 L 107,48 46,48 Z M 0,106.19922 0,135 l 73,0 1,0 33,0.19922 -32,-27.92774 0,-0.0723 -0.08203,0 L 74,106.39844 l 0,-0.19922 -74,0 z"
                 />
               </svg>
+              <span
+                className={`${styles.mobileNav} ${
+                  activeBtn === ActiveBtn.active3 && styles.mobileNavActive3
+                }`}
+              >
+                Skills
+              </span>
             </a>
           </Link>
         </li>

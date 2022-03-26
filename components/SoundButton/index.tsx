@@ -19,7 +19,13 @@ export default ({ label, theme }: Options) => {
 
   useEffect(() => {
     const soundFromLS = localStorage.getItem('soundOn');
-    setSoundOn(soundFromLS === 'true');
+    const soundOnVal = soundFromLS === 'true';
+    setSoundOn(soundOnVal);
+    if (soundOnVal) {
+      Howler.mute(false);
+    } else {
+      Howler.mute(true);
+    }
   }, [theme]);
 
   const handler = () => {

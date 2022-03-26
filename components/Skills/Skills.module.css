@@ -36,18 +36,10 @@
 }
 
 .home a {
-  font-weight: 900;
   padding: 10px;
   margin-right: 10px;
-  font-size: 13px;
-  text-decoration: underline;
+  color: #fff;
 }
-
-.home a:hover {
-  opacity: 0.8;
-  text-decoration: none;
-}
-
 
 .skillsView{
   margin:0;

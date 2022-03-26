@@ -56,8 +56,19 @@ img::-moz-selection {
 }
 
 h2 {
-  font-size: 60pt;
+  font-size: 30pt;
   color: #ccc;
   margin: 0;
-  margin-bottom: -50px;
+}
+
+a {
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #3b3b3b;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
 }

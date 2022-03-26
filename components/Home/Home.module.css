@@ -37,3 +37,10 @@
   justify-content: flex-end;
   padding: 0.5rem;
 }
+
+@media screen and (max-width: 832px) {
+  .title {
+    width: 100%;
+    padding: 20px 10vw;
+  }
+}
