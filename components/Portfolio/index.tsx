@@ -5,17 +5,25 @@ export default () => {
   return (
     <main className={styles.main}>
       <div className={styles.header}>
-        <p>My name is Pavel I&apos;m Fillstack Web Developer. 32 y.o.</p>
+        <h1 className={styles.h1}>Portfolio</h1>
         <span className={styles.homeLink}>
           <Link href="/">Home</Link>
         </span>
       </div>
 
-      <h1 className={styles.h1}>Portfolio</h1>
+      <h3>Pavel Ovchinnikov</h3>
+      <h4>Full Stack Web Developer</h4>
+      <h4>Moscow</h4>
+      <h4>32 y.o.</h4>
+      <h4>English: Upper Intermediate</h4>
 
       <div className={styles.milestone}>
         <h2>Since 2021</h2>
         <div className={styles.text}>
+          <p>Company: Strata K.K.</p>
+          <a href="https://www.strata.co.jp/" target="_blank" rel="noreferrer">
+            strata.co.jp
+          </a>
           <p>
             Basically working with the legacy code of the site gmb.io. Refactoring an existing
             system. The site is a fitness video training platform for North American users. Stack:
@@ -30,32 +38,36 @@ export default () => {
       <div className={styles.milestone}>
         <h2>2018-2021</h2>
         <div className={styles.text}>
+          <p>Company: Nwave Technologies Ltd</p>
+          <a href="https://www.nwave.io/" target="_blank" rel="noreferrer">
+            nwave.io
+          </a>
+          <p>I&apos;ve been working at Nwave as a Full Stack Web Developer.</p>
           <p>
-            I&apos;ve been working at Nwave as a Fullstack developer. Nwave is developing solutions
-            in the field of IoT, and in particular the automation of parking lots through the
-            installation of parking sensors and the collection of data from them in real time. Main
+            Nwave is developing solutions in IoT, and in particular the automation of parking bays
+            with parking sensors, gather the collection of data from sensors in real time. Main
             customers from England.
           </p>
           <p>
-            To solve these problems, I developed and supported two applications for installing,
-            checking and calibrating parking sensors on a map. PWA applications on ionic3, and then
-            they were migrated to ionic4. The applications had a built-in QR code scanner,
-            communication with a third-party device calibration application, local storage of
-            settings, thinning out a large number of markers on the map, and searching for locations
-            by address. Technologies used: Angular, Google Maps API, AWS Amplify, Typescript.
+            I developed and supported two PWA mobile applications for installing, checking and
+            calibrating parking sensors on a map. PWA applications on Ionic 3, and then they were
+            migrated to Ionic 4. The applications had a built-in QR code scanner, communication with
+            a third-party device calibration application, local storage of settings, thinning out a
+            large number of markers on the map, and searching for locations by address using Google
+            Maps Api. Authorisation by AWS Amplify. Typescript as a main language.
           </p>
           <p>
-            The development and support of the admin site for monitoring the status of sensors and
-            managing them was also carried out. Stack: React, Redux-saga, Typescript, Material-UI,
-            Momentjs, Lodash, AWS Amplify. SPA site with unit tests, e2e tests, bitbucket CI/CD,
-            Sentry. The site is hosted on AWS S3. The backend was also moved from a monolith to AWS
-            microservices. In particular, my task was to create a RestAPI Device Management
-            microservice on AWS Lambda to manage a list of sensors. Lambda is implemented on NodeJS
-            with Typescript, database - PostgreSQL. Working with the database through the pg-promise
-            library. Interaction with geodata of sensors in the database is implemented using the
-            PostGIS library. RestAPI routes are managed by AWS ApiGateway. Access Management -
-            AWS&nbsp;Cognito. The deployment of the microservice was automated and was carried out
-            through the AWS CDK. Implemented unit and e2e tests for API via AWS SDK + mocha + chai.
+            Also I&apos;ve been developing and supporting the admin website with dashboard for
+            monitoring the status of sensors and managing them. Stack: React, Redux-saga,
+            Typescript, Material-UI, Momentjs, Lodash, AWS Amplify, Google Maps Api. It was a SPA
+            website with unit tests, e2e tests, bitbucket CI/CD and Sentry logging. The website is
+            hosted on AWS S3. The backend was also migrated from an old legacy to AWS microservices.
+            My part was to create a RestAPI Device Management microservice on AWS Lambda to manage a
+            list of sensors. Lambda is implemented on NodeJS with Typescript, database - PostgreSQL
+            through the pg-promise library. Interaction with geodata of sensors in the database is
+            implemented using the PostGIS library. RestAPI routes are managed by AWS ApiGateway.
+            Access Management - AWS&nbsp;Cognito. The deployment was automated by AWS CDK.
+            Implemented unit and e2e tests for API via AWS SDK + mocha + chai.
           </p>
         </div>
       </div>
@@ -63,6 +75,10 @@ export default () => {
       <div className={styles.milestone}>
         <h2>2017-2018</h2>
         <div className={styles.text}>
+          <p>Company: AdGuard</p>
+          <a href="hhttps://adguard.com//" target="_blank" rel="noreferrer">
+            adguard.com
+          </a>
           <p>
             I&apos;ve been working in Adguard. This company develop ad blocker. I written some
             browser extensions:
