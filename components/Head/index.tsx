@@ -30,7 +30,7 @@ export default ({ title, pageUrl, mainImage, description, locale }: IHead) => {
     'theme-color': '#ffffff',
     'naver-site-verification': '',
     'msapplication-TileColor': '#ffffff',
-    'msapplication-TileImage': '/ms-icon-144x144.png',
+    'msapplication-TileImage': '/ms-icon-150x150.png',
   };
 
   const metaProperty = {
