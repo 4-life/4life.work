@@ -77,7 +77,11 @@ export default () => {
           className={`${styles.logo_bottom_text}
           ${activeBtn === ActiveBtn.active3 && styles.logo_bottom_text_active}`}
         >
-          <span>Skills</span>
+          <span>
+            Skills
+            <br />
+            <i>(experimental)</i>
+          </span>
         </div>
       </div>
       <ul className={styles.logo_word}>

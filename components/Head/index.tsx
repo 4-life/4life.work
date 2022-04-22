@@ -44,6 +44,8 @@ export default ({ title, pageUrl, mainImage, description, locale }: IHead) => {
     'og:type': 'website',
     'og:title': visibleTitle,
     'og:image': mainImage || SEO.mainImage,
+    'og:image:url': mainImage || SEO.mainImage,
+    'twitter:image': mainImage || SEO.mainImage,
     'og:locale': locale || SEO.locale,
     'og:site_name': title || SEO.title,
     'og:description': description || SEO.description || '',

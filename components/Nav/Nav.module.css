@@ -7,6 +7,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
 .main {
   position: relative;
   height: 325px;
@@ -169,6 +173,11 @@
   transform-origin: 100% 50%;
   text-align: right;
   opacity: 0;
+  line-height: 22px;
+}
+
+.logo_bottom_text i {
+  font-size: 12px;
 }
 
 .logo_bottom_text_active {

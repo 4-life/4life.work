@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Portfolio.module.css';
 
 export default () => {
@@ -12,25 +13,36 @@ export default () => {
       </div>
 
       <h3>Pavel Ovchinnikov</h3>
-      <h4>Full Stack Web Developer</h4>
-      <h4>Moscow</h4>
-      <h4>32 y.o.</h4>
-      <h4>English: Upper Intermediate</h4>
+      <p>
+        <span className={styles.commonTitle}>Age</span> 32 y.o.
+        <br />
+        <span className={styles.commonTitle}>City</span> Moscow
+        <br />
+        <span className={styles.commonTitle}>English</span> Upper Intermediate
+      </p>
 
       <div className={styles.milestone}>
         <h2>Since 2021</h2>
         <div className={styles.text}>
-          <p>Company: Strata K.K.</p>
-          <a href="https://www.strata.co.jp/" target="_blank" rel="noreferrer">
-            strata.co.jp
-          </a>
           <p>
-            Basically working with the legacy code of the site gmb.io. Refactoring an existing
-            system. The site is a fitness video training platform for North American users. Stack:
-            nextjs (react, redux-saga, styled-components, formik) as front and nestjs for rest-api
-            (typescript, postgresSQL, typeorm, auth0). Video files are loaded in a bundle of
-            microservices MUX + AWS Lambda + AWS Transcribe. Host on EC2 and autodeploy via github
-            actions. Also admin support on react-admin.
+            <a href="https://www.strata.co.jp/" target="_blank" rel="noreferrer">
+              <span>
+                <Image src="/images/companies/strata.png" alt="Strata" width={30} height={30} />
+              </span>
+              <span>Strata K.K.</span>
+            </a>
+          </p>
+          <p>
+            Strata is a full product life-cycle engineering company with some projects. My project
+            is gmb.io website and Praxis fitness video trainig platform for North American users. I
+            refactored an existing codebase and fixed CI/CD process.
+          </p>
+          <p>
+            The actual stack: <b>NextJS</b>
+            &nbsp;(react, redux-saga, styled-components, formik) as front and <b>NestJS</b> for
+            rest-api (typescript, postgresSQL, typeorm, auth0). Video files uploads using AWS
+            microservices (AWS Lambda + AWS Transcribe) with MUX video service. Host on EC2 and
+            autodeploy via github actions. Also admin panel based on react-admin.
           </p>
         </div>
       </div>
@@ -38,10 +50,14 @@ export default () => {
       <div className={styles.milestone}>
         <h2>2018-2021</h2>
         <div className={styles.text}>
-          <p>Company: Nwave Technologies Ltd</p>
-          <a href="https://www.nwave.io/" target="_blank" rel="noreferrer">
-            nwave.io
-          </a>
+          <p>
+            <a href="https://www.nwave.io/" target="_blank" rel="noreferrer">
+              <span>
+                <Image src="/images/companies/nwave.png" alt="Nwave" width={30} height={30} />
+              </span>
+              <span>Nwave Technologies Ltd.</span>
+            </a>
+          </p>
           <p>I&apos;ve been working at Nwave as a Full Stack Web Developer.</p>
           <p>
             Nwave is developing solutions in IoT, and in particular the automation of parking bays
@@ -75,18 +91,22 @@ export default () => {
       <div className={styles.milestone}>
         <h2>2017-2018</h2>
         <div className={styles.text}>
-          <p>Company: AdGuard</p>
-          <a href="hhttps://adguard.com//" target="_blank" rel="noreferrer">
-            adguard.com
-          </a>
           <p>
-            I&apos;ve been working in Adguard. This company develop ad blocker. I written some
-            browser extensions:
+            <a href="https://adguard.com/" target="_blank" rel="noreferrer">
+              <span>
+                <Image src="/images/companies/adguard.png" alt="Adguard" width={30} height={30} />
+              </span>
+              <span>AdGuard</span>
+            </a>
+          </p>
+          <p>
+            Adguard is one of the most popular ad blocker. Also Adguard develop another extensions.
+            For example, I written some additional browser extensions:
           </p>
           <ul>
             <li>
-              Extension that helps you to see a website content when it blocks a content for all who
-              have enabled ad blocker (not deployed,&nbsp;
+              Extension that helps to read a website content when it blocks a view for all who have
+              enabled ad blocker (extension not deployed,&nbsp;
               <a href="https://github.com/AdguardTeam/Recovery" target="_blank" rel="noreferrer">
                 repository
               </a>
@@ -130,9 +150,9 @@ export default () => {
         <h2>2008-2013</h2>
         <div className={styles.text}>
           <p>
-            I studied at Moscow State Mining University at the Faculty of Information Systems.
-            Trained in the direction of the university as a C# WPF programmer. Also developed
-            webistes on PHP. In 2013 graduated in Software Engineer.
+            I&apos;ve been studying at Moscow State Mining University at the Faculty of Information
+            Systems. Trained in the direction of the university as a C# WPF programmer. Also
+            developed webistes on PHP. In 2013 graduated in Software Engineer.
           </p>
         </div>
       </div>
