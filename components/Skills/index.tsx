@@ -13,9 +13,8 @@ export default () => {
   }, []);
 
   return (
-    <>
-      <div className={styles.bg} ref={gridEl}>
-        <div className={styles.title}>My Skills</div>
+    <div className={styles.bg}>
+      <div className={styles.title}>Skills (Work in progress)</div>
 
         <div className={styles.footer}>
           <div className={styles.footerMenu}>
