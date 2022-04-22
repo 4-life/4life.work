@@ -5,7 +5,7 @@ import styles from './Skills.module.css';
 export default () => {
   return (
     <div className={styles.bg}>
-      <div className={styles.title}>Skills</div>
+      <div className={styles.title}>Skills (Work in progress)</div>
 
       <div className={styles.footer}>
         <div className={styles.footerMenu}>
