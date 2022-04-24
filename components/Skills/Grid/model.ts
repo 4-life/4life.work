@@ -1,0 +1,169 @@
+/* eslint-disable prettier/prettier */
+
+const model = {
+  content: [
+    {
+      id: 'angular',
+      gridImage: ['libs/angular.png'],
+      copy: 'AngularJS',
+      story: 'I have expirence with AngularJS',
+      color: '#dadada',
+      textColor: '#c4473a',
+      scale: 0.7,
+      url: 'angularjs.org/',
+    },
+    {
+      id: 'ionic',
+      gridImage: ['libs/ionic.png'],
+      copy: 'Ionic',
+      story:
+        'I have expirence with the beautiful, open source front-end SDK for developing hybrid mobile apps with HTML5',
+      color: '#dddddd',
+      textColor: '#4e8ef7',
+      scale: 0.7,
+      url: 'ionicframework.com/',
+    },
+    {
+      id: 'js2',
+      gridImage: ['libs/js.png'],
+      copy: 'JavaScript',
+      story:
+        'I have experienced with the last features of JS (ES6), async/await etc.',
+      color: '#f1ee00',
+      textColor: '#000000',
+      scale: 0.7,
+      url: 'tc39.es/',
+    },
+    {
+      id: 'aws',
+      gridImage: ['libs/aws.png'],
+      copy: 'Microservices',
+      story:
+        'I have expirence with Amazon Web Services',
+      color: '#04273a',
+      textColor: '#ffffff',
+      scale: 0.7,
+      url: 'aws.amazon.com/',
+    },
+    {
+      id: 'nodejs',
+      gridImage: ['libs/nodejs.png'],
+      copy: 'NodeJS',
+      story:
+        "Platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices",
+      color: '#303030',
+      textColor: '#ffffff',
+      scale: 0.7,
+      url: 'nodejs.org/',
+    },
+    {
+      id: 'github',
+      gridImage: ['libs/github.png'],
+      copy: 'CI/CD',
+      story:
+        'I experienced with Git and Github Actions',
+      color: '#256edf',
+      textColor: '#ffffff',
+      scale: 0.7,
+      url: 'github.com/',
+    },
+    {
+      id: 'react',
+      gridImage: ['libs/react.png'],
+      copy: 'React',
+      story: 'A javascript library for building user interfaces',
+      color: '#222',
+      textColor: '#00d8ff',
+      scale: 0.7,
+      url: 'facebook.github.io/react/',
+    },
+    {
+      id: 'nextjs',
+      gridImage: ['libs/next.png'],
+      copy: 'NextJS',
+      story: 'I have expirenece with NextJS',
+      color: '#5ecdc8',
+      textColor: '#000000',
+      scale: 0.7,
+      url: 'nextjs.org/',
+    },
+    {
+      id: 'redux',
+      gridImage: ['libs/redux.png'],
+      copy: 'State Management',
+      story:
+        'I experienced with redux+saga',
+      color: '#555555',
+      textColor: '#999999',
+      scale: 0.7,
+      url: 'redux-saga.js.org/',
+    },
+    {
+      id: 'js',
+      gridImage: ['libs/js.png'],
+      copy: 'JavaScript',
+      story:
+        'I have experienced with the last features of JS (ES6), async/await etc.',
+      color: '#f1ee00',
+      textColor: '#000000',
+      scale: 0.7,
+      url: 'tc39.es/',
+    },
+    {
+      id: 'mocha',
+      gridImage: ['libs/mocha.png'],
+      copy: 'Testing',
+      story:
+        'I have experienced with tisting by Mocha + Chai',
+      color: '#cccccc',
+      textColor: '#666666',
+      scale: 0.7,
+      url: 'mochajs.org/',
+    },
+    {
+      id: 'typescript',
+      gridImage: ['libs/typescript.png'],
+      copy: 'Typescript',
+      story: 'I have experienced with Typescript and positive in implementing strict types',
+      color: '#007acc',
+      textColor: '#ffffff',
+      scale: 0.7,
+      url: 'typescriptlang.org/',
+    },
+    {
+      id: 'vue',
+      gridImage: ['libs/vue.png'],
+      copy: 'Vue',
+      story: 'I have experienced with Vue',
+      color: '#cccccc',
+      textColor: '#435466',
+      scale: 0.7,
+      url: 'vuejs.org/',
+    },
+  ],
+  layout: [
+    143, 142, 141, 140, 139, 138, 137, 136, 135, 134, 133, 132,
+    100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 131,
+    101, 64, 63, 62, 61, 60, 59, 58, 57, 56, 89, 130,
+    102, 65, 36, 35, 34, 33, 32, 31, 30, 55, 88, 129,
+    103, 66, 37, 16, 15, 14, 13, 12, 29, 54, 87, 128,
+    104, 67, 38, 17, 4, 3, 2, 11, 28, 53, 86, 127,
+    105, 68, 39, 18, 5, 0, 1, 10, 27, 52, 85, 126,
+    106, 69, 40, 19, 6, 7, 8, 9, 26, 51, 84, 125,
+    107, 70, 41, 20, 21, 22, 23, 24, 25, 50, 83, 124,
+    108, 71, 42, 43, 44, 45, 46, 47, 48, 49, 82, 123,
+    109, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 122,
+    110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121
+  ]
+};
+
+type Xy = { x: number; y: number };
+
+export type SkillModel = typeof model.content[0] & {
+  corners?: Xy[];
+  positionX?: number;
+  positionY?: number;
+  image?: HTMLImageElement;
+};
+
+export default model;
