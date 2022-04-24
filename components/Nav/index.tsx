@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import { Howl } from 'howler';
@@ -148,27 +149,25 @@ export default () => {
           onMouseOut={() => debouncedHandler(ActiveBtn.active1)}
           onBlur={() => debouncedHandler(ActiveBtn.active1)}
         >
-          <Link href="/skills">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 107 135"
-              >
-                <path
-                  className={`${activeBtn === ActiveBtn.active3 && styles.active_path_3}`}
-                  d="m 38,0 -38,26.798828 0.09960937,0 0,68.5 37.99999963,0 0,-68.5 -0.09961,0 0,-1 L 38,0 Z m 8,0 0,25.898438 61,0 L 107,0 46,0 Z m 0,48 0,26.099609 61,0 L 107,48 46,48 Z M 0,106.19922 0,135 l 73,0 1,0 33,0.19922 -32,-27.92774 0,-0.0723 -0.08203,0 L 74,106.39844 l 0,-0.19922 -74,0 z"
-                />
-              </svg>
-              <span
-                className={`${styles.mobileNav} ${
-                  activeBtn === ActiveBtn.active3 && styles.mobileNavActive3
-                }`}
-              >
-                Skills
-              </span>
-            </a>
-          </Link>
+          <a href="/skills">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 107 135"
+            >
+              <path
+                className={`${activeBtn === ActiveBtn.active3 && styles.active_path_3}`}
+                d="m 38,0 -38,26.798828 0.09960937,0 0,68.5 37.99999963,0 0,-68.5 -0.09961,0 0,-1 L 38,0 Z m 8,0 0,25.898438 61,0 L 107,0 46,0 Z m 0,48 0,26.099609 61,0 L 107,48 46,48 Z M 0,106.19922 0,135 l 73,0 1,0 33,0.19922 -32,-27.92774 0,-0.0723 -0.08203,0 L 74,106.39844 l 0,-0.19922 -74,0 z"
+              />
+            </svg>
+            <span
+              className={`${styles.mobileNav} ${
+                activeBtn === ActiveBtn.active3 && styles.mobileNavActive3
+              }`}
+            >
+              Skills
+            </span>
+          </a>
         </li>
       </ul>
     </nav>
