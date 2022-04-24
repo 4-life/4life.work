@@ -80,3 +80,74 @@ h4 {
   margin: 5px 0;
   color: #484848;
 }
+
+
+.skillView {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  display: none;
+  z-index: 3;
+}
+
+.closeButton{
+  position: absolute;
+  top: -7px;
+  left: 455px;
+  cursor: pointer;
+}
+
+.closeButtonSmall{
+  position: absolute;
+  top: 8px;
+  left: 470px;
+  z-index: 100;
+  cursor: pointer;
+}
+.skillView a{
+  z-index: 100;
+  color: inherit;
+  text-decoration:none;
+}
+.detailHeader {
+  position: absolute;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  top:20px;
+  width:500px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 50px;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  font-family: 'Conv_Curse Casual',Sans-Serif;
+}
+
+.detailDescription {
+  position: absolute;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+  top: 80px;
+  left: 20px;
+  width: 460px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+.detailName{
+  position: absolute;
+  cursor: default;
+  top: 455px;
+  width: 500px;
+  text-align: center;
+  color: #000000;
+  font-size: 15.3px;
+  user-select: none;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
