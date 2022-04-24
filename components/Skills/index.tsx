@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-sync-scripts */
 import { useEffect, useRef } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Script from 'next/script';
 import SoundButton, { Theme } from '../SoundButton';
@@ -16,13 +14,6 @@ export default () => {
 
   return (
     <>
-      <Head>
-        <script src="libs/CSSPlugin.min.js" />
-        <script src="libs/TweenLite.min.js" />
-        <script src="libs/TimelineLite.min.js" />
-        <script src="libs/EasePack.min.js" />
-      </Head>
-
       <div className={styles.bg} ref={gridEl}>
         <div className={styles.title}>My Skills</div>
 
@@ -38,6 +29,11 @@ export default () => {
           </div>
         </div>
       </div>
+
+      <Script src="libs/CSSPlugin.min.js" strategy="beforeInteractive" />
+      <Script src="libs/TweenLite.min.js" strategy="beforeInteractive" />
+      <Script src="libs/TimelineLite.min.js" strategy="beforeInteractive" />
+      <Script src="libs/EasePack.min.js" strategy="beforeInteractive" />
     </>
   );
 };
