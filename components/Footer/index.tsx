@@ -1,5 +1,9 @@
+import getConfig from 'next/config';
 import Image from 'next/image';
 import styles from './Footer.module.css';
+
+const { publicRuntimeConfig } = getConfig();
+const version2 = publicRuntimeConfig.version;
 
 export default ({ version }) => {
   return (
@@ -10,7 +14,7 @@ export default ({ version }) => {
       </span>
       <p>2022</p>
       <br />
-      <p>&nbsp;v{version || '0.0.0'} </p>
+      <p>&nbsp;v{version || version2} </p>
     </footer>
   );
 };
