@@ -56,8 +56,8 @@ function onMouseUp(event) {
 
 function onTouchStart(event) {
   event.preventDefault();
-  mouse.x = event.pageX + document.body.scrollLeft;
-  mouse.y = event.pageY + document.body.scrollTop;
+  mouse.x = (event.pageX || event.touches[0].pageX) + document.body.scrollLeft;
+  mouse.y = (event.pageY || event.touches[0].pageY) + document.body.scrollTop;
   downTarget.x = mouse.x;
   downTarget.y = mouse.y;
   if (!browseMode) return;
@@ -85,8 +85,8 @@ function testDidMove() {
 
 function onTouchMove(event) {
   event.preventDefault();
-  mouse.x = event.pageX + document.body.scrollLeft;
-  mouse.y = event.pageY + document.body.scrollTop;
+  mouse.x = (event.pageX || event.touches[0].pageX) + document.body.scrollLeft;
+  mouse.y = (event.pageY || event.touches[0].pageY) + document.body.scrollTop;
   testDidMove();
 }
 
@@ -142,9 +142,11 @@ function update() {
     canvas.height = h;
     grid.resize(w, h);
     viewer.resize(w, h);
+    const halfW = w / 2;
+    const halfH = h / 2;
 
-    skillViewer.view.style.left = `${w / 2 + -250}px`;
-    skillViewer.view.style.top = `${h / 2 - 250}px`;
+    skillViewer.view.style.left = `${halfW - (halfW < 250 ? halfW : 250)}px`;
+    skillViewer.view.style.top = `${halfH - (halfH < 250 ? halfH : 250)}px`;
     if (pauseGridRender) {
       grid.render(context);
       viewer.render(context);
