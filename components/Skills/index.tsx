@@ -5,7 +5,7 @@ import SoundButton, { Theme } from '../SoundButton';
 import styles from './Skills.module.css';
 import init from './Grid';
 
-export default () => {
+export default ({ version }) => {
   const gridEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,6 +23,7 @@ export default () => {
               <Link href="/">Home</Link>
             </b>
             <span>My Skills (experimental)</span>
+            <span>&nbsp;{version}</span>
           </div>
           <div className={styles.footerSound}>
             <SoundButton theme={Theme.white} label />
