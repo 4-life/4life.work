@@ -1,11 +1,15 @@
 import { useEffect, useRef } from 'react';
+import getConfig from 'next/config';
 import Link from 'next/link';
 import Script from 'next/script';
 import SoundButton, { Theme } from '../SoundButton';
 import styles from './Skills.module.css';
 import init from './Grid';
 
-export default ({ version }) => {
+const { publicRuntimeConfig } = getConfig();
+const { version } = publicRuntimeConfig;
+
+export default () => {
   const gridEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

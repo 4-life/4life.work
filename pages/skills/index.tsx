@@ -1,15 +1,11 @@
 import Head from '../../components/Head';
 import Skills from '../../components/Skills';
 
-export default ({ version }) => {
+export default () => {
   return (
     <>
       <Head title="My skills" />
-      <Skills version={version} />
+      <Skills />
     </>
   );
 };
-
-export function getServerSideProps() {
-  return { props: { version: process.env.npm_package_version } };
-}

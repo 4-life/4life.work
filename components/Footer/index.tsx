@@ -3,9 +3,9 @@ import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const { publicRuntimeConfig } = getConfig();
-const version2 = publicRuntimeConfig.version;
+const { version } = publicRuntimeConfig;
 
-export default ({ version }) => {
+export default () => {
   return (
     <footer className={styles.footer}>
       <p>Powered by Pavel</p>
@@ -14,7 +14,7 @@ export default ({ version }) => {
       </span>
       <p>2022</p>
       <br />
-      <p>&nbsp;v{version || version2} </p>
+      <p>&nbsp;v{version || '0.0.0'} </p>
     </footer>
   );
 };
