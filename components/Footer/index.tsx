@@ -1,7 +1,11 @@
+import getConfig from 'next/config';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
-export default ({ version }) => {
+const { publicRuntimeConfig } = getConfig();
+const { version } = publicRuntimeConfig;
+
+export default () => {
   return (
     <footer className={styles.footer}>
       <p>Powered by Pavel</p>
