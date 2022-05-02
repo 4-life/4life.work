@@ -3,14 +3,15 @@
 const model = {
   content: [
     {
-      id: 'angular',
-      gridImage: ['libs/angular.png'],
-      copy: 'AngularJS',
-      story: 'I have expirence with AngularJS',
-      color: '#dadada',
-      textColor: '#c4473a',
+      id: 'aws',
+      gridImage: ['libs/aws.png'],
+      copy: 'Microservices',
+      story:
+        'I have expirence with Amazon Web Services',
+      color: '#04273a',
+      textColor: '#ffffff',
       scale: 0.7,
-      url: 'angularjs.org/',
+      url: 'aws.amazon.com/',
     },
     {
       id: 'ionic',
@@ -24,7 +25,7 @@ const model = {
       url: 'ionicframework.com/',
     },
     {
-      id: 'js2',
+      id: 'js',
       gridImage: ['libs/js.png'],
       copy: 'JavaScript',
       story:
@@ -35,15 +36,25 @@ const model = {
       url: 'tc39.es/',
     },
     {
-      id: 'aws',
-      gridImage: ['libs/aws.png'],
-      copy: 'Microservices',
+      id: 'postgres',
+      gridImage: ['libs/postgres.png'],
+      copy: 'PostgresSQL',
       story:
-        'I have expirence with Amazon Web Services',
-      color: '#04273a',
+        'I have expirence with PostgresSQL. TypeORM, pgadmin4, pg-promise',
+      color: '#336791',
       textColor: '#ffffff',
       scale: 0.7,
-      url: 'aws.amazon.com/',
+      url: 'postgresql.org/',
+    },
+    {
+      id: 'angular',
+      gridImage: ['libs/angular.png'],
+      copy: 'AngularJS',
+      story: 'I have expirence with AngularJS',
+      color: '#b4b4b4',
+      textColor: '#c4473a',
+      scale: 0.7,
+      url: 'angularjs.org/',
     },
     {
       id: 'nodejs',
@@ -99,24 +110,13 @@ const model = {
       url: 'redux-saga.js.org/',
     },
     {
-      id: 'js',
-      gridImage: ['libs/js.png'],
-      copy: 'JavaScript',
-      story:
-        'I have experienced with the last features of JS (ES6), async/await etc.',
-      color: '#f1ee00',
-      textColor: '#000000',
-      scale: 0.7,
-      url: 'tc39.es/',
-    },
-    {
       id: 'mocha',
       gridImage: ['libs/mocha.png'],
       copy: 'Testing',
       story:
         'I have experienced with tisting by Mocha + Chai',
-      color: '#cccccc',
-      textColor: '#666666',
+      color: '#c4473a',
+      textColor: '#ffffff',
       scale: 0.7,
       url: 'mochajs.org/',
     },
