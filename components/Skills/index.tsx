@@ -19,14 +19,14 @@ export default () => {
   return (
     <>
       <div className={styles.bg} ref={gridEl}>
-        <div className={styles.title}>My Skills</div>
+        <div className={styles.title}>My Skills (beta)</div>
 
         <div className={styles.footer}>
           <div className={styles.footerMenu}>
             <b className={styles.home}>
               <Link href="/">Home</Link>
             </b>
-            <span>My Skills (experimental)</span>
+            <span>My Skills (beta)</span>
             <span>&nbsp;{version}</span>
           </div>
           <div className={styles.footerSound}>
