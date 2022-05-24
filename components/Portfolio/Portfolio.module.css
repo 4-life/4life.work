@@ -46,6 +46,19 @@
   color: #878787;
 }
 
+.flowImage {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.homeIcon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 900px) {
   .milestone {
     flex-direction: column;

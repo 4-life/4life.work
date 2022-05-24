@@ -81,7 +81,7 @@ export default () => {
           <span>
             Skills
             <br />
-            <i>(experimental)</i>
+            <i>(beta)</i>
           </span>
         </div>
       </div>

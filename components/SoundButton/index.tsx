@@ -41,23 +41,23 @@ export default ({ label, theme }: Options) => {
 
   return (
     <button className={styles.soundButton} type="button" onClick={handler}>
-      {soundOn && (
+      <div className={!soundOn ? styles.soundButtonHidden : ''}>
         <Image
           src={`/images/sounds/sound_ON_${theme || Theme.white}.png`}
           alt="sound_on"
           width={30}
           height={30}
         />
-      )}
+      </div>
 
-      {!soundOn && (
+      <div className={soundOn ? styles.soundButtonHidden : ''}>
         <Image
           src={`/images/sounds/sound_OFF_${theme || Theme.white}.png`}
           alt="sound_off"
           width={30}
           height={30}
         />
-      )}
+      </div>
 
       {label && (
         <span className={styles.soundButtonLabel}>

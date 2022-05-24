@@ -13,3 +13,8 @@
 .soundButton > span {
   vertical-align: middle;
 }
+
+.soundButtonHidden {
+  visibility: hidden;
+  position: absolute;
+}

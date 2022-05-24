@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Portfolio.module.css';
@@ -8,7 +9,14 @@ export default () => {
       <div className={styles.header}>
         <h1 className={styles.h1}>Portfolio</h1>
         <span className={styles.homeLink}>
-          <Link href="/">Home</Link>
+          <Link href="/" passHref>
+            <a>
+              <span className={styles.homeIcon}>
+                <Image src="/images/homeIcon.png" alt="Home" width={25} height={25} />
+              </span>
+              Home
+            </a>
+          </Link>
         </span>
       </div>
 
@@ -33,16 +41,32 @@ export default () => {
             </a>
           </p>
           <p>
-            Strata is a full product life-cycle engineering company with some projects. My project
-            is gmb.io website and Praxis fitness video trainig platform for North American users. I
-            refactored an existing codebase and fixed CI/CD process.
+            Strata is a full product life-cycle engineering company with several projects. My
+            project is <i>gmb.io</i> website and Praxis fitness video training platform for North
+            American users.
           </p>
           <p>
             The actual stack: <b>NextJS</b>
-            &nbsp;(react, redux-saga, styled-components, formik) as front and <b>NestJS</b> for
-            rest-api (typescript, postgresSQL, typeorm, auth0). Video files uploads using AWS
-            microservices (AWS Lambda + AWS Transcribe) with MUX video service. Host on EC2 and
-            autodeploy via github actions. Also admin panel based on react-admin.
+            &nbsp;(react, redux-saga, styled-components, formik) as a front-end and <b>NestJS</b>
+            &nbsp;for rest-api (typescript, postgresSQL, typeorm, auth0). Video files uploads using
+            AWS microservices (<b>AWS Lambda + AWS Transcribe</b>) with <b>MUX</b> video service.
+            &nbsp;Host on <b>EC2</b> and autodeploy via <b>Github Actions</b>. User authorisation
+            based on <b>Auth0</b>.
+          </p>
+          <p>
+            I refactored an existing codebase and fixed CI/CD process. For example i simplifyed
+            generating closed captions for videos in AWS:
+          </p>
+          <p>The old flow:</p>
+          <div className={styles.flowImage}>
+            <Image src="/images/aws-flow/old.png" alt="Old AWS flow" width={750} height={390} />
+          </div>
+          <p>Refactored flow:</p>
+          <div className={styles.flowImage}>
+            <Image src="/images/aws-flow/new.png" alt="New AWS flow" width={475} height={350} />
+          </div>
+          <p>
+            Also i maintain admin panel on <b>react-admin</b>.
           </p>
         </div>
       </div>
@@ -65,25 +89,29 @@ export default () => {
             customers from England.
           </p>
           <p>
-            I developed and supported two PWA mobile applications for installing, checking and
-            calibrating parking sensors on a map. PWA applications on Ionic 3, and then they were
-            migrated to Ionic 4. The applications had a built-in QR code scanner, communication with
-            a third-party device calibration application, local storage of settings, thinning out a
-            large number of markers on the map, and searching for locations by address using Google
-            Maps Api. Authorisation by AWS Amplify. Typescript as a main language.
+            I developed and supported two PWA mobile applications on <b>Typescript</b> for
+            installing, checking and calibrating parking sensors on a map. PWA applications on
+            <b>Ionic 3</b>, and then they were migrated to <b>Ionic 4/5</b>. The applications had a
+            built-in QR code scanner, communication with a third-party device calibration
+            application, local storage of settings, thinning out a large number of markers on the
+            map, and searching for locations by address using <b>Google Maps Api</b>. Authorisation
+            based on <b>AWS Amplify</b>. Typescript as a main language.
           </p>
           <p>
             Also I&apos;ve been developing and supporting the admin website with dashboard for
-            monitoring the status of sensors and managing them. Stack: React, Redux-saga,
-            Typescript, Material-UI, Momentjs, Lodash, AWS Amplify, Google Maps Api. It was a SPA
-            website with unit tests, e2e tests, bitbucket CI/CD and Sentry logging. The website is
-            hosted on AWS S3. The backend was also migrated from an old legacy to AWS microservices.
-            My part was to create a RestAPI Device Management microservice on AWS Lambda to manage a
-            list of sensors. Lambda is implemented on NodeJS with Typescript, database - PostgreSQL
-            through the pg-promise library. Interaction with geodata of sensors in the database is
-            implemented using the PostGIS library. RestAPI routes are managed by AWS ApiGateway.
-            Access Management - AWS&nbsp;Cognito. The deployment was automated by AWS CDK.
-            Implemented unit and e2e tests for API via AWS SDK + mocha + chai.
+            monitoring statuses of sensors and managing them. Stack: <b>React</b>, <b>Redux-saga</b>
+            ,&nbsp;<b>Typescript</b>, <b>Material-UI</b>, <b>Momentjs</b>, <b>Lodash</b>,&nbsp;
+            <b>AWS Amplify</b>, <b>Google Maps Api</b>. It was a SPA website with unit tests, e2e
+            and ests, <b>Bitbucket CI/CD</b> and <b>Sentry</b> logging. The website is hosted
+            on&nbsp;<b>AWS S3.</b> The backend was also migrated from an old legacy to <b>AWS</b>
+            &nbsp;microservices. My part was to create a RestAPI Device Management microservice
+            on&nbsp;<b>AWS Lambda</b> to manage a list of sensors. <b>Lambda</b> is implemented
+            on&nbsp;<b>NodeJS</b> with <b>Typescript</b>, database - <b>PostgreSQL</b>
+            through the <b>pg-promise</b> library. Interaction with geodata of sensors in the
+            database is implemented using the <b>PostGIS</b> library. RestAPI routes are managed by
+            &apos;<b>AWS ApiGateway</b>. Access Management - <b>AWS Cognito</b>. The deployment was
+            automated by <b>AWS CDK</b>. Implemented unit and e2e tests for API via&nbsp;
+            <b>AWS SDK + mocha + chai</b>.
           </p>
         </div>
       </div>
@@ -101,7 +129,7 @@ export default () => {
           </p>
           <p>
             Adguard is one of the most popular ad blocker. Also Adguard develop another extensions.
-            For example, I written some additional browser extensions:
+            For example, I written some additional browser extensions using <b>JavaScript</b>:
           </p>
           <ul>
             <li>
@@ -129,7 +157,7 @@ export default () => {
             <a href="https://adguard.com" target="_blank" rel="noreferrer">
               Adguard
             </a>
-            &nbsp;website Front-End on Vue.
+            &nbsp;website Front-End on <b>Vue</b>, <b>Vuex</b> and <b>PostCSS</b>.
           </p>
         </div>
       </div>
@@ -139,9 +167,10 @@ export default () => {
         <div className={styles.text}>
           <p>
             I&apos;ve been working in different companies as a Web Developer. I&apos;ve been written
-            websites using PHP, Wordpress, JavaScript, jQuery. I started use frameworks such as
-            Angular 1 as a SPA. I had some projects with websockets and SVG animation. I also
-            automated processes in Grunt and Gulp.
+            websites using <b>PHP</b>, <b>Wordpress</b>, <b>JavaScript</b>, <b>jQuery</b>. I started
+            use frameworks such as <b>Angular 1</b> and developed SPA. I had some projects with
+            websockets and SVG animation. I also automated app deployment and building processes
+            by&nbsp;<b>Grunt</b> and <b>Gulp</b>.
           </p>
         </div>
       </div>
@@ -151,8 +180,9 @@ export default () => {
         <div className={styles.text}>
           <p>
             I&apos;ve been studying at Moscow State Mining University at the Faculty of Information
-            Systems. Trained in the direction of the university as a C# WPF programmer. Also
-            developed webistes on PHP. In 2013 graduated in Software Engineer.
+            Systems. Trained in the direction of the university as a <b>C#</b> <b>WPF</b>
+            &nbsp;programmer. Also developed webistes on <b>PHP</b>. In 2013 graduated in Software
+            Engineer.
           </p>
         </div>
       </div>

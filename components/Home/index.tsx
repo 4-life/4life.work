@@ -13,13 +13,23 @@ export default () => {
       <h1 className={styles.title}>
         My name is <i>Pavel</i> <br /> I&apos;m Fillstack Web Developer from Moscow
         <br />
-        <a href="mailto:qwe@qwe.qw" title="Email me" rel="noreferrer">
+        <a href="mailto:ezmvib4nk@mozmail.com" title="Email me" rel="noreferrer">
           <Image src="/images/email.png" alt="Email" width={28} height={20} />
         </a>
-        <a href="telegram" title="Chat in Telegram" target="_blank" rel="noreferrer">
+        <a
+          href="https://t.me/js4life"
+          title="Write me in Telegram"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image src="/images/telegram.png" alt="Telegram" width={25} height={25} />
         </a>
-        <a href="github" title="My Github Account" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/4-life/"
+          title="My Github Account"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image src="/images/github.png" alt="Github" width={25} height={25} />
         </a>
       </h1>
