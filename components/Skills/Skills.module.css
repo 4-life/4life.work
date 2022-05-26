@@ -26,6 +26,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 300;
   font-family: Arial;
+  overflow: hidden;
 }
 
 .footer .footerMenu {

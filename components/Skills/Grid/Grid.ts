@@ -445,7 +445,6 @@ export default class Grid {
   }
 
   private hittest(): Node {
-    document.body.style.cursor = 'default';
     if (this.overCell) {
       const point = this.overCell;
       const topRight =
@@ -461,7 +460,6 @@ export default class Grid {
       const positionX = mouse.x - point.xReal + this.squareWidth * 2;
       const positionY = mouse.y - point.yReal + this.squareWidth * 1.5;
       if (positionX > 0 && positionX < distX && positionY > 0 && positionY < distY + 40) {
-        document.body.style.cursor = 'pointer';
         return this.overCell;
       }
     }

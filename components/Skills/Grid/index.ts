@@ -183,6 +183,7 @@ export default function init(el: HTMLDivElement | null) {
   canvas.style.position = 'absolute';
   canvas.style.top = '0px';
   canvas.style.left = '0px';
+  canvas.style.cursor = 'pointer';
   el.appendChild(canvas);
   canvas.style.display = 'none';
   fadeIn(canvas);
