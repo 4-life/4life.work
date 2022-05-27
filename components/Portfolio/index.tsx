@@ -3,6 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Portfolio.module.css';
 
+import oldFlow from '../../public/images/aws-flow/old.png';
+import newFlow from '../../public/images/aws-flow/new.png';
+import dmFlow from '../../public/images/aws-flow/dm.png';
+
 export default () => {
   return (
     <main className={styles.main}>
@@ -46,12 +50,11 @@ export default () => {
             American users.
           </p>
           <p>
-            The actual stack: <b>NextJS</b>
-            &nbsp;(react, redux-saga, styled-components, formik) as a front-end and <b>NestJS</b>
-            &nbsp;for rest-api (typescript, postgresSQL, typeorm, auth0). Video files uploads using
-            AWS microservices (<b>AWS Lambda + AWS Transcribe</b>) with <b>MUX</b> video service.
-            &nbsp;Host on <b>EC2</b> and autodeploy via <b>Github Actions</b>. User authorisation
-            based on <b>Auth0</b>.
+            The actual stack: <b>NextJS (react, redux-saga, styled-components, formik)</b> as a
+            front-end and <b>NestJS</b> for rest-api (typescript, postgresSQL, typeorm, auth0).
+            Video files uploads using AWS microservices (<b>AWS Lambda + AWS Transcribe</b>) with
+            <b>MUX</b> video service.&nbsp; Host on <b>EC2</b> and autodeploy via
+            <b>Github Actions</b>. User authorisation based on <b>Auth0</b>.
           </p>
           <p>
             I refactored an existing codebase and fixed CI/CD process. For example i simplifyed
@@ -59,11 +62,15 @@ export default () => {
           </p>
           <p>The old flow:</p>
           <div className={styles.flowImage}>
-            <Image src="/images/aws-flow/old.png" alt="Old AWS flow" width={750} height={390} />
+            <a href={oldFlow.src} target="_blank" rel="noreferrer">
+              <Image src={oldFlow} alt="Old AWS flow" width={750} height={390} />
+            </a>
           </div>
           <p>Refactored flow:</p>
           <div className={styles.flowImage}>
-            <Image src="/images/aws-flow/new.png" alt="New AWS flow" width={475} height={350} />
+            <a href={newFlow.src} target="_blank" rel="noreferrer">
+              <Image src={newFlow} alt="New AWS flow" width={475} height={350} />
+            </a>
           </div>
           <p>
             Also i maintain admin panel on <b>react-admin</b>.
@@ -90,29 +97,34 @@ export default () => {
           </p>
           <p>
             I developed and supported two PWA mobile applications on <b>Typescript</b> for
-            installing, checking and calibrating parking sensors on a map. PWA applications on
+            installing, checking and calibrating parking sensors on a map. PWA applications on&nbsp;
             <b>Ionic 3</b>, and then they were migrated to <b>Ionic 4/5</b>. The applications had a
             built-in QR code scanner, communication with a third-party device calibration
             application, local storage of settings, thinning out a large number of markers on the
             map, and searching for locations by address using <b>Google Maps Api</b>. Authorisation
-            based on <b>AWS Amplify</b>. Typescript as a main language.
+            based on <b>AWS Amplify</b>.
           </p>
           <p>
             Also I&apos;ve been developing and supporting the admin website with dashboard for
-            monitoring statuses of sensors and managing them. Stack: <b>React</b>, <b>Redux-saga</b>
-            ,&nbsp;<b>Typescript</b>, <b>Material-UI</b>, <b>Momentjs</b>, <b>Lodash</b>,&nbsp;
-            <b>AWS Amplify</b>, <b>Google Maps Api</b>. It was a SPA website with unit tests, e2e
-            and ests, <b>Bitbucket CI/CD</b> and <b>Sentry</b> logging. The website is hosted
+            monitoring statuses of sensors and managing them. The stack: <b>React</b>,&nbsp;
+            <b>Redux-saga</b>, <b>Typescript</b>, <b>Material-UI</b>, <b>Momentjs</b>, <b>Lodash</b>
+            ,&nbsp;<b>AWS Amplify</b>, <b>Google Maps Api</b>. It was a SPA website with unit and
+            e2e tests, <b>Bitbucket CI/CD</b> and <b>Sentry</b> logging. The website is hosted
             on&nbsp;<b>AWS S3.</b> The backend was also migrated from an old legacy to <b>AWS</b>
             &nbsp;microservices. My part was to create a RestAPI Device Management microservice
             on&nbsp;<b>AWS Lambda</b> to manage a list of sensors. <b>Lambda</b> is implemented
             on&nbsp;<b>NodeJS</b> with <b>Typescript</b>, database - <b>PostgreSQL</b>
-            through the <b>pg-promise</b> library. Interaction with geodata of sensors in the
+            &nbsp;through the <b>pg-promise</b> library. Interaction with geodata of sensors in the
             database is implemented using the <b>PostGIS</b> library. RestAPI routes are managed by
-            &apos;<b>AWS ApiGateway</b>. Access Management - <b>AWS Cognito</b>. The deployment was
-            automated by <b>AWS CDK</b>. Implemented unit and e2e tests for API via&nbsp;
-            <b>AWS SDK + mocha + chai</b>.
+            &nbsp;<b>AWS ApiGateway</b>. User Access Management - <b>AWS Cognito</b>. The deployment
+            was automated by <b>AWS CDK</b>. Implemented unit and e2e tests for API via&nbsp;
+            <b>AWS SDK + mocha + chai</b> with 99% code coverage. Here is scheme of my part:
           </p>
+          <div className={styles.flowImage}>
+            <a href={dmFlow.src} target="_blank" rel="noreferrer">
+              <Image src={dmFlow} alt="dm" width={400} height={370} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -129,7 +141,7 @@ export default () => {
           </p>
           <p>
             Adguard is one of the most popular ad blocker. Also Adguard develop another extensions.
-            For example, I written some additional browser extensions using <b>JavaScript</b>:
+            For example, I written some additional browser extensions using <b>JavaScript (ES6)</b>:
           </p>
           <ul>
             <li>
