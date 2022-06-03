@@ -32,6 +32,14 @@ export default () => {
         >
           <Image src="/images/github.png" alt="Github" width={25} height={25} />
         </a>
+        <a
+          href="http://linkedin.com/in/js4life"
+          title="My Linkedin Account"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image src="/images/linkedin.png" alt="Linkedin" width={25} height={25} />
+        </a>
       </h1>
     </main>
   );
