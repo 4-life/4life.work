@@ -1,15 +1,12 @@
 import Gesturepad from './Gesturepad';
 import { fadeIn, fadeOut, PATH_IMAGES, SOUNDS } from './utils';
 
-// const { TweenLite, Sine } = global as any;
-
 export default class SkillViewer {
   public view: HTMLDivElement;
   private div: HTMLDivElement;
   private detailContainer: HTMLDivElement;
   private detailDescriptionContainer: HTMLDivElement;
   private detailNameContainer: HTMLDivElement;
-  private loaderBar: HTMLImageElement;
   private gesturepad: Gesturepad;
   private closeButton: HTMLImageElement;
   public isOpen: boolean;
@@ -25,11 +22,6 @@ export default class SkillViewer {
     this.div.style.width = '100%';
     this.div.style.maxWidth = '500px';
     this.div.style.height = '500px';
-    this.loaderBar = new Image();
-    this.loaderBar.src = `${PATH_IMAGES}loaderLine.png`;
-    this.loaderBar.style.position = 'absolute';
-    this.loaderBar.style.top = '491px';
-    this.loaderBar.style.left = '0px';
     this.view.style.width = '100%';
     this.view.style.maxWidth = '500px';
     this.view.style.height = '500px';
@@ -74,6 +66,5 @@ export default class SkillViewer {
     this.detailNameContainer.style.color = skill.textColor || '#FFFFFF';
     this.alpha = 0;
     fadeIn(this.view);
-    fadeIn(this.loaderBar);
   }
 }
