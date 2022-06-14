@@ -26,6 +26,8 @@ export default () => {
 
       <h3>Pavel Ovchinnikov</h3>
       <p>
+        <span>Full-Stack web developer</span>
+        <br />
         <span className={styles.commonTitle}>Age</span> 32 y.o.
         <br />
         <span className={styles.commonTitle}>City</span> Moscow
@@ -51,7 +53,7 @@ export default () => {
           </p>
           <p>
             The actual stack: <b>NextJS (react, redux-saga, styled-components, formik)</b> as a
-            front-end and <b>NestJS for rest-api (typescript, postgresSQL, typeorm, auth0)</b>.
+            front-end and back-end with <b>NestJS (typescript, postgresSQL, typeorm, auth0)</b>.
             Video files uploads using AWS microservices (<b>AWS Lambda + AWS Transcribe</b>) with
             &nbsp;<b>MUX</b> video service. Host on <b>EC2</b> and autodeploy via&nbsp;
             <b>Github Actions</b>. User authorisation based on <b>Auth0</b>.
