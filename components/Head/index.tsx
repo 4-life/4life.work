@@ -3,10 +3,10 @@ import Head from 'next/head';
 
 const SEO = {
   author: 'Pavel 4life',
-  description: `Personal website of Pavel 4life. My name is Pavel. I'm Fullstack Web Developer`,
+  description: `Personal website of Pavel 4life. My name is Pavel. I'm Full-stack Web Developer`,
   homeUrl: 'https://4life.work/',
   appName: 'Pavel 4life',
-  title: `Pavel 4life | Fillstack web developer`,
+  title: `Pavel 4life | Full-stack web developer`,
   locale: 'en_EN',
   siteUrl: 'https://4life.work/',
   mainImage: 'https://4life.work/favicon.png',
