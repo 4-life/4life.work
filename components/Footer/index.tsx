@@ -12,9 +12,13 @@ export default () => {
       <span className={styles.logo}>
         <Image src="/images/footer-logo.png" alt="4life Logo" width={64} height={26} />
       </span>
+      <p>
+        <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer">
+          {version || '0.0.0'}
+        </a>
+      </p>
+      <p>&nbsp;</p>
       <p>2022</p>
-      <br />
-      <p>&nbsp;v{version || '0.0.0'} </p>
     </footer>
   );
 };
