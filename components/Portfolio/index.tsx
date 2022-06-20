@@ -36,6 +36,30 @@ export default () => {
       </p>
 
       <div className={styles.milestone}>
+        <div className={styles.text}>
+          <p>Code examples of my work:</p>
+          <p>
+            <a href="https://github.com/4-life/chat-io" target="_blank" rel="noreferrer">
+              Simple chat app
+            </a>
+            &nbsp;(Typescript, React, Redux-saga, Socket.io, CRA, MUI, tests)
+          </p>
+          <p>
+            <a href="https://github.com/4-life/backend-ts" target="_blank" rel="noreferrer">
+              Rest-Api service
+            </a>
+            &nbsp;(Typescript, Express, PostgreSQL, Sequelize, tests)
+          </p>
+          <p>
+            <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer">
+              My Website
+            </a>
+            &nbsp;(NextJS, React)
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.milestone}>
         <h2>Since 2021</h2>
         <div className={styles.text}>
           <p>
