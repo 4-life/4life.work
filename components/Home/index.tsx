@@ -11,7 +11,7 @@ export default () => {
       </div>
       <Nav />
       <h1 className={styles.title}>
-        My name is <i>Pavel</i> <br /> I&apos;m Full-stack web developer from Moscow
+        My name is <i>Pavel</i> <br /> I&apos;m Full-stack web developer from Kazakhstan
         <br />
         <a href="mailto:ezmvib4nk@mozmail.com" title="Email me" rel="noreferrer">
           <Image src="/images/email.png" alt="Email" width={28} height={20} />
