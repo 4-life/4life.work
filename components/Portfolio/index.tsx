@@ -56,6 +56,12 @@ export default () => {
             </a>
             &nbsp;(NextJS, React)
           </p>
+          <p>
+            <a href="https://github.com/4-life/nft-marketplace" target="_blank" rel="noreferrer">
+              NFT Marketplace
+            </a>
+            &nbsp;(Typescript, React, Sass)
+          </p>
         </div>
       </div>
 
