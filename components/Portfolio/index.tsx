@@ -62,11 +62,48 @@ export default () => {
             </a>
             &nbsp;(Typescript, React, Sass)
           </p>
+          <p>
+            <a
+              href="https://github.com/4-life/storybook-boilerplate"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Storybook boilerplate
+            </a>
+            &nbsp;(Storybook, Typescript, React, Sass)
+          </p>
         </div>
       </div>
 
       <div className={styles.milestone}>
-        <h2>Since 2021</h2>
+        <h2>
+          2022<span className={styles.month}>.05</span> - to date
+        </h2>
+        <div className={styles.text}>
+          <p>
+            <a href="https://strateos.com/" target="_blank" rel="noreferrer">
+              <span>
+                <Image src="/images/companies/strateos.png" alt="Strata" width={30} height={30} />
+              </span>
+              <span>Strateos</span>
+            </a>
+          </p>
+          <p>
+            Strateos reimagined the laboratory as a smart data generation center with the industry’s
+            first Cloud Lab Automation-as-a-Service Platform.
+          </p>
+          <p>
+            I develop user dashboard related to lab automation processes. The actual stack:{' '}
+            <b>Storybook</b>, <b>TypeScript</b>, <b>SCSS</b>.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.milestone}>
+        <h2>
+          2021<span className={styles.month}>.05</span> - 2022
+          <span className={styles.month}>.07</span>
+        </h2>
         <div className={styles.text}>
           <p>
             <a href="https://www.strata.co.jp/" target="_blank" rel="noreferrer">
@@ -111,7 +148,10 @@ export default () => {
       </div>
 
       <div className={styles.milestone}>
-        <h2>2018-2021</h2>
+        <h2>
+          2018<span className={styles.month}>.07</span> - 2021
+          <span className={styles.month}>.04</span>
+        </h2>
         <div className={styles.text}>
           <p>
             <a href="https://www.nwave.io/" target="_blank" rel="noreferrer">
@@ -161,7 +201,10 @@ export default () => {
       </div>
 
       <div className={styles.milestone}>
-        <h2>2017-2018</h2>
+        <h2>
+          2017<span className={styles.month}>.05</span> - 2018
+          <span className={styles.month}>.06</span>
+        </h2>
         <div className={styles.text}>
           <p>
             <a href="https://adguard.com/" target="_blank" rel="noreferrer">
@@ -207,7 +250,10 @@ export default () => {
       </div>
 
       <div className={styles.milestone}>
-        <h2>2013-2017</h2>
+        <h2>
+          2013<span className={styles.month}>.05</span> - 2017
+          <span className={styles.month}>.05</span>
+        </h2>
         <div className={styles.text}>
           <p>
             I&apos;ve been working in different companies as a Web Developer. I&apos;ve been written
@@ -220,7 +266,10 @@ export default () => {
       </div>
 
       <div className={styles.milestone}>
-        <h2>2008-2013</h2>
+        <h2>
+          2008<span className={styles.month}>.09</span> - 2013
+          <span className={styles.month}>.09</span>
+        </h2>
         <div className={styles.text}>
           <p>
             I&apos;ve been studying at Moscow State Mining University at the Faculty of Information

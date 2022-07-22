@@ -2,11 +2,11 @@
 import Head from 'next/head';
 
 const SEO = {
-  author: 'Pavel 4life',
-  description: `Personal website of Pavel 4life. My name is Pavel. I'm Full-stack Web Developer`,
+  author: 'Pavel Ovchinnikov',
+  description: `Personal website of Pavel Ovchinnikov. My name is Pavel. I'm Full-stack Web Developer`,
   homeUrl: 'https://4life.work/',
-  appName: 'Pavel 4life',
-  title: `Pavel 4life | Full-stack web developer`,
+  appName: 'Personal website of Pavel Ovchinnikov',
+  title: `Pavel | Full-stack web developer`,
   locale: 'en_EN',
   siteUrl: 'https://4life.work/',
   mainImage: 'https://4life.work/favicon.png',
