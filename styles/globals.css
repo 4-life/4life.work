@@ -104,6 +104,16 @@ h4 {
   right: 10px;
   z-index: 100;
   cursor: pointer;
+  background: url("/images/closeButtonWhite.png") no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.white .closeButtonSmall{
+  background: url("/images/closeButtonBlack.png") no-repeat;
+  background-size: contain;
 }
 
 .skillView a{
@@ -117,7 +127,7 @@ h4 {
   cursor: default;
   pointer-events: none;
   user-select: none;
-  top: 20px;
+  top: 30px;
   width: 100%;
   max-width: 500px;
   text-align: center;
@@ -132,7 +142,7 @@ h4 {
   pointer-events: none;
   cursor: default;
   user-select: none;
-  top: 80px;
+  top: 90px;
   left: 0;
   padding: 0 20px;
   text-align: center;

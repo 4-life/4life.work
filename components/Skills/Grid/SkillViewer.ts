@@ -1,5 +1,6 @@
 import Gesturepad from './Gesturepad';
-import { fadeIn, fadeOut, PATH_IMAGES, SOUNDS } from './utils';
+import { themeDefault } from './model';
+import { fadeIn, fadeOut, SOUNDS } from './utils';
 
 export default class SkillViewer {
   public view: HTMLDivElement;
@@ -8,16 +9,17 @@ export default class SkillViewer {
   private detailDescriptionContainer: HTMLDivElement;
   private detailNameContainer: HTMLDivElement;
   private gesturepad: Gesturepad;
-  private closeButton: HTMLImageElement;
+  private closeButton: HTMLButtonElement;
   public isOpen: boolean;
   public onClosePressed: any;
   public alpha: number = 0;
   public onSwapPressed: any;
+  private viewClassname = 'skillView';
 
   constructor(el: HTMLDivElement) {
     this.view = document.createElement('div');
     this.view.style.position = 'absolute';
-    this.view.className = 'skillView';
+    this.view.className = this.viewClassname;
     this.div = document.createElement('div');
     this.div.style.width = '100%';
     this.div.style.maxWidth = '500px';
@@ -28,9 +30,8 @@ export default class SkillViewer {
     el.appendChild(this.view);
     this.gesturepad = new Gesturepad(this.view);
     this.gesturepad.onClose = this.closePressed.bind(this);
-    this.closeButton = new Image();
+    this.closeButton = document.createElement('button');
     this.closeButton.className = 'closeButtonSmall';
-    this.closeButton.src = `${PATH_IMAGES}closeButtonPetit.png`;
     this.detailContainer = document.createElement('div');
     this.detailContainer.className = 'detailHeader';
     this.detailDescriptionContainer = document.createElement('div');
@@ -54,11 +55,14 @@ export default class SkillViewer {
     if (this.onClosePressed) this.onClosePressed();
     fadeOut(this.view);
     this.gesturepad.disable();
+    // reset theme color
+    this.view.className = this.viewClassname;
   }
 
   public show(skill) {
     this.isOpen = true;
     this.detailContainer.innerHTML = skill.copy;
+    this.view.classList.add(skill.theme || themeDefault);
     this.detailDescriptionContainer.innerHTML = skill.story;
     this.detailNameContainer.innerHTML = `<b><a href="http://${skill.url}" target="_blank">${skill.url}</a></b>`;
     this.detailContainer.style.color = skill.textColor || '#FFFFFF';

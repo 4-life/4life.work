@@ -21,7 +21,7 @@ interface IHead {
 }
 
 export default ({ title, pageUrl, mainImage, description, locale }: IHead) => {
-  const visibleTitle = `${SEO.title} ${title || ''}`;
+  const visibleTitle = [SEO.title, title].filter((str) => !!str).join(' | ');
   const metaName = {
     author: SEO.author,
     robots: 'index,follow',

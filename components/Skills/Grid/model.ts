@@ -1,17 +1,36 @@
-/* eslint-disable prettier/prettier */
+type Xy = { x: number; y: number };
 
-const model = {
+export const themeDefault = 'default';
+export const themeWhite = 'white';
+
+export type SkillModel = {
+  id: string;
+  gridImage: string[];
+  copy: string;
+  story: string;
+  color: string;
+  textColor: string;
+  scale: number;
+  url: string;
+  theme?: typeof themeDefault | typeof themeWhite;
+  corners?: Xy[];
+  positionX?: number;
+  positionY?: number;
+  image?: HTMLImageElement;
+};
+
+const model: { content: SkillModel[]; layout: number[] } = {
   content: [
     {
       id: 'aws',
       gridImage: ['libs/aws.png'],
       copy: 'Microservices',
-      story:
-        'I have expirence with Amazon Web Services',
+      story: 'I have expirence with Amazon Web Services',
       color: '#04273a',
       textColor: '#ffffff',
       scale: 0.7,
       url: 'aws.amazon.com/',
+      theme: themeDefault,
     },
     {
       id: 'ionic',
@@ -28,19 +47,18 @@ const model = {
       id: 'js',
       gridImage: ['libs/js.png'],
       copy: 'JavaScript',
-      story:
-        'I have experienced with the last features of JS (ES6), async/await etc.',
+      story: 'I have experienced with the last features of JS (ES6), async/await etc.',
       color: '#f1ee00',
       textColor: '#000000',
       scale: 0.7,
       url: 'tc39.es/',
+      theme: 'white',
     },
     {
       id: 'postgres',
       gridImage: ['libs/postgres.png'],
       copy: 'PostgresSQL',
-      story:
-        'I have expirence with PostgresSQL. TypeORM, pgadmin4, pg-promise',
+      story: 'I have expirence with PostgresSQL. TypeORM, pgadmin4, pg-promise',
       color: '#336791',
       textColor: '#ffffff',
       scale: 0.7,
@@ -71,9 +89,8 @@ const model = {
       id: 'github',
       gridImage: ['libs/github.png'],
       copy: 'CI/CD',
-      story:
-        'I experienced with Git and Github Actions',
-      color: '#256edf',
+      story: 'I experienced with Git and Github Actions',
+      color: '#002f67',
       textColor: '#ffffff',
       scale: 0.7,
       url: 'github.com/',
@@ -93,17 +110,17 @@ const model = {
       gridImage: ['libs/next.png'],
       copy: 'NextJS',
       story: 'I have expirenece with NextJS',
-      color: '#5ecdc8',
-      textColor: '#000000',
+      color: '#fff',
+      textColor: '#333',
       scale: 0.7,
       url: 'nextjs.org/',
+      theme: 'white',
     },
     {
       id: 'redux',
       gridImage: ['libs/redux.png'],
       copy: 'State Management',
-      story:
-        'I experienced with redux+saga',
+      story: 'I experienced with redux+saga',
       color: '#555555',
       textColor: '#999999',
       scale: 0.7,
@@ -113,12 +130,12 @@ const model = {
       id: 'mocha',
       gridImage: ['libs/mocha.png'],
       copy: 'Testing',
-      story:
-        'I have experienced with tisting by Mocha + Chai',
-      color: '#c4473a',
-      textColor: '#ffffff',
+      story: 'I have experienced with tisting by Mocha + Chai',
+      color: '#ffffff',
+      textColor: '#333333',
       scale: 0.7,
       url: 'mochajs.org/',
+      theme: 'white',
     },
     {
       id: 'typescript',
@@ -142,6 +159,7 @@ const model = {
     },
   ],
   layout: [
+    // eslint-disable-next-line prettier/prettier
     143, 142, 141, 140, 139, 138, 137, 136, 135, 134, 133, 132,
     100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 131,
     101, 64, 63, 62, 61, 60, 59, 58, 57, 56, 89, 130,
@@ -154,16 +172,7 @@ const model = {
     108, 71, 42, 43, 44, 45, 46, 47, 48, 49, 82, 123,
     109, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 122,
     110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121
-  ]
-};
-
-type Xy = { x: number; y: number };
-
-export type SkillModel = typeof model.content[0] & {
-  corners?: Xy[];
-  positionX?: number;
-  positionY?: number;
-  image?: HTMLImageElement;
+  ],
 };
 
 export default model;

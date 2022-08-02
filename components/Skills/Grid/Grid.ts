@@ -307,7 +307,7 @@ export default class Grid {
           if (scaleY < 0) scaleY *= -1;
           const averageTop = (topLeft.yReals + topRight.yReals) / 2;
           const { ratio } = point;
-          const scale = 1 - ratio * 0.2;
+          const scale = 1 - ratio * 0.1;
           const imagePositionY = centerPointY - sizeY / 2;
           const imagePositionY2 = averageTop;
           const imagePositionYoutput = imagePositionY + (imagePositionY2 - imagePositionY) * ratio;
