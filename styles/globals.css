@@ -145,7 +145,8 @@ h4 {
   top: 90px;
   left: 0;
   padding: 0 20px;
-  text-align: center;
+  text-align: left;
+  white-space: break-spaces;
   color: #FFFFFF;
   font-size: 18px;
   text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
