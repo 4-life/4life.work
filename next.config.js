@@ -1,6 +1,6 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'unsafe-inline' 'self';
+  script-src 'self';
   child-src 'self';
   style-src 'self' 'unsafe-inline';
   font-src 'self';
