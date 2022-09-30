@@ -1,8 +1,8 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self';
+  script-src 'unsafe-inline' 'self';
   child-src 4life.work;
-  style-src 'self' 4life.work;
+  style-src 'self' 'unsafe-inline' 4life.work;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
