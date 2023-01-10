@@ -11,16 +11,16 @@ jobs:
     if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - name: Get current year
-        id: year
-        run: echo "year=$('%Y')" >> $GITHUB_OUTPUT
+        run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+
       - uses: actions/checkout@v3
       - name: Install libs
         run: npm i
 
       - name: Build the app
-        run: npm run build
+        run: echo ${{ env.YEAR }} && npm run build
         env:
-          YEAR: ${{ steps.year.outputs.year }}
+          YEAR: ${{ env.YEAR }}
 
       - name: Vercel Action
         with:
