@@ -1,14 +1,13 @@
-name: Build 4life.work
+name: Checks
 
 on:
   push:
     branches:
-    - master
+    - dev
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - name: Get current year
         id: year
@@ -17,15 +16,13 @@ jobs:
       - name: Install libs
         run: npm i
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run type-check
+
       - name: Build the app
         run: npm run build
         env:
           YEAR: ${{ steps.year.outputs.year }}
-
-      - name: Vercel Action
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        uses: amondnet/vercel-action@v25.1.0
-
