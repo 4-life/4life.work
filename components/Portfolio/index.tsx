@@ -28,7 +28,7 @@ export default () => {
       <p>
         <span>Full-Stack web developer</span>
         <br />
-        <span className={styles.commonTitle}>Age</span> 32 y.o.
+        <span className={styles.commonTitle}>Age</span> 33 y.o.
         <br />
         <span className={styles.commonTitle}>City</span> Moscow
         <br />
@@ -77,7 +77,7 @@ export default () => {
 
       <div className={styles.milestone}>
         <h2>
-          2022<span className={styles.month}>.05</span> - to date
+          2022<span className={styles.month}>.07</span> - to date
         </h2>
         <div className={styles.text}>
           <p>
