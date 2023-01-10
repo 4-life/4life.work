@@ -18,7 +18,7 @@ jobs:
         run: npm i
 
       - name: Build the app
-        run: echo ${{ env.YEAR }} && npm run build
+        run: YEAR=${{ env.YEAR }} npm run build
         env:
           YEAR: ${{ env.YEAR }}
 
