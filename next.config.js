@@ -33,16 +33,19 @@ const securityHeaders = [
 const nextConfig = {
   // eslint-disable-next-line require-await
   async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: securityHeaders,
-      },
-    ];
+    return process.env.NODE_ENV === 'production'
+      ? [
+          {
+            source: '/:path*',
+            headers: securityHeaders,
+          },
+        ]
+      : [];
   },
   reactStrictMode: true,
   publicRuntimeConfig: {
     version: process.env.npm_package_version,
+    year: process.env.YEAR,
   },
 };
 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const { publicRuntimeConfig } = getConfig();
-const { version } = publicRuntimeConfig;
+const { version, year } = publicRuntimeConfig;
 
 export default () => {
   return (
@@ -18,7 +18,7 @@ export default () => {
         </a>
       </p>
       <p>&nbsp;</p>
-      <p>2022</p>
+      <p>{year || '0000'}</p>
     </footer>
   );
 };
