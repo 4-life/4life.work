@@ -5,6 +5,10 @@ on:
     branches:
     - dev
 
+  pull_request_target:
+    branches:
+      - dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,3 +30,12 @@ jobs:
         run: YEAR=${{ env.YEAR }} npm run build
         env:
           YEAR: ${{ env.YEAR }}
+
+      - name: Vercel Action
+        uses: amondnet/vercel-action@v25.1.0
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          alias-domains: |
+            dev.4life.work
