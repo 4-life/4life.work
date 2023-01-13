@@ -10,17 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
-      - name: Get current year
-        run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
-
       - uses: actions/checkout@v3
       - name: Install libs
-        run: npm i
+        run: yarn
 
       - name: Build the app
-        run: YEAR=${{ env.YEAR }} npm run build
-        env:
-          YEAR: ${{ env.YEAR }}
+        run: yarn build
 
       - name: Vercel Action
         uses: amondnet/vercel-action@v25.1.0
