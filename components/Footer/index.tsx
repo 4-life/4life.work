@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const { publicRuntimeConfig } = getConfig();
-const { version, year } = publicRuntimeConfig;
+const { version, date } = publicRuntimeConfig;
 
 export default () => {
   return (
@@ -18,7 +18,7 @@ export default () => {
         </a>
       </p>
       <p>&nbsp;</p>
-      <p>{year || '0000'}</p>
+      <p>{new Date(Number(date) * 1000).getFullYear() || '0000'}</p>
     </footer>
   );
 };

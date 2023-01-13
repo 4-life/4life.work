@@ -9,3 +9,10 @@
 ![Typescript](https://img.shields.io/badge/-Typescript-333333?style=flat-square&logo=Typescript)
 ![NextJS](https://img.shields.io/badge/-NextJs-333333?style=flat-square&logo=nextdotjs)
 ![Vercel](https://img.shields.io/badge/-Vercel-333333?style=flat-square&logo=vercel)
+
+
+### Build commands
+
+- Run `yarn` to install the project dependencies
+- Run `yarn dev` to local development
+- Run `yarn build` production build
