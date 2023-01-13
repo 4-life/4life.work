@@ -1,10 +1,11 @@
 {
   "name": "4life-work",
-  "version": "1.0.34",
+  "version": "1.1.1",
   "description": "My personal website",
+  "license": "ISC",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "DATE=$(date +%s) next dev",
+    "build": "DATE=$(date +%s) next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",

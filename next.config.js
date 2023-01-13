@@ -45,7 +45,7 @@ const nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
     version: process.env.npm_package_version,
-    year: process.env.YEAR,
+    date: process.env.DATE,
   },
 };
 
