@@ -17,7 +17,7 @@ export default () => {
           <Image src="/images/email.png" alt="Email" width={28} height={20} />
         </a>
         <a
-          href="https://t.me/js4life"
+          href="https://t.me/pavel_jsw"
           title="Write me in Telegram"
           target="_blank"
           rel="noreferrer"

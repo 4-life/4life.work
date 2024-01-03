@@ -5,7 +5,7 @@ import Head from '../components/Head';
 // eslint-disable-next-line no-console
 console.log(
   '%c       ',
-  'font-size: 300px; background: url(http://4life.work/images/logo.png) no-repeat;',
+  'font-size: 300px; background: url(https://4life.work/images/logo.png) no-repeat;',
 );
 
 export default () => {
