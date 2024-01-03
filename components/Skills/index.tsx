@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+'use client';
+
+import { useRef } from 'react';
 import getConfig from 'next/config';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -10,15 +12,11 @@ const { publicRuntimeConfig } = getConfig();
 const { version } = publicRuntimeConfig;
 
 export default () => {
-  const gridEl = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    init(gridEl.current);
-  }, []);
+  const ref = useRef<HTMLDivElement>(null);
 
   return (
     <>
-      <div className={styles.bg} ref={gridEl}>
+      <div className={styles.bg} ref={ref}>
         <div className={styles.title}>My Skills (beta)</div>
 
         <div className={styles.footer}>
@@ -35,10 +33,7 @@ export default () => {
         </div>
       </div>
 
-      <Script src="libs/CSSPlugin.min.js" strategy="beforeInteractive" />
-      <Script src="libs/TweenLite.min.js" strategy="beforeInteractive" />
-      <Script src="libs/TimelineLite.min.js" strategy="beforeInteractive" />
-      <Script src="libs/EasePack.min.js" strategy="beforeInteractive" />
+      <Script src="libs/TweenLite.min.js" strategy="lazyOnload" onLoad={() => init(ref.current)} />
     </>
   );
 };

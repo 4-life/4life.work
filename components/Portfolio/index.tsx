@@ -14,12 +14,10 @@ export default () => {
         <h1 className={styles.h1}>Portfolio</h1>
         <span className={styles.homeLink}>
           <Link href="/" passHref>
-            <a>
-              <span className={styles.homeIcon}>
-                <Image src="/images/homeIcon.png" alt="Home" width={25} height={25} />
-              </span>
-              Home
-            </a>
+            <span className={styles.homeIcon}>
+              <Image src="/images/homeIcon.png" alt="Home" width={25} height={25} />
+            </span>
+            Home
           </Link>
         </span>
       </div>
