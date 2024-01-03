@@ -91,26 +91,24 @@ export default () => {
           onMouseOver={() => debouncedHandler(ActiveBtn.active1)}
           onFocus={() => debouncedHandler(ActiveBtn.active1)}
         >
-          <Link href="/">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 84 134"
-              >
-                <path
-                  className={`${activeBtn === ActiveBtn.active1 && styles.active_path_1}`}
-                  d="m 38,0 -38,23.171875 0,4.029297 0,25.1875 38,0 L 38,24.179688 38,0 Z m 7,0 0,135 39,0 L 84,0 45,0 Z M 0,61.455078 0,92.6875 l 0,2.013672 0,2.015625 38,19.140623 0,-21.156248 0,-2.013672 0,-31.232422 -38,0 z"
-                />
-              </svg>
-              <span
-                className={`${styles.mobileNav} ${
-                  activeBtn === ActiveBtn.active1 && styles.mobileNavActive1
-                }`}
-              >
-                Home
-              </span>
-            </a>
+          <Link href="/" passHref>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 84 134"
+            >
+              <path
+                className={`${activeBtn === ActiveBtn.active1 && styles.active_path_1}`}
+                d="m 38,0 -38,23.171875 0,4.029297 0,25.1875 38,0 L 38,24.179688 38,0 Z m 7,0 0,135 39,0 L 84,0 45,0 Z M 0,61.455078 0,92.6875 l 0,2.013672 0,2.015625 38,19.140623 0,-21.156248 0,-2.013672 0,-31.232422 -38,0 z"
+              />
+            </svg>
+            <span
+              className={`${styles.mobileNav} ${
+                activeBtn === ActiveBtn.active1 && styles.mobileNavActive1
+              }`}
+            >
+              Home
+            </span>
           </Link>
         </li>
         <li
@@ -120,26 +118,24 @@ export default () => {
           onMouseOut={() => debouncedHandler(ActiveBtn.active1)}
           onBlur={() => debouncedHandler(ActiveBtn.active1)}
         >
-          <Link href="/portfolio">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 108 135"
-              >
-                <path
-                  className={`${activeBtn === ActiveBtn.active2 && styles.active_path_2}`}
-                  d="m 0,0 38.099609,44.441406 0,-3.449218 L 38,0 0,0 Z M 0,14.78125 0.09960937,134.90039 36,134.99414 36,135 38,135 38,59.123047 0,14.78125 Z m 49,80.802734 0,38.429686 0,0.88672 0,0.0996 59,0 0,-0.0996 0,-0.88672 0,-38.332029 0,-0.09766 -58,0 -1,0 z"
-                />
-              </svg>
-              <span
-                className={`${styles.mobileNav} ${
-                  activeBtn === ActiveBtn.active2 && styles.mobileNavActive2
-                }`}
-              >
-                Portfolio
-              </span>
-            </a>
+          <Link href="/portfolio" passHref>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 108 135"
+            >
+              <path
+                className={`${activeBtn === ActiveBtn.active2 && styles.active_path_2}`}
+                d="m 0,0 38.099609,44.441406 0,-3.449218 L 38,0 0,0 Z M 0,14.78125 0.09960937,134.90039 36,134.99414 36,135 38,135 38,59.123047 0,14.78125 Z m 49,80.802734 0,38.429686 0,0.88672 0,0.0996 59,0 0,-0.0996 0,-0.88672 0,-38.332029 0,-0.09766 -58,0 -1,0 z"
+              />
+            </svg>
+            <span
+              className={`${styles.mobileNav} ${
+                activeBtn === ActiveBtn.active2 && styles.mobileNavActive2
+              }`}
+            >
+              Portfolio
+            </span>
           </Link>
         </li>
         <li

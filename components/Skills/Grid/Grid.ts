@@ -4,7 +4,6 @@ import { PATH_IMAGES, SOUNDS } from './utils';
 import DoubleSpring from './DoubleSpring';
 import { database } from './globals';
 
-const { TweenLite, Expo, Sine, Cubic } = global as any;
 const { mouse, track } = database;
 
 type Xy = { x: number; y: number };
@@ -130,14 +129,14 @@ export default class Grid {
   }
 
   public startIntro() {
-    TweenLite.to(this, 2, {
+    window.TweenLite.to(this, 2, {
       startZoom: 1,
-      ease: Expo.easeInOut,
+      ease: window.Expo.easeInOut,
       onComplete: this.onZoomedOut.bind(this),
     });
-    TweenLite.to(this, 0.1, {
+    window.TweenLite.to(this, 0.1, {
       startFade: 1,
-      ease: Expo.easeInOut,
+      ease: window.Expo.easeInOut,
       delay: 2,
       onComplete: this.onTransitionFinished,
     });
@@ -369,18 +368,18 @@ export default class Grid {
           this.textCanvas.context.fillStyle = this.overCell.skill.textColor || '#ffffff';
           this.textCanvas.context.font = 'bold 16pt Calibri, Helvetica, Arial, sans-serif';
           this.textCanvas.context.globalAlpha = 1;
-          TweenLite.to(this.overCell, 0.2, {
+          window.TweenLite.to(this.overCell, 0.2, {
             ratio: 1,
-            ease: Sine.easeInOut,
+            ease: window.Sine.easeInOut,
           });
-          TweenLite.to(this.overCell, 0.1, {
+          window.TweenLite.to(this.overCell, 0.1, {
             alpha1: 1,
-            ease: Sine.easeInOut,
+            ease: window.Sine.easeInOut,
             delay: 0.1,
           });
-          TweenLite.to(this.overCell, 0.3, {
+          window.TweenLite.to(this.overCell, 0.3, {
             alpha2: 1,
-            ease: Sine.easeInOut,
+            ease: window.Sine.easeInOut,
             delay: 0.2,
           });
         }
@@ -415,9 +414,9 @@ export default class Grid {
 
   public centerOnSkill() {
     this.locked = true;
-    TweenLite.to(this, 0.4, {
+    window.TweenLite.to(this, 0.4, {
       zoomRatio: 1,
-      ease: Cubic.easeIn,
+      ease: window.Cubic.easeIn,
     });
     if (this.overCell) {
       this.overCell.ratio = 0;
@@ -429,7 +428,7 @@ export default class Grid {
 
   public unlock() {
     this.locked = false;
-    TweenLite.to(this, 0.2, {
+    window.TweenLite.to(this, 0.2, {
       zoomRatio: 0,
     });
   }

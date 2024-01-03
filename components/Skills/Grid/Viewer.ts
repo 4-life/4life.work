@@ -3,8 +3,6 @@ import { PATH_IMAGES } from './utils';
 
 const newSet = 100;
 
-const { TweenLite, Sine, Back, Elastic } = global as any;
-
 type Xy = { x: number; y: number };
 
 export default class Viewer {
@@ -141,139 +139,139 @@ export default class Viewer {
     } else {
       delays = [0, 0.1, 0.2, 0.3];
     }
-    TweenLite.to(this.topLeft, 0.5 * speed, {
+    window.TweenLite.to(this.topLeft, 0.5 * speed, {
       x: -250,
       y: -250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: delays[0],
     });
-    TweenLite.to(this.topRight, 0.5 * speed, {
+    window.TweenLite.to(this.topRight, 0.5 * speed, {
       x: 250,
       y: -250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: delays[1] * speed,
     });
-    TweenLite.to(this.bottomRight, 0.5 * speed, {
+    window.TweenLite.to(this.bottomRight, 0.5 * speed, {
       x: 250,
       y: 250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: delays[2] * speed,
     });
-    TweenLite.to(this.bottomLeft, 0.5 * speed, {
+    window.TweenLite.to(this.bottomLeft, 0.5 * speed, {
       x: -250,
       y: 250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: delays[3] * speed,
       onComplete: this.onSquareComplete.bind(this),
     });
-    TweenLite.to(this.socialSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311 - 14 + newSet,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.4 + 0,
     });
-    TweenLite.to(this.socialSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[1], 0.5 * speed, {
       x: 250 + 75,
       y: -250 + 311 + newSet,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.4 + 0.1 * speed,
     });
-    TweenLite.to(this.socialSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[2], 0.5 * speed, {
       x: 250 + 75,
       y: -250 + 311 + 65 + newSet,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.4 + 0.2 * speed,
     });
-    TweenLite.to(this.socialSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65 + newSet,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.4 + 0.3 * speed,
     });
-    TweenLite.to(this.skillSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.7 + 0,
     });
-    TweenLite.to(this.skillSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[1], 0.5 * speed, {
       x: 250 + 75,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.7 + 0.1 * speed,
     });
-    TweenLite.to(this.skillSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[2], 0.5 * speed, {
       x: 250 + 75,
       y: -250 + 311 + 65 + 75,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.7 + 0.2 * speed,
     });
-    TweenLite.to(this.skillSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65 + 75,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.7 + 0.3 * speed,
       onComplete: this.onShown2.bind(this),
     });
-    TweenLite.to(this, 0.5, {
+    window.TweenLite.to(this, 0.5, {
       blackStrength: 0.75,
-      ease: Sine.easeOut,
+      ease: window.Sine.easeOut,
     });
-    TweenLite.to(this, 0.25, {
+    window.TweenLite.to(this, 0.25, {
       imageAlpha: 0,
-      ease: Sine.easeOut,
+      ease: window.Sine.easeOut,
       delay: 0.2,
     });
   }
 
   public swap() {
     const speed = 0.8;
-    TweenLite.to(this.socialSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0,
     });
-    TweenLite.to(this.socialSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[1], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.1 * speed,
     });
-    TweenLite.to(this.socialSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[2], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.2 * speed,
     });
-    TweenLite.to(this.socialSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.3 * speed,
     });
-    TweenLite.to(this.skillSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0,
     });
-    TweenLite.to(this.skillSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[1], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.1 * speed,
     });
-    TweenLite.to(this.skillSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[2], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.2 * speed,
     });
-    TweenLite.to(this.skillSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.3 * speed,
       onComplete: this.onShown2.bind(this),
     });
@@ -282,81 +280,81 @@ export default class Viewer {
 
   public hide() {
     const speed = 0.8;
-    TweenLite.to(this.socialSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0,
     });
-    TweenLite.to(this.socialSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[1], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.1 * speed,
     });
-    TweenLite.to(this.socialSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[2], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.2 * speed,
     });
-    TweenLite.to(this.socialSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.socialSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.3 * speed,
     });
-    TweenLite.to(this.skillSpring[0], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[0], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0,
     });
-    TweenLite.to(this.skillSpring[1], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[1], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.1 * speed,
     });
-    TweenLite.to(this.skillSpring[2], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[2], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.2 * speed,
     });
-    TweenLite.to(this.skillSpring[3], 0.5 * speed, {
+    window.TweenLite.to(this.skillSpring[3], 0.5 * speed, {
       x: 250,
       y: -250 + 311 + 65,
-      ease: Elastic.easeOut,
+      ease: window.Elastic.easeOut,
       delay: 0.3 * speed,
     });
-    TweenLite.to(this, 0.5, {
+    window.TweenLite.to(this, 0.5, {
       blackStrength: 0,
       imageAlpha: 1,
-      ease: Sine.easeOut,
+      ease: window.Sine.easeOut,
     });
-    TweenLite.to(this.topLeft, 0.5 * speed, {
+    window.TweenLite.to(this.topLeft, 0.5 * speed, {
       x: -250,
       y: -250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: 0,
     });
-    TweenLite.to(this.topRight, 0.5 * speed, {
+    window.TweenLite.to(this.topRight, 0.5 * speed, {
       x: -0,
       y: -250,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: 0.1 * speed,
     });
-    TweenLite.to(this.bottomRight, 0.5 * speed, {
+    window.TweenLite.to(this.bottomRight, 0.5 * speed, {
       x: -0,
       y: -0,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: 0.2 * speed,
     });
-    TweenLite.to(this.bottomLeft, 0.5 * speed, {
+    window.TweenLite.to(this.bottomLeft, 0.5 * speed, {
       x: -250,
       y: -0,
-      ease: Back.easeOut,
+      ease: window.Back.easeOut,
       delay: 0.3 * speed,
       onComplete: this.onHidden2.bind(this),
     });
