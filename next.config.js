@@ -40,12 +40,7 @@ const nextConfig = {
       ? [
           {
             source: '/(.*)',
-            headers: [
-              {
-                key: 'Content-Security-Policy',
-                value: cspHeader.replace(/\n/g, ''),
-              },
-            ],
+            headers: securityHeaders,
           },
         ]
       : [];
