@@ -1,14 +1,17 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self';
-  child-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
   style-src 'self' 'unsafe-inline';
+  img-src 'self' blob: data:;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+  child-src 'self';
   connect-src 'self';
   frame-src 'self';
-  img-src 'self' data:;
   manifest-src 'self';
   media-src 'self';
   worker-src 'none';
@@ -36,7 +39,7 @@ const nextConfig = {
     return process.env.NODE_ENV === 'production'
       ? [
           {
-            source: '/:path*',
+            source: '/(.*)',
             headers: securityHeaders,
           },
         ]
