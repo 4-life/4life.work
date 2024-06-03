@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import Nav from '../Nav';
-import SoundButton, { Theme } from '../SoundButton';
+import Nav from '@/components/Nav';
+import SoundButton from '@/components/SoundButton';
+import Theme from '@/components/SoundButton/types';
 import styles from './Home.module.css';
 
-export default () => {
+export default (): JSX.Element => {
   return (
     <main className={styles.main}>
       <div className={styles.header}>

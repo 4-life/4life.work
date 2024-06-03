@@ -1,5 +1,7 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable max-len */
+
+'use client';
+
 import Link from 'next/link';
 import { Howl } from 'howler';
 import { throttle } from 'lodash';
@@ -16,7 +18,7 @@ const SOUND = new Howl({
   src: [`/sounds/sound.wav`, `/sounds/clickOpen.ogg`],
 });
 
-export default () => {
+export default (): JSX.Element => {
   const ready = useRef<boolean>(false);
   const [activeBtn, setActiveBtn] = useState<ActiveBtn>();
 
@@ -30,7 +32,7 @@ export default () => {
     }, 1200);
   }, []);
 
-  const handler = (btn: ActiveBtn) => {
+  const handler = (btn: ActiveBtn): void => {
     if (!ready.current || btn === activeBtn) {
       return;
     }

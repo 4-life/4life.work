@@ -43,10 +43,10 @@ const nextConfig = {
       : [];
   },
   reactStrictMode: true,
-  publicRuntimeConfig: {
+  env: {
     version: process.env.npm_package_version,
     date: process.env.DATE,
-  },
+  }
 };
 
 module.exports = nextConfig;

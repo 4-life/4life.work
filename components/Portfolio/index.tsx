@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Portfolio.module.css';
@@ -7,7 +6,7 @@ import oldFlow from '../../public/images/aws-flow/old.png';
 import newFlow from '../../public/images/aws-flow/new.png';
 import dmFlow from '../../public/images/aws-flow/dm.png';
 
-export default () => {
+export default (): JSX.Element => {
   return (
     <main className={styles.main}>
       <div className={styles.header}>

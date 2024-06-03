@@ -51,14 +51,13 @@ export default class Grid {
   private gridWidth: number = 0;
   private gridHeight: number = 0;
   private scale: number = 0;
-  public onTransitionFinished: any;
-  public onStartComplete: any;
-  public onSkillSelected: any;
+  public onStartComplete?: () => void;
+  public onSkillSelected?: (skill: SkillModel) => void;
   public firstTouch: boolean = false;
-  private overCell?: Node;
   public didMove = false;
+  private overCell?: Node;
 
-  constructor(width, height) {
+  constructor(width: number, height: number) {
     this.padding = 1;
     this.textCanvas = document.createElement('canvas');
     this.textCanvas.width = 500;
@@ -83,7 +82,7 @@ export default class Grid {
     this.startFade = 0;
   }
 
-  public resize(width: number, height: number) {
+  public resize(width: number, height: number): void {
     this.width = width;
     this.height = height;
     this.gridWidth = Math.ceil(this.width / this.squareWidth) + 2 + this.padding + 1;
@@ -128,7 +127,7 @@ export default class Grid {
     this.scale = 1;
   }
 
-  public startIntro() {
+  public startIntro(): void {
     window.TweenLite.to(this, 2, {
       startZoom: 1,
       ease: window.Expo.easeInOut,
@@ -138,18 +137,17 @@ export default class Grid {
       startFade: 1,
       ease: window.Expo.easeInOut,
       delay: 2,
-      onComplete: this.onTransitionFinished,
     });
   }
 
-  private onZoomedOut() {
+  private onZoomedOut(): void {
     this.start = false;
     this.locked = false;
     SOUNDS.drag.play();
-    this.onStartComplete();
+    this.onStartComplete?.();
   }
 
-  public render(context: CanvasRenderingContext2D) {
+  public render(context: CanvasRenderingContext2D): void {
     context.save();
     const speedX = (track.x - this.camera.x) * 0.4;
     const speedY = (track.y - this.camera.y) * 0.4;
@@ -392,7 +390,7 @@ export default class Grid {
     context.restore();
   }
 
-  private effectCell(point, growth) {
+  private effectCell(point: Node, growth: number): void {
     const topLeft = point;
     const topRight =
       this.points[this.gridWidth * (point.y % this.gridHeight) + ((point.x + 1) % this.gridWidth)];
@@ -412,7 +410,7 @@ export default class Grid {
     bottomLeft.spring.ty = +growth;
   }
 
-  public centerOnSkill() {
+  public centerOnSkill(): void {
     this.locked = true;
     window.TweenLite.to(this, 0.4, {
       zoomRatio: 1,
@@ -426,14 +424,14 @@ export default class Grid {
     }
   }
 
-  public unlock() {
+  public unlock(): void {
     this.locked = false;
     window.TweenLite.to(this, 0.2, {
       zoomRatio: 0,
     });
   }
 
-  public down() {
+  public down(): void {
     this.overCell = this.hittest();
     this.overCell.down = true;
     this.didMove = false;
@@ -472,7 +470,7 @@ export default class Grid {
     return this.points[(gridPosY % this.gridHeight) * this.gridWidth + gridPosX];
   }
 
-  public up() {
+  public up(): void {
     if (!this.overCell) {
       return;
     }
@@ -528,12 +526,12 @@ export default class Grid {
         if (this.overCell.x === 0) this.overCell.skill.positionX -= 1;
         this.overCell.skill.color = point.color;
         this.overCell.skill.image = point.image;
-        this.onSkillSelected(this.overCell.skill);
+        this.onSkillSelected?.(this.overCell.skill);
       }
     }
   }
 
-  public static getId(xid, yid) {
+  public static getId(xid: number, yid: number): number {
     const gridWidth = 5;
     const gridHeight = 5;
     let modX = (xid - 4) % gridWidth;
