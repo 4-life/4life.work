@@ -1,11 +1,7 @@
-import getConfig from 'next/config';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
-const { publicRuntimeConfig } = getConfig();
-const { version, date } = publicRuntimeConfig;
-
-export default () => {
+export default (): JSX.Element => {
   return (
     <footer className={styles.footer}>
       <p>Powered by Pavel</p>
@@ -14,11 +10,12 @@ export default () => {
       </span>
       <p>
         <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer">
-          {version || '0.0.0'}
+          {process.env.version || '0.0.0'}
         </a>
       </p>
       <p>&nbsp;</p>
-      <p>{new Date(Number(date) * 1000).getFullYear() || '0000'}</p>
+      <p>&nbsp;</p>
+      <p>{new Date(Number(process.env.date) * 1000).getFullYear() || '0000'}</p>
     </footer>
   );
 };

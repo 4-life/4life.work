@@ -1,0 +1,20 @@
+.soundButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.soundButtonLabel {
+  display: inline;
+  color: #FFFFFF;
+}
+
+.soundButton > span {
+  vertical-align: middle;
+}
+
+.soundButtonHidden {
+  visibility: hidden;
+  position: absolute;
+}

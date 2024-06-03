@@ -1,5 +1,3 @@
-/* eslint-disable no-bitwise */
-/* eslint-disable no-param-reassign */
 import { Howl } from 'howler';
 
 export const PATH_SOUNDS = './sounds';
@@ -22,7 +20,7 @@ export const SOUNDS = {
   }),
 };
 
-export function fadeOut(el: HTMLElement) {
+export function fadeOut(el: HTMLElement): void {
   let opacity = 1;
 
   const timer = setInterval(() => {
@@ -36,7 +34,7 @@ export function fadeOut(el: HTMLElement) {
   }, 10);
 }
 
-export function fadeIn(el: HTMLElement) {
+export function fadeIn(el: HTMLElement): void {
   let opacity = 0.01;
 
   el.style.display = 'block';

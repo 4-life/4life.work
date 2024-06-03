@@ -1,17 +1,19 @@
 'use client';
 
 import { useRef } from 'react';
-import getConfig from 'next/config';
 import Link from 'next/link';
 import Script from 'next/script';
-import SoundButton, { Theme } from '../SoundButton';
-import styles from './Skills.module.css';
+import SoundButton from '@/components/SoundButton';
+import Theme from '@/components/SoundButton/types';
 import init from './Grid';
 
-const { publicRuntimeConfig } = getConfig();
-const { version } = publicRuntimeConfig;
+import styles from './Skills.module.css';
 
-export default () => {
+interface Props {
+  version: string;
+}
+
+export default ({ version }: Props): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
 
   return (

@@ -19,15 +19,18 @@ export default class GlobalRef<T> {
     this.sym = Symbol.for(uniqueName);
   }
 
-  get value() {
+  get value(): T {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (global as any)[this.sym] as T;
   }
 
   set value(value: T) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (global as any)[this.sym] = value;
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const databaseConn = new GlobalRef<Record<string, any>>('app.database');
 
 databaseConn.value = {

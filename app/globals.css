@@ -1,0 +1,207 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+
+  --tile-start-rgb: 239, 245, 249;
+  --tile-end-rgb: 228, 232, 233;
+  --tile-border: conic-gradient(
+    #00000080,
+    #00000040,
+    #00000030,
+    #00000020,
+    #00000010,
+    #00000010,
+    #00000080
+  );
+
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Akkurat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a7a7a7 #dbdbdb;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a7a7a7;
+  border-radius: 20px;
+  border: 3px solid #dbdbdb;
+}
+
+::selection {
+  background: #ea4c88;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #ea4c88;
+  color: #fff;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+.bg {
+  background: url("/images/bg.jpg") repeat;
+}
+
+h2 {
+  font-size: 25pt;
+  color: #ccc;
+  margin: 0;
+}
+
+a {
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #3b3b3b;
+  line-height: 1.5;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+h3 {
+  font-size: 23pt;
+  color: #484848;
+  margin: 5px 0;
+}
+
+h4 {
+  font-size: 15pt;
+  margin: 5px 0;
+  color: #484848;
+}
+
+.skillView {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  display: none;
+  z-index: 3;
+}
+
+.closeButton{
+  position: absolute;
+  top: -7px;
+  left: 455px;
+  cursor: pointer;
+}
+
+.closeButtonSmall{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  cursor: pointer;
+  background: url("/images/closeButtonWhite.png") no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.white .closeButtonSmall{
+  background: url("/images/closeButtonBlack.png") no-repeat;
+  background-size: contain;
+}
+
+.skillView a{
+  z-index: 100;
+  color: inherit;
+  text-decoration:none;
+}
+
+.detailHeader {
+  position: absolute;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  top: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 50px;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  font-family: 'Conv_Curse Casual',Sans-Serif;
+}
+
+.detailDescription {
+  position: absolute;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+  top: 90px;
+  left: 0;
+  padding: 0 20px;
+  text-align: left;
+  white-space: break-spaces;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+.detailName{
+  position: absolute;
+  cursor: default;
+  top: 455px;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-size: 15.3px;
+  user-select: none;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}

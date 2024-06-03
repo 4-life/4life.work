@@ -4,63 +4,63 @@ import Grid from './Grid';
 import Viewer from './Viewer';
 import SkillViewer from './SkillViewer';
 import { database } from './globals';
+import { SkillModel } from './model';
 
 const { mouse, track, downTarget } = database;
 let { skill } = database;
-const { TweenLite, Sine } = global as any;
 
 let resizeCount = 0;
-let loaded = false;
+let isLoaded = false;
 let grid: Grid;
-let browseMode = false;
+let isBrowseMode = false;
 let canvas: HTMLCanvasElement;
 let viewer: Viewer;
 let trackpad: Trackpad;
 let skillViewer: SkillViewer;
-let pauseGridRender = false;
+let isPauseGridRender = false;
 let context: CanvasRenderingContext2D;
 
-function showSkill(m) {
+function showSkill(m: SkillModel): void {
   skill = m;
   SOUNDS.clickOpen.play();
-  browseMode = false;
+  isBrowseMode = false;
   viewer.showSkill(m);
   trackpad.lock();
-  TweenLite.to(trackpad, 0.5, {
+  window.TweenLite.to(trackpad, 0.5, {
     value: m.positionX,
     easingValue: m.positionX,
     valueY: m.positionY,
     easingValueY: m.positionY,
-    ease: Sine.easeOut,
+    ease: window.Sine.easeOut,
   });
   grid.centerOnSkill();
 }
 
-function onResize() {
+function onResize(): void {
   resizeCount = 0;
 }
 
-function onMouseDown(event) {
+function onMouseDown(event: MouseEvent): void {
   event.preventDefault();
   downTarget.x = mouse.x;
   downTarget.y = mouse.y;
-  if (!browseMode) return;
+  if (!isBrowseMode) return;
   grid.down();
 }
 
-function onMouseUp(event) {
+function onMouseUp(event: MouseEvent): void {
   event.preventDefault();
-  if (!browseMode) return;
+  if (!isBrowseMode) return;
   grid.up();
 }
 
-function onTouchStart(event) {
+function onTouchStart(event: TouchEvent): void {
   event.preventDefault();
-  mouse.x = (event.pageX || event.touches[0].pageX) + document.body.scrollLeft;
-  mouse.y = (event.pageY || event.touches[0].pageY) + document.body.scrollTop;
+  mouse.x = event.touches[0].pageX + document.body.scrollLeft;
+  mouse.y = event.touches[0].pageY + document.body.scrollTop;
   downTarget.x = mouse.x;
   downTarget.y = mouse.y;
-  if (!browseMode) return;
+  if (!isBrowseMode) return;
   if (!grid.firstTouch) {
     grid.firstTouch = true;
     SOUNDS.drag.play();
@@ -68,13 +68,13 @@ function onTouchStart(event) {
   grid.down();
 }
 
-function onTouchEnd(event) {
+function onTouchEnd(event: TouchEvent): void {
   event.preventDefault();
-  if (!browseMode) return;
+  if (!isBrowseMode) return;
   grid.up();
 }
 
-function testDidMove() {
+function testDidMove(): void {
   const xdist = mouse.x - downTarget.x;
   const ydist = mouse.y - downTarget.y;
   const dist = xdist * xdist + ydist * ydist;
@@ -83,57 +83,52 @@ function testDidMove() {
   }
 }
 
-function onTouchMove(event) {
+function onTouchMove(event: TouchEvent): void {
   event.preventDefault();
-  mouse.x = (event.pageX || event.touches[0].pageX) + document.body.scrollLeft;
-  mouse.y = (event.pageY || event.touches[0].pageY) + document.body.scrollTop;
+  mouse.x = event.touches[0].pageX + document.body.scrollLeft;
+  mouse.y = event.touches[0].pageY + document.body.scrollTop;
   testDidMove();
 }
 
-function onMouseMove(event) {
+function onMouseMove(event: MouseEvent): void {
   mouse.x = event.clientX + document.body.scrollLeft;
   mouse.y = event.clientY + document.body.scrollTop;
   testDidMove();
 }
 
-function onGridStartComplete() {
-  browseMode = true;
+function onGridStartComplete(): void {
+  isBrowseMode = true;
   trackpad.unlock();
 }
 
-function onSquareReady() {
+function onSquareReady(): void {
   skillViewer.show(skill);
 }
 
-function onSkillSelected(s) {
-  showSkill(s);
+function onSkillSelected(selectedSkill: SkillModel): void {
+  showSkill(selectedSkill);
 }
 
-function onViewerShown() {
+function onViewerShown(): void {
   if (skillViewer.isOpen) {
-    pauseGridRender = true;
+    isPauseGridRender = true;
   }
   grid.render(context);
   viewer.render(context);
 }
 
-function onViewerHidden() {
+function onViewerHidden(): void {
   trackpad.unlock();
   grid.unlock();
-  browseMode = true;
+  isBrowseMode = true;
 }
 
-function onSwapPressed() {
-  pauseGridRender = false;
-  viewer.swap();
-}
-
-function hideSkill() {
-  pauseGridRender = false;
+function hideSkill(): void {
+  isPauseGridRender = false;
   viewer.hide();
 }
 
-function update() {
+function update(): void {
   resizeCount += 1;
   if (resizeCount === 20) {
     const w = window.innerWidth;
@@ -147,32 +142,32 @@ function update() {
 
     skillViewer.view.style.left = `${halfW - (halfW < 250 ? halfW : 250)}px`;
     skillViewer.view.style.top = `${halfH - (halfH < 250 ? halfH : 250)}px`;
-    if (pauseGridRender) {
+    if (isPauseGridRender) {
       grid.render(context);
       viewer.render(context);
     }
   }
 
-  if (loaded && browseMode) {
+  if (isLoaded && isBrowseMode) {
     trackpad.update();
   }
 
   track.x = trackpad.value;
   track.y = trackpad.valueY;
-  if (!pauseGridRender) {
+  if (!isPauseGridRender) {
     grid.render(context);
     viewer.render(context);
   }
   requestAnimationFrame(update);
 }
 
-export default function init(el: HTMLDivElement | null) {
+export default function init(el: HTMLDivElement | null): void {
   if (!el) {
     return;
   }
   onResize();
   window.addEventListener('resize', onResize);
-  loaded = true;
+  isLoaded = true;
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
@@ -205,8 +200,7 @@ export default function init(el: HTMLDivElement | null) {
 
   skillViewer = new SkillViewer(el);
   skillViewer.onClosePressed = hideSkill;
-  skillViewer.onSwapPressed = onSwapPressed;
-  browseMode = false;
+  isBrowseMode = false;
 
   onResize();
   resizeCount = 19;

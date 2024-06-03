@@ -18,9 +18,9 @@ export default class Viewer {
   private alpha: number;
   private imageAlpha: number;
   private kickBack: HTMLImageElement;
-  public onSquareReady: any;
-  public onShown: any;
-  public onHidden: any;
+  public onSquareReady?: () => void;
+  public onShown?: () => void;
+  public onHidden?: () => void;
   public skill?: SkillModel;
 
   constructor(width: number, height: number) {
@@ -62,7 +62,7 @@ export default class Viewer {
     ];
   }
 
-  public render(context: CanvasRenderingContext2D) {
+  public render(context: CanvasRenderingContext2D): void {
     if (!this.skill) return;
     context.save();
     context.translate(this.width / 2, this.height / 2);
@@ -99,12 +99,12 @@ export default class Viewer {
     context.restore();
   }
 
-  public resize(width, height) {
+  public resize(width: number, height: number): void {
     this.width = width;
     this.height = height;
   }
 
-  public showSkill(skill: SkillModel) {
+  public showSkill(skill: SkillModel): void {
     this.skill = skill;
     this.color = skill.color;
     this.alpha = 1;
@@ -224,7 +224,7 @@ export default class Viewer {
     });
   }
 
-  public swap() {
+  public swap(): void {
     const speed = 0.8;
     window.TweenLite.to(this.socialSpring[0], 0.5 * speed, {
       x: 250,
@@ -278,7 +278,7 @@ export default class Viewer {
     this.color = '#463849';
   }
 
-  public hide() {
+  public hide(): void {
     const speed = 0.8;
     window.TweenLite.to(this.socialSpring[0], 0.5 * speed, {
       x: 250,
@@ -360,16 +360,16 @@ export default class Viewer {
     });
   }
 
-  private onSquareComplete() {
-    this.onSquareReady();
+  private onSquareComplete(): void {
+    this.onSquareReady?.();
   }
 
-  private onShown2() {
-    this.onShown();
+  private onShown2(): void {
+    this.onShown?.();
   }
 
-  private onHidden2() {
+  private onHidden2(): void {
     this.skill = undefined;
-    this.onHidden();
+    this.onHidden?.();
   }
 }

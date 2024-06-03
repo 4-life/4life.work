@@ -23,18 +23,28 @@ export default class DoubleSpring {
     this.ty = 0;
   }
 
-  public update() {
+  public update(): void {
     this.ax = (this.tx - this.x) * springiness;
     this.dx += this.ax;
     this.dx *= damp;
-    if (this.dx < -max) this.dx = -max;
-    else if (this.dx > max) this.dx = max;
+
+    if (this.dx < -max) {
+      this.dx = -max;
+    } else if (this.dx > max) {
+      this.dx = max;
+    }
+
     this.x += this.dx;
     this.ay = (this.ty - this.y) * springiness;
     this.dy += this.ay;
     this.dy *= damp;
-    if (this.dy < -max) this.dy = -max;
-    else if (this.dy > max) this.dy = max;
+
+    if (this.dy < -max) {
+      this.dy = -max;
+    } else if (this.dy > max) {
+      this.dy = max;
+    }
+
     this.y += this.dy;
   }
 }

@@ -146,8 +146,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       id: 'typescript',
       gridImage: ['libs/typescript.png'],
       copy: 'Typescript',
-      story:
-        "I can't imagine Javascript code without typing sysytem. A lot of bugs can be avoided just using strict types. I use Typescript in any kind of project",
+      story: `I can't imagine Javascript code without typing sysytem. A lot of bugs can be avoided just using strict types. I use Typescript in any kind of project`,
       color: '#007acc',
       textColor: '#ffffff',
       scale: 0.7,

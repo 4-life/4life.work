@@ -13,6 +13,6 @@
 
 ### Build commands
 
-- Run `yarn` to install the project dependencies
-- Run `yarn dev` to local development
-- Run `yarn build` production build
+- Run `npm i` to install the project dependencies
+- Run `npm run dev` to local development
+- Run `npm run build` production build

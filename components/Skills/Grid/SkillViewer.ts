@@ -1,5 +1,4 @@
-import Gesturepad from './Gesturepad';
-import { themeDefault } from './model';
+import { SkillModel, themeDefault } from './model';
 import { fadeIn, fadeOut, SOUNDS } from './utils';
 
 export default class SkillViewer {
@@ -8,12 +7,10 @@ export default class SkillViewer {
   private detailContainer: HTMLDivElement;
   private detailDescriptionContainer: HTMLDivElement;
   private detailNameContainer: HTMLDivElement;
-  private gesturepad: Gesturepad;
   private closeButton: HTMLButtonElement;
   public isOpen: boolean;
-  public onClosePressed: any;
+  public onClosePressed?: () => void;
   public alpha: number = 0;
-  public onSwapPressed: any;
   private viewClassname = 'skillView';
 
   constructor(el: HTMLDivElement) {
@@ -28,8 +25,6 @@ export default class SkillViewer {
     this.view.style.maxWidth = '500px';
     this.view.style.height = '500px';
     el.appendChild(this.view);
-    this.gesturepad = new Gesturepad(this.view);
-    this.gesturepad.onClose = this.closePressed.bind(this);
     this.closeButton = document.createElement('button');
     this.closeButton.className = 'closeButtonSmall';
     this.detailContainer = document.createElement('div');
@@ -43,23 +38,21 @@ export default class SkillViewer {
     this.view.appendChild(this.detailNameContainer);
     this.view.appendChild(this.closeButton);
     this.closeButton.addEventListener('click', this.closePressed.bind(this));
-    this.closeButton.addEventListener('touchstart', this.closePressed.bind(this));
     this.isOpen = false;
   }
 
-  private closePressed(event) {
+  private closePressed(event: MouseEvent): void {
     event.preventDefault();
     if (!this.isOpen) return;
     SOUNDS.clickClose.play();
     this.isOpen = false;
     if (this.onClosePressed) this.onClosePressed();
     fadeOut(this.view);
-    this.gesturepad.disable();
     // reset theme color
     this.view.className = this.viewClassname;
   }
 
-  public show(skill) {
+  public show(skill: SkillModel): void {
     this.isOpen = true;
     this.detailContainer.innerHTML = skill.copy;
     this.view.classList.add(skill.theme || themeDefault);
