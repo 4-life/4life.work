@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals", "airbnb", "plugin:prettier/recommended", "prettier"],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "prettier"],
   "env": {
     "browser": true
   },
@@ -47,7 +47,6 @@
     "no-case-declarations": 0,
     "@typescript-eslint/camelcase": 0,
     "no-trailing-spaces": ["error"],
-    "curly": ["error"],
     "eqeqeq": ["error"],
     "no-alert": ["error"],
     "no-eq-null": ["error"],
@@ -59,7 +58,6 @@
     "array-callback-return": "error",
     "spaced-comment": ["error", "always"],
     "no-console": "error",
-    "no-mixed-operators": "error",
     "max-len": ["error", { "code": 300 }],
     "one-var": ["error", "never"],
     "no-unreachable": "error",
@@ -91,7 +89,9 @@
         "namedComponents": "function-declaration",
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "react/display-name": "off",
+    "import/no-anonymous-default-export": "off"
   },
   "overrides": [
     {
