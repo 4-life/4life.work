@@ -5,24 +5,39 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .footer p {
   font-size: 0.8rem;
-  line-height: 42px;
   font-weight: 400;
-  color: #4d4d4d;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
   font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .logo {
-  height: 26px;
-  margin: 0 0.5rem;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.ccLogo {
+  height: 14px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+}
+
+.ccLink {
+  margin-right: 4px;
+}
+
+.license {
+  display: flex;
+  align-items: center;
 }

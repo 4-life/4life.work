@@ -25,11 +25,11 @@ export default (): JSX.Element => {
       <p>
         <span>Full-Stack web developer</span>
         <br />
-        <span className={styles.commonTitle}>Age</span> 33 y.o.
+        <span className={styles.commonTitle}>Age</span> 35 y.o.
         <br />
         <span className={styles.commonTitle}>City</span> Moscow
         <br />
-        <span className={styles.commonTitle}>English</span> Upper Intermediate
+        <span className={styles.commonTitle}>English</span> B+
       </p>
 
       <div className={styles.milestone}>
@@ -129,13 +129,25 @@ export default (): JSX.Element => {
           <p>The old flow:</p>
           <div className={styles.flowImage}>
             <a href={oldFlow.src} target="_blank" rel="noreferrer">
-              <Image src={oldFlow} alt="Old AWS flow" width={750} height={390} />
+              <Image
+                src={oldFlow}
+                alt="Old AWS flow"
+                width={750}
+                height={390}
+                layout="responsive"
+              />
             </a>
           </div>
           <p>Refactored flow:</p>
           <div className={styles.flowImage}>
             <a href={newFlow.src} target="_blank" rel="noreferrer">
-              <Image src={newFlow} alt="New AWS flow" width={475} height={350} />
+              <Image
+                src={newFlow}
+                alt="New AWS flow"
+                width={475}
+                height={350}
+                layout="responsive"
+              />
             </a>
           </div>
           <p>
@@ -191,7 +203,7 @@ export default (): JSX.Element => {
           </p>
           <div className={styles.flowImage}>
             <a href={dmFlow.src} target="_blank" rel="noreferrer">
-              <Image src={dmFlow} alt="dm" width={400} height={370} />
+              <Image src={dmFlow} alt="dm" width={400} height={370} layout="responsive" />
             </a>
           </div>
         </div>
