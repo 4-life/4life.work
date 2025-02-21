@@ -1,8 +1,8 @@
 {
   "name": "4life-work",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "My personal website",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "DATE=$(date +%s) next dev",
     "build": "DATE=$(date +%s) next build",
