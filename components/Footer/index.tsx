@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
@@ -27,10 +28,26 @@ export default (): JSX.Element => {
           className={styles.ccLink}
         >
           License
-          <img className={styles.ccLogo} src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="" />
-          <img className={styles.ccLogo} src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="" />
-          <img className={styles.ccLogo} src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="" />
-          <img className={styles.ccLogo} src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="" />
+          <img
+            className={styles.ccLogo}
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+          />
+          <img
+            className={styles.ccLogo}
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+          />
+          <img
+            className={styles.ccLogo}
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+          />
+          <img
+            className={styles.ccLogo}
+            src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
+            alt=""
+          />
         </a>
         <p>{new Date(Number(process.env.date) * 1000).getFullYear() || ''}</p>
       </div>
