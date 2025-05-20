@@ -28,7 +28,7 @@
 }
 
 .milestone .text {
-  margin: -15px 20px 0 0;
+  margin: -10px 15px 0 0;
 }
 
 .milestone .text a span {
@@ -62,6 +62,16 @@
 
 .month {
   font-size: 10pt;
+}
+
+.to-date {
+  font-size: 80%;
+}
+
+.company-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 @media screen and (max-width: 900px) {

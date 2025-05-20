@@ -8,6 +8,7 @@
     "build": "DATE=$(date +%s) next build",
     "start": "next start",
     "lint": "next lint",
+    "lint-fix": "next lint --fix",
     "export": "next export",
     "type-check": "tsc --noEmit"
   },
