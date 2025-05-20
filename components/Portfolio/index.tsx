@@ -54,6 +54,12 @@ export default (): JSX.Element => {
             &nbsp;(NextJS, React)
           </p>
           <p>
+            <a href="https://github.com/4-life/ad-dashboard" target="_blank" rel="noreferrer">
+              AD Dashboard
+            </a>
+            &nbsp;(Typescript, Vite, React)
+          </p>
+          <p>
             <a href="https://github.com/4-life/nft-marketplace" target="_blank" rel="noreferrer">
               NFT Marketplace
             </a>
@@ -74,25 +80,75 @@ export default (): JSX.Element => {
 
       <div className={styles.milestone}>
         <h2>
-          2022<span className={styles.month}>.07</span> - to date
+          2022<span className={styles.month}>.07</span> -{' '}
+          <span className={styles['to-date']}>to date</span>
         </h2>
         <div className={styles.text}>
           <p>
-            <a href="https://strateos.com/" target="_blank" rel="noreferrer">
-              <span>
-                <Image src="/images/companies/strateos.png" alt="Strata" width={30} height={30} />
-              </span>
-              <span>Strateos</span>
+            <a
+              href="https://kupsilla.com/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles['company-link']}
+            >
+              <Image src="/images/companies/kupsilla.png" alt="Kupsilla" width={20} height={22} />
+              <span>Kupsilla LLC</span>
             </a>
           </p>
           <p>
-            Strateos reimagined the laboratory as a smart data generation center with the industry’s
-            first Cloud Lab Automation-as-a-Service Platform.
+            At Kupsilla, I worked on high-impact client projects including <b>Strateos</b>, a
+            pioneer in lab automation, and a <b>Genetic Science</b> research platform.
           </p>
           <p>
-            I develop user dashboard related to lab automation processes. The actual stack:{' '}
-            <b>Storybook</b>, <b>TypeScript</b>, <b>SCSS</b>.
+            <b>Strateos Project</b> – Contributed to the development of a cutting-edge{' '}
+            <b>Cloud Lab Automation-as-a-Service</b> platform that enables users to remotely run
+            real-world <b>chemical reactions via automated robotics</b>.
           </p>
+          <ul>
+            <li>
+              <p>
+                Designed and developed user dashboards for managing lab automation processes using{' '}
+                <b>React</b>, <b>TypeScript</b>, <b>SCSS</b>, and <b>Storybook</b>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Re-architected the large front-end codebase into <b>microfrontends</b> to improve
+                scalability and maintainability.
+              </p>
+            </li>
+            <li>
+              <p>
+                Created and maintained <b>shared UI libraries</b> distributed via a private NPM
+                registry for consistency across teams and faster development cycles.
+              </p>
+            </li>
+          </ul>
+          <p>
+            <b>Genetic Science Project</b> – Led front-end development for a web application that
+            allows users to <b>search and visualize scientific parameters related to human genes</b>
+            .
+          </p>
+          <ul>
+            <li>
+              <p>
+                Built interactive, high-performance tables, plots, and graphs using{' '}
+                <b>nivo.rocks</b>, optimized for handling large genomic datasets.
+              </p>
+            </li>
+            <li>
+              <p>
+                Chose <b>Server-Side Rendering (SSR)</b> architecture to significantly improve load
+                times, especially for data-heavy pages.
+              </p>
+            </li>
+            <li>
+              <p>
+                Implemented performance tuning strategies to ensure smooth user interactions,
+                including virtualization and efficient state management.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -103,28 +159,39 @@ export default (): JSX.Element => {
         </h2>
         <div className={styles.text}>
           <p>
-            <a href="https://www.strata.co.jp/" target="_blank" rel="noreferrer">
-              <span>
-                <Image src="/images/companies/strata.png" alt="Strata" width={30} height={30} />
-              </span>
+            <a
+              href="https://www.strata.co.jp/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles['company-link']}
+            >
+              <Image src="/images/companies/strata.png" alt="Strata" width={30} height={30} />
               <span>Strata K.K.</span>
             </a>
           </p>
           <p>
-            Strata is a full product life-cycle engineering company with several projects. My
-            project is <i>gmb.io</i> website and Praxis fitness video training platform for North
-            American users.
+            I worked at Strata, a full product life-cycle engineering company, on multiple projects
+            including the <b>gmb.io</b> website and <b>Praxis</b>, a fitness video training platform
+            targeted at North American users.
           </p>
           <p>
-            The actual stack: <b>NextJS (react, redux-saga, styled-components, formik)</b> as a
-            front-end and back-end with <b>NestJS (typescript, postgresSQL, typeorm, auth0)</b>.
-            Video files uploads using AWS microservices (<b>AWS Lambda + AWS Transcribe</b>) with
-            &nbsp;<b>MUX</b> video service. Host on <b>EC2</b> and autodeploy via&nbsp;
-            <b>Github Actions</b>. User authorisation based on <b>Auth0</b>.
+            The technology stack included <b>Next.js</b> (with <b>React</b>, <b>Redux-Saga</b>,{' '}
+            <b>Styled-Components</b>, and <b>Formik</b>) for both the frontend and backend, and{' '}
+            <b>NestJS</b> on the server side, using <b>TypeScript</b>, <b>PostgreSQL</b>, and{' '}
+            <b>TypeORM</b>. User authentication was handled via <b>Auth0</b>. The system supported
+            video uploads through <b>AWS Lambda</b> and <b>AWS Transcribe</b>, integrated with the{' '}
+            <b>MUX</b> video streaming service. Applications were hosted on <b>AWS EC2</b> with
+            automated deployment via <b>GitHub Actions</b>.
           </p>
           <p>
-            I refactored an existing codebase and fixed CI/CD process. For example i simplifyed
-            generating closed captions for videos in AWS:
+            The <b>gmb.io</b> platform hosts a large library of training videos. I improved video
+            delivery by optimizing playback performance, including automatic selection of the best
+            video resolution and codecs based on the user&apos;s device and browser capabilities.
+            This significantly enhanced the streaming experience across a wide range of clients.
+          </p>
+          <p>
+            Additionally, I refactored and stabilized the existing codebase, resolved issues in the
+            CI/CD pipeline, and simplified the generation of closed captions using AWS services.
           </p>
           <p>The old flow:</p>
           <div className={styles.flowImage}>
@@ -163,44 +230,59 @@ export default (): JSX.Element => {
         </h2>
         <div className={styles.text}>
           <p>
-            <a href="https://www.nwave.io/" target="_blank" rel="noreferrer">
-              <span>
-                <Image src="/images/companies/nwave.png" alt="Nwave" width={30} height={30} />
-              </span>
+            <a
+              href="https://www.nwave.io/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles['company-link']}
+            >
+              <Image src="/images/companies/nwave.png" alt="Nwave" width={30} height={30} />
               <span>Nwave Technologies Ltd.</span>
             </a>
           </p>
-          <p>I&apos;ve been working at Nwave as a Full Stack Web Developer.</p>
           <p>
-            Nwave is developing solutions in IoT, and in particular the automation of parking bays
-            with parking sensors, gather the collection of data from sensors in real time. Main
-            customers from England.
+            I worked at Nwave as a Full Stack Web Developer. Nwave develops IoT solutions,
+            specializing in the automation of parking bays using smart parking sensors that collect
+            and transmit data in real time. The company primarily serves clients in the UK.
           </p>
           <p>
-            I developed and supported two PWA mobile applications on <b>Typescript</b> for
-            installing, checking and calibrating parking sensors on a map. PWA applications on&nbsp;
-            <b>Ionic 3</b>, and then they were migrated to <b>Ionic 4/5</b>. The applications had a
-            built-in QR code scanner, communication with a third-party device calibration
-            application, local storage of settings, thinning out a large number of markers on the
-            map, and searching for locations by address using <b>Google Maps Api</b>. Authorisation
-            based on <b>AWS Amplify</b>.
+            At Nwave, I developed and maintained SPlace - progressive web application (<b>PWA</b>)
+            using <b>TypeScript</b> for installing, checking, and calibrating parking sensors on a
+            map. This application were built with <b>Ionic 3</b> and later migrated to{' '}
+            <b>Ionic 4/5</b>. Key features included a built-in <b>QR code scanner</b>, integration
+            with a third-party calibration tool, <b>local storage</b> for configuration, performance
+            optimization for displaying a large number of map markers, and location search using the{' '}
+            <b>Google Maps API</b>. Authentication was implemented using <b>AWS Amplify</b>, and the
+            app was published on{' '}
+            <a
+              href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Play
+            </a>
+            .
           </p>
           <p>
-            Also I&apos;ve been developing and supporting the admin website with dashboard for
-            monitoring statuses of sensors and managing them. The stack: <b>React</b>,&nbsp;
-            <b>Redux-saga</b>, <b>Typescript</b>, <b>Material-UI</b>, <b>Momentjs</b>, <b>Lodash</b>
-            ,&nbsp;<b>AWS Amplify</b>, <b>Google Maps Api</b>. It was a SPA website with unit and
-            e2e tests, <b>Bitbucket CI/CD</b> and <b>Sentry</b> logging. The website is hosted
-            on&nbsp;<b>AWS S3.</b> The backend was also migrated from an old legacy to <b>AWS</b>
-            &nbsp;microservices. My part was to create a RestAPI Device Management microservice
-            on&nbsp;<b>AWS Lambda</b> to manage a list of sensors. <b>Lambda</b> is implemented
-            on&nbsp;<b>NodeJS</b> with <b>Typescript</b>, database - <b>PostgreSQL</b>
-            &nbsp;through the <b>pg-promise</b> library. Interaction with geodata of sensors in the
-            database is implemented using the <b>PostGIS</b> library. RestAPI routes are managed by
-            &nbsp;<b>AWS ApiGateway</b>. User Access Management - <b>AWS Cognito</b>. The deployment
-            was automated by <b>AWS CDK</b>. Implemented unit and e2e tests for API via&nbsp;
-            <b>AWS SDK + mocha + chai</b> with 99% code coverage. Here is scheme of my part:
+            I also developed and supported an admin dashboard web application for monitoring and
+            managing sensor statuses. The tech stack included <b>React</b>, <b>Redux-Saga</b>,{' '}
+            <b>TypeScript</b>, <b>Material-UI</b>, <b>Moment.js</b>, <b>Lodash</b>,{' '}
+            <b>AWS Amplify</b>, and the <b>Google Maps API</b>. It was a single-page application
+            (SPA) with <b>unit</b> and <b>end-to-end tests</b>, integrated with{' '}
+            <b>Bitbucket CI/CD</b> and <b>Sentry</b> for logging. The site was hosted on{' '}
+            <b>AWS S3</b>.
           </p>
+          <p>
+            Additionally, I participated in migrating the backend from a legacy system to AWS
+            microservices. I implemented a <b>REST API</b> microservice for device management using{' '}
+            <b>AWS Lambda</b>, written in <b>Node.js</b> with <b>TypeScript</b>. The database was{' '}
+            <b>PostgreSQL</b> accessed via <b>pg-promise</b>, with geospatial operations handled by{' '}
+            <b>PostGIS</b>. <b>AWS API Gateway</b> managed the REST routes, and <b>AWS Cognito</b>{' '}
+            was used for user authentication. Deployment was automated using the <b>AWS CDK</b>. I
+            also implemented comprehensive <b>unit</b> and <b>e2e tests</b> using <b>Mocha</b>,{' '}
+            <b>Chai</b>, and the <b>AWS SDK</b>, achieving 99% code coverage.
+          </p>
+          <p>Scheme of my work:</p>
           <div className={styles.flowImage}>
             <a href={dmFlow.src} target="_blank" rel="noreferrer">
               <Image src={dmFlow} alt="dm" width={400} height={370} layout="responsive" />
@@ -216,44 +298,52 @@ export default (): JSX.Element => {
         </h2>
         <div className={styles.text}>
           <p>
-            <a href="https://adguard.com/" target="_blank" rel="noreferrer">
-              <span>
-                <Image src="/images/companies/adguard.png" alt="Adguard" width={30} height={30} />
-              </span>
+            <a
+              href="https://adguard.com/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles['company-link']}
+            >
+              <Image src="/images/companies/adguard.png" alt="Adguard" width={30} height={30} />
               <span>AdGuard</span>
             </a>
           </p>
           <p>
-            Adguard is one of the most popular ad blocker. Also Adguard develop another extensions.
-            For example, I written some additional browser extensions using <b>JavaScript (ES6)</b>:
+            I worked at Adguard, one of the most popular ad blockers, where I contributed to both
+            the main product and additional browser extensions. I developed several browser
+            extensions using <b>JavaScript (ES6)</b>, including:
           </p>
           <ul>
             <li>
-              Extension that helps to read a website content when it blocks a view for all who have
-              enabled ad blocker (extension not deployed,&nbsp;
-              <a href="https://github.com/AdguardTeam/Recovery" target="_blank" rel="noreferrer">
-                repository
-              </a>
-              ).
+              <p>
+                An extension that helps users read website content hidden behind ad blocker
+                detection (not deployed, available in a &nbsp;
+                <a href="https://github.com/AdguardTeam/Recovery" target="_blank" rel="noreferrer">
+                  repository
+                </a>
+                ).
+              </p>
             </li>
             <li>
-              Part in developing Adguard Assistant (
-              <a
-                href="https://github.com/AdguardTeam/AdguardAssistant"
-                target="_blank"
-                rel="noreferrer"
-              >
-                repository
-              </a>
-              )
+              <p>
+                Contributions to the development of <b>Adguard Assistant</b> (
+                <a
+                  href="https://github.com/AdguardTeam/AdguardAssistant"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  repository
+                </a>
+                )
+              </p>
             </li>
           </ul>
           <p>
-            Also i developed&nbsp;
+            In addition, I worked on the front-end of the{' '}
             <a href="https://adguard.com" target="_blank" rel="noreferrer">
               Adguard
-            </a>
-            &nbsp;website Front-End on <b>Vue</b>, <b>Vuex</b> and <b>PostCSS</b>.
+            </a>{' '}
+            website using <b>Vue</b>, <b>Vuex</b>, and <b>PostCSS</b>.
           </p>
         </div>
       </div>
@@ -265,11 +355,14 @@ export default (): JSX.Element => {
         </h2>
         <div className={styles.text}>
           <p>
-            I&apos;ve been working in different companies as a Web Developer. I&apos;ve been written
-            websites using <b>PHP</b>, <b>Wordpress</b>, <b>JavaScript</b>, <b>jQuery</b>. I started
-            use frameworks such as <b>Angular 1</b> and developed SPA. I had some projects with
-            websockets and SVG animation. I also automated app deployment and building processes
-            by&nbsp;<b>Grunt</b> and <b>Gulp</b>.
+            I worked as a Web Developer for several companies, where I was responsible for creating
+            and maintaining websites using <b>PHP</b>, <b>WordPress</b>, <b>JavaScript</b>, and{' '}
+            <b>jQuery</b>. During this time, I began working with modern JavaScript frameworks,
+            including <b>AngularJS</b> (Angular 1), and developed single-page applications (SPAs). I
+            also gained experience with real-time features using <b>WebSockets</b> and implemented
+            interactive <b>SVG</b> animations for various projects. Additionally, I automated build
+            and deployment processes using <b>Grunt</b> and <b>Gulp</b>, which improved development
+            efficiency and consistency across environments.
           </p>
         </div>
       </div>
@@ -281,11 +374,35 @@ export default (): JSX.Element => {
         </h2>
         <div className={styles.text}>
           <p>
-            I&apos;ve been studying at Moscow State Mining University at the Faculty of Information
-            Systems. Trained in the direction of the university as a <b>C#</b> <b>WPF</b>
-            &nbsp;programmer. Also developed webistes on <b>PHP</b>. In 2013 graduated in Software
-            Engineer.
+            I studied at Moscow State Mining University – Faculty of Information Systems. Degree:
+            Specialist in Software Engineering.
           </p>
+          <ul>
+            <li>
+              <p>
+                Completed a five-year Specialist program, equivalent to a combined Bachelor&apos;s
+                and Master&apos;s level education.
+              </p>
+            </li>
+            <li>
+              <p>
+                Focused on software development, with specialization in C# and WPF desktop
+                application programming.
+              </p>
+            </li>
+            <li>
+              <p>Developed various web projects using PHP, HTML, CSS, and MySQL.</p>
+            </li>
+            <li>
+              <p>
+                Gained a strong foundation in algorithms, databases, and system architecture through
+                coursework and lab work.
+              </p>
+            </li>
+            <li>
+              <p>Graduated with a Specialist degree in Software Engineering</p>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
