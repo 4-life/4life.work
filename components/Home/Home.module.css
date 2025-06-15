@@ -30,7 +30,7 @@
   text-align: right;
 }
 
-.title_links {
+.titleLinks {
   display: flex;
   align-items: center;
   justify-content: flex-end;

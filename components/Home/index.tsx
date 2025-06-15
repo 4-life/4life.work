@@ -14,7 +14,7 @@ export default (): JSX.Element => {
       <h1 className={styles.title}>
         My name is <i>Pavel</i> <br /> I&apos;m Full-stack web developer from Kazakhstan
         <br />
-        <div className={styles.title_links}>
+        <div className={styles.titleLinks}>
           <a href="mailto:ezmvib4nk@mozmail.com" title="Email me" rel="noreferrer">
             <Image src="/icons/email.svg" alt="Email" width={25} height={25} />
           </a>
