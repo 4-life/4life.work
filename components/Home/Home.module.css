@@ -30,6 +30,12 @@
   text-align: right;
 }
 
+.titleLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .header {
   position: absolute;
   top: 0;

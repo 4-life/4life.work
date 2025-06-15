@@ -14,7 +14,7 @@ export default (): JSX.Element => {
         <span className={styles.homeLink}>
           <Link href="/" passHref>
             <span className={styles.homeIcon}>
-              <Image src="/images/homeIcon.png" alt="Home" width={25} height={25} />
+              <Image src="/icons/home.svg" alt="Home" width={25} height={25} />
             </span>
             Home
           </Link>
@@ -34,46 +34,78 @@ export default (): JSX.Element => {
 
       <div className={styles.milestone}>
         <div className={styles.text}>
-          <p>Code examples of my work:</p>
+          <p>Work examples:</p>
           <p>
-            <a href="https://github.com/4-life/chat-io" target="_blank" rel="noreferrer">
-              Simple chat app
+            <a
+              href="https://github.com/4-life/chat-io"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              Group chat app
             </a>
-            &nbsp;(Typescript, React, Redux-saga, Socket.io, CRA, MUI, tests)
+            &nbsp;(React, Socket.io, CRA, MUI, tests)
           </p>
           <p>
-            <a href="https://github.com/4-life/backend-ts" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/4-life/backend-ts"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Rest-Api service
             </a>
-            &nbsp;(Typescript, Express, PostgreSQL, Sequelize, tests)
-          </p>
-          <p>
-            <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer">
-              My Website
-            </a>
-            &nbsp;(NextJS, React)
-          </p>
-          <p>
-            <a href="https://github.com/4-life/ad-dashboard" target="_blank" rel="noreferrer">
-              AD Dashboard
-            </a>
-            &nbsp;(Typescript, Vite, React)
-          </p>
-          <p>
-            <a href="https://github.com/4-life/nft-marketplace" target="_blank" rel="noreferrer">
-              NFT Marketplace
-            </a>
-            &nbsp;(Typescript, React, Sass)
+            &nbsp;(Express, PostgreSQL, Sequelize, tests)
           </p>
           <p>
             <a
               href="https://github.com/4-life/storybook-boilerplate"
               target="_blank"
               rel="noreferrer"
+              className={styles.iconLink}
             >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Storybook boilerplate
             </a>
-            &nbsp;(Storybook, Typescript, React, Sass)
+            &nbsp;(Storybook, React, Sass)
+          </p>
+          <p>
+            <a
+              href="https://github.com/4-life/nft-marketplace"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              NFT Marketplace
+            </a>
+            &nbsp;(React, Sass)
+          </p>
+          <p>
+            <a
+              href="https://github.com/4-life/ad-dashboard"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              AD Dashboard
+            </a>
+            &nbsp;(Vite, React, Sass)
+          </p>
+          <p>
+            <a
+              href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/play.svg" alt="Github" width={20} height={20} />
+              PWA Mobile app
+            </a>
+            &nbsp;(Ionic, Angular)
           </p>
         </div>
       </div>
@@ -89,7 +121,7 @@ export default (): JSX.Element => {
               href="https://kupsilla.com/"
               target="_blank"
               rel="noreferrer"
-              className={styles['company-link']}
+              className={styles.iconLink}
             >
               <Image src="/images/companies/kupsilla.png" alt="Kupsilla" width={20} height={22} />
               <span>Kupsilla LLC</span>
@@ -163,7 +195,7 @@ export default (): JSX.Element => {
               href="https://www.strata.co.jp/"
               target="_blank"
               rel="noreferrer"
-              className={styles['company-link']}
+              className={styles.iconLink}
             >
               <Image src="/images/companies/strata.png" alt="Strata" width={30} height={30} />
               <span>Strata K.K.</span>
@@ -234,7 +266,7 @@ export default (): JSX.Element => {
               href="https://www.nwave.io/"
               target="_blank"
               rel="noreferrer"
-              className={styles['company-link']}
+              className={styles.iconLink}
             >
               <Image src="/images/companies/nwave.png" alt="Nwave" width={30} height={30} />
               <span>Nwave Technologies Ltd.</span>
@@ -302,7 +334,7 @@ export default (): JSX.Element => {
               href="https://adguard.com/"
               target="_blank"
               rel="noreferrer"
-              className={styles['company-link']}
+              className={styles.iconLink}
             >
               <Image src="/images/companies/adguard.png" alt="Adguard" width={30} height={30} />
               <span>AdGuard</span>

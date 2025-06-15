@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
@@ -7,15 +6,20 @@ export default (): JSX.Element => {
     <footer className={styles.footer}>
       <div>
         <p>
-          Powered by{' '}
-          <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer">
+          Powered by
+          <a
+            href="https://github.com/4-life/4life.work"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.gitLink}
+          >
             <Image
-              src="/images/footer-logo.png"
+              src="/icons/logo.svg"
               alt="4life Logo"
               width={32}
               height={13}
               className={styles.logo}
-            />{' '}
+            />
             {process.env.version || '0.0.0'}
           </a>
         </p>
@@ -28,26 +32,6 @@ export default (): JSX.Element => {
           className={styles.ccLink}
         >
           License
-          <img
-            className={styles.ccLogo}
-            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
-            alt=""
-          />
-          <img
-            className={styles.ccLogo}
-            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
-            alt=""
-          />
-          <img
-            className={styles.ccLogo}
-            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
-            alt=""
-          />
-          <img
-            className={styles.ccLogo}
-            src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
-            alt=""
-          />
         </a>
         <p>{new Date(Number(process.env.date) * 1000).getFullYear() || ''}</p>
       </div>
