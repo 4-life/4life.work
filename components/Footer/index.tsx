@@ -7,7 +7,12 @@ export default (): JSX.Element => {
       <div>
         <p>
           Powered by
-          <a href="https://github.com/4-life/4life.work" target="_blank" rel="noreferrer" className={styles.gitLink}>
+          <a
+            href="https://github.com/4-life/4life.work"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.gitLink}
+          >
             <Image
               src="/icons/logo.svg"
               alt="4life Logo"

@@ -36,14 +36,24 @@ export default (): JSX.Element => {
         <div className={styles.text}>
           <p>Work examples:</p>
           <p>
-            <a href="https://github.com/4-life/chat-io" target="_blank" rel="noreferrer" className={styles.iconLink}>
+            <a
+              href="https://github.com/4-life/chat-io"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Group chat app
             </a>
             &nbsp;(React, Socket.io, CRA, MUI, tests)
           </p>
           <p>
-            <a href="https://github.com/4-life/backend-ts" target="_blank" rel="noreferrer" className={styles.iconLink}>
+            <a
+              href="https://github.com/4-life/backend-ts"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Rest-Api service
             </a>
@@ -62,21 +72,36 @@ export default (): JSX.Element => {
             &nbsp;(Storybook, React, Sass)
           </p>
           <p>
-            <a href="https://github.com/4-life/nft-marketplace" target="_blank" rel="noreferrer" className={styles.iconLink}>
+            <a
+              href="https://github.com/4-life/nft-marketplace"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               NFT Marketplace
             </a>
             &nbsp;(React, Sass)
           </p>
           <p>
-            <a href="https://github.com/4-life/ad-dashboard" target="_blank" rel="noreferrer" className={styles.iconLink}>
+            <a
+              href="https://github.com/4-life/ad-dashboard"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               AD Dashboard
             </a>
             &nbsp;(Vite, React, Sass)
           </p>
           <p>
-            <a href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US" target="_blank" rel="noreferrer" className={styles.iconLink}>
+            <a
+              href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
               <Image src="/icons/play.svg" alt="Github" width={20} height={20} />
               PWA Mobile app
             </a>
