@@ -68,10 +68,9 @@
   font-size: 80%;
 }
 
-.company-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.iconLink img {
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 900px) {

@@ -8,29 +8,10 @@
   flex-direction: column;
 }
 
-.footer p {
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
+.footer p,
 .footer a {
   font-size: 0.8rem;
   font-weight: 400;
-}
-
-.logo {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-.logo img {
-  height: 100%;
-}
-
-.ccLogo {
-  height: 14px;
-  margin-left: 3px;
-  vertical-align: text-bottom;
 }
 
 .ccLink {
@@ -40,4 +21,9 @@
 .license {
   display: flex;
   align-items: center;
+}
+
+.gitLink img {
+  vertical-align: middle;
+  margin: 0 8px;
 }
