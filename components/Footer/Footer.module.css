@@ -8,6 +8,12 @@
   flex-direction: column;
 }
 
+@media print {
+  .footer {
+    display: none;
+  }
+}
+
 .footer p,
 .footer a {
   font-size: 0.8rem;
