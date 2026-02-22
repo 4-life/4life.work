@@ -129,7 +129,6 @@ export default class Viewer {
           delays = [0, 0.1, 0.2, 0.3];
         }
       } else {
-        // eslint-disable-next-line no-lonely-if
         if (skill.corners[0].y < 0) {
           delays = [0.2, 0.3, 0, 0.1];
         } else {

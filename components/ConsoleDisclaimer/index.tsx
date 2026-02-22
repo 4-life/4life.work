@@ -1,5 +1,3 @@
-/* eslint-disable func-names */
-
 'use client';
 
 interface ConsoleI extends Console {

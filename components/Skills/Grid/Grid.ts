@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import model, { SkillModel } from './model';
 import { PATH_IMAGES, SOUNDS } from './utils';
 import DoubleSpring from './DoubleSpring';
