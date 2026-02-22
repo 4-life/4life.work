@@ -107,7 +107,6 @@ export default class Trackpad {
     if (event.preventDefault) {
       event.preventDefault();
     } else {
-      // eslint-disable-next-line no-param-reassign
       event.returnValue = false;
     }
     if (this.locked) return;
