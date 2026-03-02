@@ -1,5 +1,5 @@
 .bg {
-  background: #505050;
+  background: #fff;
 }
 
 .title {
@@ -10,7 +10,7 @@
   height: 100vh;
   font-size: 1.1rem;
   font-weight: 400;
-  color: #f5f5f5;
+  color: #333333;
 }
 
 .footer{
@@ -34,10 +34,4 @@
 }
 .footer .footerSound {
   margin: 5px 12px;
-}
-
-.home a {
-  padding: 10px;
-  margin-right: 10px;
-  color: #fff;
 }

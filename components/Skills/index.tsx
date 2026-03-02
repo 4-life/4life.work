@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef } from 'react';
-import Link from 'next/link';
 import Script from 'next/script';
 import SoundButton from '@/components/SoundButton';
 import Theme from '@/components/SoundButton/types';
@@ -19,15 +18,16 @@ export default ({ version }: Props): JSX.Element => {
   return (
     <>
       <div className={styles.bg} ref={ref}>
-        <div className={styles.title}>My Skills (beta)</div>
+        <div className={styles.title}>Hi, I&apos;m Pavel</div>
 
         <div className={styles.footer}>
           <div className={styles.footerMenu}>
-            <b className={styles.home}>
-              <Link href="/">Home</Link>
-            </b>
-            <span>My Skills (beta)</span>
-            <span>&nbsp;{version}</span>
+            <p>
+              ABOUT ME
+              <br />
+              {new Date(Number(process.env.date) * 1000).getFullYear() || ''}{' '}
+              <span>&nbsp;{version}</span>
+            </p>
           </div>
           <div className={styles.footerSound}>
             <SoundButton theme={Theme.white} label />

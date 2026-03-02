@@ -179,8 +179,8 @@ export default function init(el: HTMLDivElement | null): void {
   canvas.style.top = '0px';
   canvas.style.left = '0px';
   canvas.style.cursor = 'pointer';
+  canvas.style.transition = 'all 1s ease-in-out';
   el.appendChild(canvas);
-  canvas.style.display = 'none';
   fadeIn(canvas);
   canvas.addEventListener('mousedown', onMouseDown);
   canvas.addEventListener('mouseup', onMouseUp);

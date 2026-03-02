@@ -21,30 +21,12 @@ export const SOUNDS = {
 };
 
 export function fadeOut(el: HTMLElement): void {
-  let opacity = 1;
-
-  const timer = setInterval(() => {
-    if (opacity <= 0.1) {
-      clearInterval(timer);
-      el.style.display = 'none';
-    }
-
-    el.style.opacity = `${opacity}`;
-    opacity -= opacity * 0.1;
-  }, 10);
+  setTimeout(() => (el.style.opacity = '0'), 200);
+  setTimeout(() => (el.style.visibility = 'hidden'), 1000);
 }
 
 export function fadeIn(el: HTMLElement): void {
-  let opacity = 0.01;
-
-  el.style.display = 'block';
-
-  const timer = setInterval(() => {
-    if (opacity >= 1) {
-      clearInterval(timer);
-    }
-
-    el.style.opacity = `${opacity}`;
-    opacity += opacity * 0.1;
-  }, 10);
+  el.style.opacity = '0';
+  el.style.visibility = 'visible';
+  setTimeout(() => (el.style.opacity = '1'), 200);
 }

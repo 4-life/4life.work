@@ -25,9 +25,9 @@ export default (): JSX.Element => {
       <p>
         <span>Full-Stack web developer</span>
         <br />
-        <span className={styles.commonTitle}>Age</span> 35 y.o.
+        <span className={styles.commonTitle}>Age</span> 36 y.o.
         <br />
-        <span className={styles.commonTitle}>City</span> Moscow
+        <span className={styles.commonTitle}>City</span> Aktau
         <br />
         <span className={styles.commonTitle}>English</span> B+
       </p>
@@ -35,6 +35,30 @@ export default (): JSX.Element => {
       <div className={styles.milestone}>
         <div className={styles.text}>
           <p>Work examples:</p>
+          <p>
+            <a
+              href="https://github.com/4-life/nft-marketplace"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              NFT Marketplace
+            </a>
+            &nbsp;(React, Sass)
+          </p>
+          <p>
+            <a
+              href="https://github.com/4-life/hello-world"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              GraphQL boilerplate
+            </a>
+            &nbsp;(TypeGraphQL, TypeORM, Apollo, NextJS)
+          </p>
           <p>
             <a
               href="https://github.com/4-life/chat-io"
@@ -45,7 +69,7 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Group chat app
             </a>
-            &nbsp;(React, Socket.io, CRA, MUI, tests)
+            &nbsp;(React, Socket.io, MUI, e2e tests)
           </p>
           <p>
             <a
@@ -57,7 +81,7 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Rest-Api service
             </a>
-            &nbsp;(Express, PostgreSQL, Sequelize, tests)
+            &nbsp;(Express, PostgreSQL, Sequelize, unit tests)
           </p>
           <p>
             <a
@@ -70,18 +94,6 @@ export default (): JSX.Element => {
               Storybook boilerplate
             </a>
             &nbsp;(Storybook, React, Sass)
-          </p>
-          <p>
-            <a
-              href="https://github.com/4-life/nft-marketplace"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.iconLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              NFT Marketplace
-            </a>
-            &nbsp;(React, Sass)
           </p>
           <p>
             <a

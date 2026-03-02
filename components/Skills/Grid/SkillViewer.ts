@@ -15,15 +15,8 @@ export default class SkillViewer {
 
   constructor(el: HTMLDivElement) {
     this.view = document.createElement('div');
-    this.view.style.position = 'absolute';
     this.view.className = this.viewClassname;
     this.div = document.createElement('div');
-    this.div.style.width = '100%';
-    this.div.style.maxWidth = '500px';
-    this.div.style.height = '500px';
-    this.view.style.width = '100%';
-    this.view.style.maxWidth = '500px';
-    this.view.style.height = '500px';
     el.appendChild(this.view);
     this.closeButton = document.createElement('button');
     this.closeButton.className = 'closeButtonSmall';
