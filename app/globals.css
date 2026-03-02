@@ -132,8 +132,12 @@ p {
   padding: 0;
   width: 500px;
   height: 500px;
+  max-width: 100%;;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 3;
 }
 
@@ -169,40 +173,35 @@ p {
 }
 
 .detailHeader {
-  position: absolute;
   cursor: default;
   pointer-events: none;
   user-select: none;
-  top: 30px;
+  margin-top: 30px;
   width: 100%;
   max-width: 500px;
   text-align: center;
   color: #FFFFFF;
   font-size: 50px;
-  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.1em;
   font-family: 'Conv_Curse Casual',Sans-Serif;
 }
 
 .detailDescription {
-  position: absolute;
   pointer-events: none;
   cursor: default;
   user-select: none;
-  top: 90px;
-  left: 0;
   padding: 0 20px;
   text-align: left;
   white-space: break-spaces;
   color: #FFFFFF;
   font-size: 18px;
-  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
+  text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.1em;
   font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
 .detailName{
-  position: absolute;
   cursor: default;
-  top: 455px;
+  margin-bottom: 30px;
   width: 100%;
   text-align: center;
   color: #000000;

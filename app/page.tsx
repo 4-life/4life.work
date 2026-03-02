@@ -1,11 +1,10 @@
-import Footer from '@/components/Footer';
-import Home from '@/components/Home';
+import Skills from '@/components/Skills';
+import { Metadata } from 'next';
 
-export default function Homepage(): JSX.Element {
-  return (
-    <div className="bg">
-      <Home />
-      <Footer />
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: 'Skills',
+};
+
+export default (): JSX.Element => {
+  return <Skills version={process.env.version || 'unknown'} />;
+};
