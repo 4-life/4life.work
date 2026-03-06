@@ -1,3 +1,4 @@
+import { headers } from 'next/headers';
 import { Metadata, Viewport } from 'next';
 import { ReactChildren } from '@/lib/types';
 import ConsoleDisclaimer from '@/components/ConsoleDisclaimer';
@@ -95,9 +96,10 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({ children }: ReactChildren): JSX.Element {
+export default async function RootLayout({ children }: ReactChildren): Promise<JSX.Element> {
+  const nonce = (await headers()).get('x-nonce') ?? undefined;
   return (
-    <html lang="en" className={fonts.rubik.variable}>
+    <html lang="en" className={fonts.rubik.variable} {...(nonce ? { nonce } : {})}>
       <head />
       <body>
         <main className="bg">

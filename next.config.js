@@ -1,34 +1,15 @@
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' blob: data:;
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
-  upgrade-insecure-requests;
-  child-src 'self';
-  connect-src 'self';
-  frame-src 'self';
-  manifest-src 'self';
-  media-src 'self';
-  worker-src 'none';
-`;
-
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
     value: 'on',
   },
   {
-    key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin',
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
   },
   {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+    key: 'Referrer-Policy',
+    value: 'origin-when-cross-origin',
   },
 ];
 
@@ -36,14 +17,12 @@ const securityHeaders = [
 const nextConfig = {
   // eslint-disable-next-line require-await
   async headers() {
-    return process.env.NODE_ENV === 'production'
-      ? [
-          {
-            source: '/(.*)',
-            headers: securityHeaders,
-          },
-        ]
-      : [];
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
   },
   reactStrictMode: true,
   env: {
