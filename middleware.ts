@@ -7,7 +7,7 @@ export function middleware(request: NextRequest): NextResponse {
   const csp = [
     `default-src 'self'`,
     `script-src 'self' 'nonce-${nonce}'`,
-    `style-src 'self' 'nonce-${nonce}' 'unsafe-inline'`,
+    `style-src 'self' 'unsafe-inline'`,
     `img-src 'self' blob: data:`,
     `font-src 'self'`,
     `object-src 'none'`,
