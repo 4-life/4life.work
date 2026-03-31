@@ -35,7 +35,7 @@ export default (): JSX.Element => {
             <Image src="/icons/git.svg" alt="Github" width={25} height={25} />
           </a>
           <a
-            href="http://linkedin.com/in/js4life"
+            href="http://linkedin.com/in/4-life"
             title="My Linkedin Account"
             target="_blank"
             rel="noreferrer"
