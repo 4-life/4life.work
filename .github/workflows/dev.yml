@@ -26,9 +26,8 @@ jobs:
       - name: Build the app
         run: yarn build
 
-      - name: Vercel Action
-        uses: amondnet/vercel-action@v25.1.0
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      - name: Deploy to Vercel
+        run: npx vercel@latest --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
