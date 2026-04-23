@@ -119,6 +119,18 @@ export default (): JSX.Element => {
             </a>
             &nbsp;(Ionic, Angular)
           </p>
+          <p>
+            <a
+              href="https://meshintex.com"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.iconLink}
+            >
+              <Image src="/icons/external-link.svg" alt="Meshintex" width={20} height={20} />
+              Meshintex
+            </a>
+            &nbsp;(Nextjs, React, Tailwind)
+          </p>
         </div>
       </div>
 
