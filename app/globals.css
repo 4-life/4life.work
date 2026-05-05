@@ -3,6 +3,13 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
+  --color-primary: #27ae60;
+  --color-text: #333;
+  --color-text-soft: #555;
+  --color-text-muted: #888;
+  --color-border: #e8e8e8;
+  --color-bg-subtle: #fafafa;
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
