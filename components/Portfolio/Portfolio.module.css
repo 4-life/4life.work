@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  padding: 0 1vw;
+  padding: 0 24px 80px;
   max-width: 900px;
   flex: 1 1;
   display: flex;
@@ -12,47 +12,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 28px 0 20px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 4px;
 }
 
 .h1 {
-  color: #27ae60;
+  color: var(--color-primary);
+  font-size: 28pt;
+  margin: 0;
 }
 
 .homeLink {
   padding: 10px 0;
-}
-
-.milestone {
-  display: flex;
-  margin: 15px 0;
-}
-
-.milestone .text {
-  margin: -10px 15px 0 0;
-}
-
-.milestone .text a span {
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.milestone h2 {
-  white-space: nowrap;
-  line-height: 30pt;
-  margin-right: 20px;
-  width: 220px;
-}
-
-.commonTitle {
-  color: #878787;
-}
-
-.flowImage {
-  background: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  border: 1px solid #ccc;
 }
 
 .homeIcon {
@@ -60,22 +32,206 @@
   margin-right: 5px;
 }
 
+/* Profile */
+.profile {
+  padding: 28px 0 16px;
+}
+
+.subtitle {
+  font-size: 15pt;
+  color: var(--color-text-soft);
+  margin: 4px 0 16px;
+  font-weight: 400;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.commonTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-text-muted);
+}
+
+.metaValue {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.contactLink:hover {
+  opacity: 1;
+}
+
+/* Projects section */
+.section {
+  margin: 8px 0 32px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin: 0 0 12px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-subtle);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.projectCard:hover {
+  border-color: var(--color-primary);
+  background: #f0faf4;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.projectStack {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  padding-left: 28px;
+  font-weight: 400;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--color-border);
+  margin-top: 8px;
+}
+
+.milestone {
+  display: flex;
+  margin: 0 0 44px;
+  position: relative;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 3px var(--color-primary);
+}
+
+.milestoneLeft {
+  width: 200px;
+  min-width: 200px;
+  padding-right: 20px;
+  padding-top: 4px;
+}
+
+.text {
+  flex: 1;
+  margin-top: -4px;
+}
+
+.text a span {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 .month {
   font-size: 10pt;
+  opacity: 0.6;
 }
 
 .to-date {
   font-size: 80%;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.flowLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-text-muted);
+  margin: 16px 0 8px;
+}
+
+.flowImage {
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .iconLink img {
   vertical-align: middle;
-  margin-right: 8px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .milestone {
     flex-direction: column;
+  }
+
+  .milestoneLeft {
+    width: auto;
+    min-width: auto;
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .milestone::before {
+    left: -22px;
   }
 }
 
@@ -85,6 +241,15 @@
   }
 
   .header {
+    display: none;
+  }
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .milestone::before {
     display: none;
   }
 }
