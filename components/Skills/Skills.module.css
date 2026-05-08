@@ -2,6 +2,14 @@
   background: #fff;
 }
 
+:global(.gridCanvas) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: grab;
+  transition: all 1s ease-in-out;
+}
+
 .title {
   display: flex;
   align-content: center;

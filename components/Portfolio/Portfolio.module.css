@@ -252,4 +252,10 @@
   .milestone::before {
     display: none;
   }
+  .milestoneLeft {
+    width: auto;
+    min-width: auto;
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
 }
