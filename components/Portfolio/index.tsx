@@ -35,7 +35,7 @@ export default (): JSX.Element => {
           </span>
           <span className={styles.metaItem}>
             <span className={styles.commonTitle}>English</span>
-            <span className={styles.metaValue}>B+</span>
+            <span className={styles.metaValue}>B2</span>
           </span>
           <span className={styles.metaItem}>
             <a href="mailto:ezmvib4nk@mozmail.com" className={styles.contactLink} title="Email">
@@ -190,6 +190,11 @@ export default (): JSX.Element => {
               pioneer in lab automation, and a <b>Genetic Science</b> research platform.
             </p>
             <p>
+              Conducted <b>technical interviews</b> for junior and middle-level candidates,
+              performed <b>code reviews</b>, and <b>mentored</b> developers to maintain code quality
+              and support team growth.
+            </p>
+            <p>
               <b>Strateos Project</b> – Contributed to the development of a cutting-edge{' '}
               <b>Cloud Lab Automation-as-a-Service</b> platform that enables users to remotely run
               real-world <b>chemical reactions via automated robotics</b>.
@@ -236,6 +241,18 @@ export default (): JSX.Element => {
                 <p>
                   Implemented performance tuning strategies to ensure smooth user interactions,
                   including virtualization and efficient state management.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Decided to deploy the application on <b>AWS Amplify</b>, integrating{' '}
+                  <b>Amazon Cognito</b> with a <b>Google OAuth</b> provider for authentication.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Set up <b>CI/CD pipelines</b> and established a <b>branching policy</b> to
+                  streamline team collaboration and release management.
                 </p>
               </li>
             </ul>

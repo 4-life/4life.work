@@ -175,11 +175,7 @@ export default function init(el: HTMLDivElement | null): void {
   canvas.width = windowWidth;
   canvas.height = windowHeight;
   context = canvas.getContext('2d') as CanvasRenderingContext2D;
-  canvas.style.position = 'absolute';
-  canvas.style.top = '0px';
-  canvas.style.left = '0px';
-  canvas.style.cursor = 'pointer';
-  canvas.style.transition = 'all 1s ease-in-out';
+  canvas.className = 'gridCanvas';
   el.appendChild(canvas);
   fadeIn(canvas);
   canvas.addEventListener('mousedown', onMouseDown);
