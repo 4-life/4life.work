@@ -63,6 +63,30 @@ export default (): JSX.Element => {
         </div>
       </div>
 
+      <div className={styles.intro}>
+        <p>
+          Full-stack web developer with 10+ years of experience building web and mobile
+          applications. Comfortable across the entire stack — from database design and backend APIs
+          to frontend UIs.
+        </p>
+        <ul>
+          <li>Strong React experience, having built web apps that real users depend on.</li>
+          <li>
+            Deep TypeScript/Node.js skills, comfortable designing APIs, data models, and system
+            architecture.
+          </li>
+          <li>Experience mentoring and leading other engineers, formally and informally.</li>
+          <li>Solid experience with CI/CD pipelines and automated testing.</li>
+          <li>
+            Comfortable with AWS (S3, EC2, Lambda, Amplify, Cognito) and cloud-based deployments.
+          </li>
+          <li>
+            Fluency with AI-assisted development tools and a clear point of view on how to use them
+            to ship faster without compromising quality.
+          </li>
+        </ul>
+      </div>
+
       <div className={styles.section}>
         <p className={styles.sectionLabel}>Projects</p>
         <div className={styles.projectGrid}>
@@ -100,19 +124,7 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Group chat app
             </a>
-            <span className={styles.projectStack}>React, Socket.io, MUI, e2e tests</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://github.com/4-life/backend-ts"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              Rest-Api service
-            </a>
-            <span className={styles.projectStack}>Express, PostgreSQL, Sequelize, unit tests</span>
+            <span className={styles.projectStack}>React, Socket.io, MUI, GCP, e2e tests</span>
           </div>
           <div className={styles.projectCard}>
             <a
@@ -124,7 +136,7 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               Storybook boilerplate
             </a>
-            <span className={styles.projectStack}>Storybook, React, Sass</span>
+            <span className={styles.projectStack}>Storybook, NPM, React, Sass</span>
           </div>
           <div className={styles.projectCard}>
             <a
@@ -148,7 +160,7 @@ export default (): JSX.Element => {
               <Image src="/icons/play.svg" alt="Google Play" width={20} height={20} />
               PWA Mobile app
             </a>
-            <span className={styles.projectStack}>Ionic, Angular</span>
+            <span className={styles.projectStack}>Ionic, Angular, Google Maps API</span>
           </div>
           <div className={styles.projectCard}>
             <a
@@ -160,7 +172,7 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               NFT Marketplace
             </a>
-            <span className={styles.projectStack}>React, Sass</span>
+            <span className={styles.projectStack}>React, GraphQL, Sass</span>
           </div>
         </div>
       </div>
