@@ -59,32 +59,18 @@ export default (): JSX.Element => {
             >
               <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
             </a>
+
+            <a
+              href="https://github.com/4-life/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.contactLink}
+              title="Github"
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+            </a>
           </span>
         </div>
-      </div>
-
-      <div className={styles.intro}>
-        <p>
-          Full-stack web developer with 10+ years of experience building web and mobile
-          applications. Comfortable across the entire stack — from database design and backend APIs
-          to frontend UIs.
-        </p>
-        <ul>
-          <li>Strong React experience, having built web apps that real users depend on.</li>
-          <li>
-            Deep TypeScript/Node.js skills, comfortable designing APIs, data models, and system
-            architecture.
-          </li>
-          <li>Experience mentoring and leading other engineers, formally and informally.</li>
-          <li>Solid experience with CI/CD pipelines and automated testing.</li>
-          <li>
-            Comfortable with AWS (S3, EC2, Lambda, Amplify, Cognito) and cloud-based deployments.
-          </li>
-          <li>
-            Fluency with AI-assisted development tools and a clear point of view on how to use them
-            to ship faster without compromising quality.
-          </li>
-        </ul>
       </div>
 
       <div className={styles.section}>
@@ -175,6 +161,60 @@ export default (): JSX.Element => {
             <span className={styles.projectStack}>React, GraphQL, Sass</span>
           </div>
         </div>
+      </div>
+
+      <div className={styles.intro}>
+        <p>
+          Full-stack web developer with 10+ years of experience building web and mobile
+          applications. Comfortable across the entire stack - from database design and backend APIs
+          to frontend UIs.
+        </p>
+        <p>
+          I have a deep expertise in <b>React</b> (hooks, RSC) with <b>Next.js</b> for full-stack
+          and SSR/SSG/ISR workflows. <b>Vue</b> experience including <b>Nuxt</b>. Production{' '}
+          <b>Angular</b> apps with <b>RxJS</b>, reactive forms. Solid state management across
+          ecosystems (<b>Redux Toolkit</b>, <b>Zustand</b>) on the React side; <b>Vuex</b> for Vue;{' '}
+          <b>NgRx</b> for Angular. Graphics work using <b>SVG</b> (animations, data viz, custom UI)
+          and <b>Canvas</b> (real-time rendering, image manipulation). Real-time UX via sockets and
+          SSE. Styling & UI: CSS-in-JS, <b>Tailwind</b>, SCSS/CSS Modules, fluid typography, custom
+          animation with <b>Framer Motion</b> and CSS transitions. Built component libraries using
+          <b>Storybook</b>. Use <b>Vite</b>, <b>Webpack</b>. Experienced optimizing bundle size by
+          code splitting, tree-shaking, lazy loading, and analyzing bundle output. Testing: Unit and
+          integration tests with <b>Mocha</b>, <b>Jest</b>/<b>Vitest</b>. E2E with <b>Cypress</b>{' '}
+          and <b>Puppeteer</b>. Visual regression testing.
+        </p>
+        <p>
+          Develop APIs, data models, and system architecture. Production experience with high-load
+          systems built on microservices - including an SNS/SQS + Lambda pipeline processing 30k
+          health-check requests per minute. <b>PostgreSQL</b> as the primary relational database —
+          schema design, query optimization, indexing strategies, migrations. ORM experience with{' '}
+          <b>TypeORM</b> and <b>Sequelize</b> across multiple production codebases. <b>DynamoDB</b>{' '}
+          for high-perfomance, low-latency workloads. Builds APIs in REST (with <b>OpenAPI</b>/
+          <b>Swagger</b> schemas as the contract) and <b>GraphQL</b> (schema design, resolvers,
+          subscriptions). Production experience with multiple auth approaches: <b>OpenID</b>,{' '}
+          <b>Auth0</b>, <b>AWS Amplify</b> (Cognito-based auth), and <b>next-auth</b> with different
+          providers.
+        </p>
+        <p>
+          <b>AWS</b> (S3, EC2, Lambda, Cognito, SNS, RDS, CloudFront) and <b>Google Cloud</b>. CI/CD
+          pipelines, automated testing, infrastructure-as-code. Experienced deploying and scaling
+          services in cloud-native environments.
+        </p>
+        <p>
+          Shipped production mobile apps using <b>React Native</b>, <b>Flutter</b>, and <b>Ionic</b>{' '}
+          — native-quality experiences from a shared codebase.
+        </p>
+        <p>
+          Maps and geospatial integrations (<b>Google Maps</b>, <b>Mapbox</b>, <b>Leaflet</b>) in
+          production.
+        </p>
+        <p>
+          Mentors and leads developers formally and informally. Fluent with AI-assisted development
+          tools with a clear methodology for using them to ship faster without lost in quality or
+          security. Reviews teammates code to catch bugs and keep quality high. Writes clear docs,
+          branching policies or linting rules. Good at detecting issues early by terminal, curl,
+          logs, native db querries, etc.
+        </p>
       </div>
 
       <div className={styles.timeline}>
