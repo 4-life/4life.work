@@ -150,7 +150,7 @@ export default (): JSX.Element => {
           </div>
           <div className={styles.projectCard}>
             <a
-              href="https://github.com/4-life/nft-marketplace"
+              href="https://github.com/4-life/lambda-digital-client"
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}
