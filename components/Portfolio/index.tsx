@@ -79,7 +79,7 @@ export default (): JSX.Element => {
             </a>
           </span>
           <span className={styles.metaItem}>
-            <a href="/cv.pdf" download className={styles.downloadBtn}>
+            <a href="/Pavel Ovchinnikov cv.pdf" download className={styles.downloadBtn}>
               ↓ Download CV
             </a>
           </span>
