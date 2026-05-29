@@ -50,7 +50,7 @@ export default class SkillViewer {
     this.detailContainer.innerHTML = skill.copy;
     this.view.classList.add(skill.theme || themeDefault);
     this.detailDescriptionContainer.innerHTML = skill.story;
-    this.detailNameContainer.innerHTML = `<b><a href="http://${skill.url}" target="_blank">${skill.url}</a></b>`;
+    this.detailNameContainer.innerHTML = `<b><a href="${skill.url}" ${!skill.isInternal ? 'target="_blank"' : ''}>${skill.url}</a></b>`;
     this.detailContainer.style.color = skill.textColor || '#FFFFFF';
     this.detailDescriptionContainer.style.color = skill.textColor || '#FFFFFF';
     this.detailNameContainer.style.color = skill.textColor || '#FFFFFF';
