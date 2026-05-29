@@ -17,6 +17,7 @@ export type SkillModel = {
   positionX?: number;
   positionY?: number;
   image?: HTMLImageElement;
+  isInternal?: boolean;
 };
 
 const model: { content: SkillModel[]; layout: number[] } = {
@@ -30,7 +31,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#f1ee00',
       textColor: '#000000',
       scale: 0.7,
-      url: 'tc39.es/',
+      url: 'http://tc39.es/',
       theme: 'white',
     },
     {
@@ -42,7 +43,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#b8d3ff',
       textColor: '#4e8ef7',
       scale: 0.7,
-      url: 'ionicframework.com/',
+      url: 'http://ionicframework.com/',
       theme: 'white',
     },
     {
@@ -54,8 +55,9 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#fff',
       textColor: '#000000',
       scale: 1,
-      url: '4life.work/portfolio',
+      url: '/portfolio',
       theme: 'white',
+      isInternal: true,
     },
     {
       id: 'postgres',
@@ -77,7 +79,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#b4b4b4',
       textColor: '#c4473a',
       scale: 0.7,
-      url: 'angularjs.org/',
+      url: 'http://angularjs.org/',
     },
     {
       id: 'nodejs',
@@ -88,7 +90,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#303030',
       textColor: '#ffffff',
       scale: 0.7,
-      url: 'nodejs.org/',
+      url: 'http://nodejs.org/',
     },
     {
       id: 'github',
@@ -99,7 +101,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#002f67',
       textColor: '#ffffff',
       scale: 0.7,
-      url: 'github.com/',
+      url: 'http://github.com/',
     },
     {
       id: 'react',
@@ -121,7 +123,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#adadadff',
       textColor: '#333',
       scale: 0.7,
-      url: 'nextjs.org/',
+      url: 'http://nextjs.org/',
       theme: 'white',
     },
     {
@@ -145,7 +147,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#493449ff',
       textColor: '#ffffff',
       scale: 0.7,
-      url: 'mochajs.org/',
+      url: 'http://mochajs.org/',
       theme: 'default',
     },
     {
@@ -156,7 +158,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       color: '#007acc',
       textColor: '#ffffff',
       scale: 0.7,
-      url: 'typescriptlang.org/',
+      url: 'http://typescriptlang.org/',
     },
     {
       id: 'vue',

@@ -38,7 +38,7 @@ export default (): JSX.Element => {
             <span className={styles.metaValue}>B2</span>
           </span>
           <span className={styles.metaItem}>
-            <a href="mailto:ezmvib4nk@mozmail.com" className={styles.contactLink} title="Email">
+            <a href="mailto:hello@4life.work" className={styles.contactLink} title="Email">
               <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
             </a>
             <a
@@ -59,7 +59,6 @@ export default (): JSX.Element => {
             >
               <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
             </a>
-
             <a
               href="https://github.com/4-life/"
               target="_blank"
@@ -69,12 +68,26 @@ export default (): JSX.Element => {
             >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
             </a>
+            <a
+              href="https://www.upwork.com/freelancers/~01b24927bb7b3ea4a1"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.contactLink}
+              title="Upwork"
+            >
+              <Image src="/icons/upwork.svg" alt="Upwork" width={20} height={20} />
+            </a>
+          </span>
+          <span className={styles.metaItem}>
+            <a href="/cv.pdf" download className={styles.downloadBtn}>
+              ↓ Download CV
+            </a>
           </span>
         </div>
       </div>
 
       <div className={styles.section}>
-        <p className={styles.sectionLabel}>Projects</p>
+        <p className={styles.sectionLabel}>My examples</p>
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
             <a
@@ -166,7 +179,7 @@ export default (): JSX.Element => {
       <div className={styles.intro}>
         <p>
           Full-stack web developer with 10+ years of experience building web and mobile
-          applications. Comfortable across the entire stack - from database design and backend APIs
+          applications. Comfortable across the entire stack — from database design and backend APIs
           to frontend UIs.
         </p>
         <p>
@@ -177,7 +190,7 @@ export default (): JSX.Element => {
           <b>NgRx</b> for Angular. Graphics work using <b>SVG</b> (animations, data viz, custom UI)
           and <b>Canvas</b> (real-time rendering, image manipulation). Real-time UX via sockets and
           SSE. Styling & UI: CSS-in-JS, <b>Tailwind</b>, SCSS/CSS Modules, fluid typography, custom
-          animation with <b>Framer Motion</b> and CSS transitions. Built component libraries using
+          animation with <b>Framer Motion</b> and CSS transitions. Built component libraries using{' '}
           <b>Storybook</b>. Use <b>Vite</b>, <b>Webpack</b>. Experienced optimizing bundle size by
           code splitting, tree-shaking, lazy loading, and analyzing bundle output. Testing: Unit and
           integration tests with <b>Mocha</b>, <b>Jest</b>/<b>Vitest</b>. E2E with <b>Cypress</b>{' '}
@@ -185,11 +198,11 @@ export default (): JSX.Element => {
         </p>
         <p>
           Develop APIs, data models, and system architecture. Production experience with high-load
-          systems built on microservices - including an SNS/SQS + Lambda pipeline processing 30k
+          systems built on microservices — including an SNS/SQS + Lambda pipeline processing 30k
           health-check requests per minute. <b>PostgreSQL</b> as the primary relational database —
           schema design, query optimization, indexing strategies, migrations. ORM experience with{' '}
           <b>TypeORM</b> and <b>Sequelize</b> across multiple production codebases. <b>DynamoDB</b>{' '}
-          for high-perfomance, low-latency workloads. Builds APIs in REST (with <b>OpenAPI</b>/
+          for high-performance, low-latency workloads. Builds APIs in REST (with <b>OpenAPI</b>/
           <b>Swagger</b> schemas as the contract) and <b>GraphQL</b> (schema design, resolvers,
           subscriptions). Production experience with multiple auth approaches: <b>OpenID</b>,{' '}
           <b>Auth0</b>, <b>AWS Amplify</b> (Cognito-based auth), and <b>next-auth</b> with different
@@ -210,10 +223,10 @@ export default (): JSX.Element => {
         </p>
         <p>
           Mentors and leads developers formally and informally. Fluent with AI-assisted development
-          tools with a clear methodology for using them to ship faster without lost in quality or
-          security. Reviews teammates code to catch bugs and keep quality high. Writes clear docs,
-          branching policies or linting rules. Good at detecting issues early by terminal, curl,
-          logs, native db querries, etc.
+          tools with a clear methodology for using them to ship faster without losing quality or
+          security. Reviews teammates&apos; code to catch bugs and keep quality high. Writes clear
+          docs, branching policies, and linting rules. Good at detecting issues early using the
+          terminal, curl, logs, and native database queries.
         </p>
       </div>
 
@@ -238,73 +251,76 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              At Kupsilla, I worked on high-impact client projects including <b>Strateos</b>, a
-              pioneer in lab automation, and a <b>Genetic Science</b> research platform.
+              At Kupsilla I worked on two client projects: <b>Strateos</b>, a cloud lab automation
+              platform, and a <b>Genetic Science</b> research application.
             </p>
             <p>
-              Conducted <b>technical interviews</b> for junior and middle-level candidates,
-              performed <b>code reviews</b>, and <b>mentored</b> developers to maintain code quality
-              and support team growth.
+              Conducted <b>technical interviews</b> for junior and mid-level candidates, performed{' '}
+              <b>code reviews</b>, and <b>mentored</b> developers to keep code quality high and
+              support team growth.
             </p>
             <p>
-              <b>Strateos Project</b> – Contributed to the development of a cutting-edge{' '}
-              <b>Cloud Lab Automation-as-a-Service</b> platform that enables users to remotely run
-              real-world <b>chemical reactions via automated robotics</b>.
+              <b>Strateos</b> – A <b>Cloud Lab Automation-as-a-Service</b> platform where users
+              remotely run real <b>chemical reactions via robotic systems</b>.
             </p>
             <ul>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Designed and developed user dashboards for managing lab automation processes using{' '}
-                  <b>React</b>, <b>TypeScript</b>, <b>SCSS</b>, and <b>Storybook</b>.
+                  Improved scalability and independent deployability of a large React codebase,
+                  measured by separate release cycles per team, by re-architecting the frontend into{' '}
+                  <b>microfrontends</b> using <b>React</b>, <b>TypeScript</b>, <b>SCSS</b>, and{' '}
+                  <b>Storybook</b>.<span className={styles.impactLabel}>↑ Scalability</span>
                 </p>
               </li>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Re-architected the large front-end codebase into <b>microfrontends</b> to improve
-                  scalability and maintainability.
+                  Increased development speed across teams, measured by reduced duplication of UI
+                  work, by building shared UI libraries and publishing them to a private{' '}
+                  <b>NPM registry</b> used by all microfrontend modules.
+                  <span className={styles.impactLabel}>↑ Dev Speed</span>
                 </p>
               </li>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Created and maintained <b>shared UI libraries</b> distributed via a private NPM
-                  registry for consistency across teams and faster development cycles.
+                  Built a complex chemical reaction constructor — a heavy custom UI component that
+                  lets users visually design lab reactions — and packaged it as a standalone NPM
+                  module to keep the main app lightweight and maintainable.
+                  <span className={styles.impactLabel}>↑ Maintainability</span>
                 </p>
               </li>
             </ul>
             <p>
-              <b>Genetic Science Project</b> – Led front-end development for a web application that
-              allows users to{' '}
-              <b>search and visualize scientific parameters related to human genes</b>.
+              <b>Genetic Science</b> – A web application for searching and visualizing scientific
+              parameters related to <b>human genes</b>.
             </p>
             <ul>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Built interactive, high-performance tables, plots, and graphs using{' '}
-                  <b>nivo.rocks</b>, optimized for handling large genomic datasets.
+                  Reduced initial page load time for data-heavy genomic pages by implementing{' '}
+                  <b>SSR</b> and enabling <b>gzip compression</b> on API responses.{' '}
+                  <span className={styles.impactLabel}>↑ Performance</span>
                 </p>
               </li>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Chose <b>Server-Side Rendering (SSR)</b> architecture to significantly improve
-                  load times, especially for data-heavy pages.
+                  Kept AWS infrastructure costs within the free tier, measured by zero hosting
+                  spend, by deploying on <b>AWS Amplify</b> and managing build-minute usage within
+                  free quota limits. <span className={styles.impactLabel}>↓ Cost</span>
                 </p>
               </li>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Implemented performance tuning strategies to ensure smooth user interactions,
-                  including virtualization and efficient state management.
+                  Built a complex interactive view combining a data plot and a collapsible rows
+                  table in one synchronized layout using <b>nivo.rocks</b>, improving data
+                  exploration for researchers. <span className={styles.impactLabel}>↑ UX</span>
                 </p>
               </li>
-              <li>
+              <li className={styles.improvementItem}>
                 <p>
-                  Decided to deploy the application on <b>AWS Amplify</b>, integrating{' '}
-                  <b>Amazon Cognito</b> with a <b>Google OAuth</b> provider for authentication.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Set up <b>CI/CD pipelines</b> and established a <b>branching policy</b> to
-                  streamline team collaboration and release management.
+                  Enabled smooth collaboration across the team, measured by a consistent CI/CD flow
+                  for all developers, by setting up <b>AWS Amplify</b> with <b>Amazon Cognito</b>{' '}
+                  (Google OAuth), linting, testing, and a <b>GitHub branching policy</b> from
+                  scratch. <span className={styles.impactLabel}>↑ Team Flow</span>
                 </p>
               </li>
             </ul>
@@ -331,30 +347,28 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              I worked at Strata, a full product life-cycle engineering company, on multiple
-              projects including the <b>gmb.io</b> website and <b>Praxis</b>, a fitness video
-              training platform targeted at North American users.
+              At Strata I worked on <b>gmb.io</b> and <b>Praxis</b> — a fitness video training
+              platform for North American users. Stack: <b>Next.js</b>, <b>NestJS</b>,{' '}
+              <b>PostgreSQL</b>, <b>TypeORM</b>, <b>Auth0</b>, <b>AWS Lambda</b>, <b>MUX</b>.
             </p>
-            <p>
-              The technology stack included <b>Next.js</b> (with <b>React</b>, <b>Redux-Saga</b>,{' '}
-              <b>Styled-Components</b>, and <b>Formik</b>) for both the frontend and backend, and{' '}
-              <b>NestJS</b> on the server side, using <b>TypeScript</b>, <b>PostgreSQL</b>, and{' '}
-              <b>TypeORM</b>. User authentication was handled via <b>Auth0</b>. The system supported
-              video uploads through <b>AWS Lambda</b> and <b>AWS Transcribe</b>, integrated with the{' '}
-              <b>MUX</b> video streaming service. Applications were hosted on <b>AWS EC2</b> with
-              automated deployment via <b>GitHub Actions</b>.
-            </p>
-            <p>
-              The <b>gmb.io</b> platform hosts a large library of training videos. I improved video
-              delivery by optimizing playback performance, including automatic selection of the best
-              video resolution and codecs based on the user&apos;s device and browser capabilities.
-              This significantly enhanced the streaming experience across a wide range of clients.
-            </p>
-            <p>
-              Additionally, I refactored and stabilized the existing codebase, resolved issues in
-              the CI/CD pipeline, and simplified the generation of closed captions using AWS
-              services.
-            </p>
+            <ul>
+              <li className={styles.improvementItem}>
+                <p>
+                  Improved video streaming quality across a wide range of devices, measured by
+                  reduced buffering and format errors, by implementing automatic platform detection
+                  that selects the optimal video codec and resolution for each client.{' '}
+                  <span className={styles.impactLabel}>↑ Video Quality</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Reduced the maintenance cost of the video upload pipeline, measured by the number
+                  of AWS services needed to operate it, by simplifying the microservice architecture
+                  and removing redundant steps.{' '}
+                  <span className={styles.impactLabel}>↓ Ops Cost</span>
+                </p>
+              </li>
+            </ul>
             <p className={styles.flowLabel}>Previous flow</p>
             <div className={styles.flowImage}>
               <a href={oldFlow.src} target="_blank" rel="noreferrer">
@@ -380,7 +394,7 @@ export default (): JSX.Element => {
               </a>
             </div>
             <p>
-              Also i maintain admin panel on <b>react-admin</b>.
+              Also maintained an admin panel built with <b>react-admin</b>.
             </p>
           </div>
         </div>
@@ -405,48 +419,44 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              I worked at Nwave as a Full Stack Web Developer. Nwave develops IoT solutions,
-              specializing in the automation of parking bays using smart parking sensors that
-              collect and transmit data in real time. The company primarily serves clients in the
-              UK.
+              At Nwave, an IoT company building smart parking sensors for UK clients, I worked as a
+              Full Stack Web Developer on both frontend and backend systems managing{' '}
+              <b>20,000 IoT devices</b>.
             </p>
+            <ul>
+              <li className={styles.improvementItem}>
+                <p>
+                  Built a <b>REST API</b> service handling full CRUD operations for 20,000 devices,
+                  achieving <b>99% test coverage</b>, by implementing it with <b>AWS Lambda</b>,{' '}
+                  <b>Node.js/TypeScript</b>, <b>PostgreSQL</b> (<b>PostGIS</b>),{' '}
+                  <b>AWS API Gateway</b>, and <b>AWS Cognito</b>, tested with <b>Mocha</b>,{' '}
+                  <b>Chai</b>, and the <b>AWS SDK</b>.{' '}
+                  <span className={styles.impactLabel}>↑ Reliability</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Improved infrastructure stability and enabled repeatable environment deployments,
+                  measured by one-command infrastructure setup, by adopting <b>AWS CDK</b> as
+                  infrastructure-as-code — replacing manual cloud configuration with
+                  version-controlled, reproducible stacks.{' '}
+                  <span className={styles.impactLabel}>↑ DevOps</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Improved rendering performance of 20,000 map markers in the <b>SPlace PWA</b>{' '}
+                  mobile app, eliminating lag on low-end devices, by implementing marker clustering,
+                  removing unnecessary recalculations, and optimizing the <b>Ionic/Angular</b>{' '}
+                  rendering pipeline. <span className={styles.impactLabel}>↑ Performance</span>
+                </p>
+              </li>
+            </ul>
             <p>
-              At Nwave, I developed and maintained SPlace - progressive web application (<b>PWA</b>)
-              using <b>TypeScript</b> for installing, checking, and calibrating parking sensors on a
-              map. This application were built with <b>Ionic 3</b> and later migrated to{' '}
-              <b>Ionic 4/5</b>. Key features included a built-in <b>QR code scanner</b>, integration
-              with a third-party calibration tool, <b>local storage</b> for configuration,
-              performance optimization for displaying a large number of map markers, and location
-              search using the <b>Google Maps API</b>. Authentication was implemented using{' '}
-              <b>AWS Amplify</b>, and the app was published on{' '}
-              <a
-                href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Play
-              </a>
-              .
-            </p>
-            <p>
-              I also developed and supported an admin dashboard web application for monitoring and
-              managing sensor statuses. The tech stack included <b>React</b>, <b>Redux-Saga</b>,{' '}
-              <b>TypeScript</b>, <b>Material-UI</b>, <b>Moment.js</b>, <b>Lodash</b>,{' '}
-              <b>AWS Amplify</b>, and the <b>Google Maps API</b>. It was a single-page application
-              (SPA) with <b>unit</b> and <b>end-to-end tests</b>, integrated with{' '}
-              <b>Bitbucket CI/CD</b> and <b>Sentry</b> for logging. The site was hosted on{' '}
-              <b>AWS S3</b>.
-            </p>
-            <p>
-              Additionally, I participated in migrating the backend from a legacy system to AWS
-              microservices. I implemented a <b>REST API</b> microservice for device management
-              using <b>AWS Lambda</b>, written in <b>Node.js</b> with <b>TypeScript</b>. The
-              database was <b>PostgreSQL</b> accessed via <b>pg-promise</b>, with geospatial
-              operations handled by <b>PostGIS</b>. <b>AWS API Gateway</b> managed the REST routes,
-              and <b>AWS Cognito</b> was used for user authentication. Deployment was automated
-              using the <b>AWS CDK</b>. I also implemented comprehensive <b>unit</b> and{' '}
-              <b>e2e tests</b> using <b>Mocha</b>, <b>Chai</b>, and the <b>AWS SDK</b>, achieving
-              99% code coverage.
+              Also developed and maintained an admin dashboard for monitoring sensor statuses, built
+              with <b>React</b>, <b>Redux-Saga</b>, <b>TypeScript</b>, <b>Material-UI</b>,{' '}
+              <b>AWS Amplify</b>, and the <b>Google Maps API</b>. The app had full unit and
+              end-to-end test coverage, integrated with <b>Bitbucket CI/CD</b> and <b>Sentry</b>.
             </p>
             <p className={styles.flowLabel}>Architecture diagram</p>
             <div className={styles.flowImage}>
@@ -477,15 +487,14 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              I worked at Adguard, one of the most popular ad blockers, where I contributed to both
-              the main product and additional browser extensions. I developed several browser
-              extensions using <b>JavaScript (ES6)</b>, including:
+              At AdGuard, one of the most popular ad blockers, I contributed to both the main
+              product and additional browser extensions, written in <b>JavaScript (ES6)</b>:
             </p>
             <ul>
               <li>
                 <p>
-                  An extension that helps users read website content hidden behind ad blocker
-                  detection (not deployed, available in a &nbsp;
+                  An extension that helps users read website content hidden behind ad-blocker
+                  detection walls (not deployed, available in a{' '}
                   <a
                     href="https://github.com/AdguardTeam/Recovery"
                     target="_blank"
@@ -498,7 +507,7 @@ export default (): JSX.Element => {
               </li>
               <li>
                 <p>
-                  Contributions to the development of <b>Adguard Assistant</b> (
+                  Contributions to <b>AdGuard Assistant</b> (
                   <a
                     href="https://github.com/AdguardTeam/AdguardAssistant"
                     target="_blank"
@@ -506,14 +515,14 @@ export default (): JSX.Element => {
                   >
                     repository
                   </a>
-                  )
+                  ).
                 </p>
               </li>
             </ul>
             <p>
-              In addition, I worked on the front-end of the{' '}
+              Also worked on the front-end of the{' '}
               <a href="https://adguard.com" target="_blank" rel="noreferrer">
-                Adguard
+                AdGuard
               </a>{' '}
               website using <b>Vue</b>, <b>Vuex</b>, and <b>PostCSS</b>.
             </p>
@@ -529,15 +538,13 @@ export default (): JSX.Element => {
           </div>
           <div className={styles.text}>
             <p>
-              I worked as a Web Developer for several companies, where I was responsible for
-              creating and maintaining websites using <b>PHP</b>, <b>WordPress</b>,{' '}
-              <b>JavaScript</b>, and <b>jQuery</b>. During this time, I began working with modern
-              JavaScript frameworks, including <b>AngularJS</b> (Angular 1), and developed
-              single-page applications (SPAs). I also gained experience with real-time features
-              using <b>WebSockets</b> and implemented interactive <b>SVG</b> animations for various
-              projects. Additionally, I automated build and deployment processes using <b>Grunt</b>{' '}
-              and <b>Gulp</b>, which improved development efficiency and consistency across
-              environments.
+              Worked as a Web Developer for several companies, building and maintaining websites
+              using <b>PHP</b>, <b>WordPress</b>, <b>JavaScript</b>, and <b>jQuery</b>. Started
+              working with modern JavaScript frameworks, including <b>AngularJS</b> (Angular 1), and
+              built single-page applications. Gained experience with real-time features using{' '}
+              <b>WebSockets</b> and created interactive <b>SVG</b> animations for various projects.
+              Automated build and deployment processes using <b>Grunt</b> and <b>Gulp</b>, which
+              improved development consistency across environments.
             </p>
           </div>
         </div>
@@ -551,7 +558,7 @@ export default (): JSX.Element => {
           </div>
           <div className={styles.text}>
             <p>
-              I studied at Moscow State Mining University – Faculty of Information Systems. Degree:
+              Studied at Moscow State Mining University – Faculty of Information Systems. Degree:
               Specialist in Software Engineering.
             </p>
             <ul>
@@ -573,11 +580,11 @@ export default (): JSX.Element => {
               <li>
                 <p>
                   Gained a strong foundation in algorithms, databases, and system architecture
-                  through coursework and lab work.
+                  through coursework and practical lab work.
                 </p>
               </li>
               <li>
-                <p>Graduated with a Specialist degree in Software Engineering</p>
+                <p>Graduated with a Specialist degree in Software Engineering.</p>
               </li>
             </ul>
           </div>
