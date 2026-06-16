@@ -34,6 +34,10 @@ export default (): JSX.Element => {
             <span className={styles.metaValue}>B2</span>
           </span>
           <span className={styles.metaItem}>
+            <span className={styles.commonTitle}>Education</span>
+            <span className={styles.metaValue}>B.S. Computer Science</span>
+          </span>
+          <span className={styles.metaItem}>
             <a href="mailto:hello@4life.work" className={styles.contactLink} title="Email">
               <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
             </a>
@@ -167,7 +171,7 @@ export default (): JSX.Element => {
         <p>
           Full-stack web developer with 10+ years of experience building web and mobile
           applications. Comfortable across the entire stack — from database design and backend APIs
-          to frontend UIs.
+          to frontend UIs. 
         </p>
         <p>My recent achievements:</p>
         <ul className="achievements-list">
