@@ -171,7 +171,7 @@ export default (): JSX.Element => {
         <p>
           Full-stack web developer with 10+ years of experience building web and mobile
           applications. Comfortable across the entire stack — from database design and backend APIs
-          to frontend UIs. 
+          to frontend UIs.
         </p>
         <p>My recent achievements:</p>
         <ul className="achievements-list">
