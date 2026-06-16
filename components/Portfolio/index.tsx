@@ -26,16 +26,16 @@ export default (): JSX.Element => {
         <p className={styles.subtitle}>Full-Stack Web Developer</p>
         <div className={styles.meta}>
           <span className={styles.metaItem}>
-            <span className={styles.commonTitle}>Age</span>
-            <span className={styles.metaValue}>36</span>
-          </span>
-          <span className={styles.metaItem}>
             <span className={styles.commonTitle}>Based in</span>
             <span className={styles.metaValue}>Georgia (PE)</span>
           </span>
           <span className={styles.metaItem}>
             <span className={styles.commonTitle}>English</span>
             <span className={styles.metaValue}>B2</span>
+          </span>
+          <span className={styles.metaItem}>
+            <span className={styles.commonTitle}>Education</span>
+            <span className={styles.metaValue}>B.S. Computer Science</span>
           </span>
           <span className={styles.metaItem}>
             <a href="mailto:hello@4life.work" className={styles.contactLink} title="Email">
@@ -67,15 +67,6 @@ export default (): JSX.Element => {
               title="Github"
             >
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-            </a>
-            <a
-              href="https://www.upwork.com/freelancers/~01b24927bb7b3ea4a1"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contactLink}
-              title="Upwork"
-            >
-              <Image src="/icons/upwork.svg" alt="Upwork" width={20} height={20} />
             </a>
           </span>
           <span className={styles.metaItem}>
@@ -115,30 +106,6 @@ export default (): JSX.Element => {
           </div>
           <div className={styles.projectCard}>
             <a
-              href="https://github.com/4-life/chat-io"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              Group chat app
-            </a>
-            <span className={styles.projectStack}>React, Socket.io, MUI, GCP, e2e tests</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://github.com/4-life/storybook-boilerplate"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              Storybook boilerplate
-            </a>
-            <span className={styles.projectStack}>Storybook, NPM, React, Sass</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
               href="https://github.com/4-life/ad-dashboard"
               target="_blank"
               rel="noreferrer"
@@ -173,6 +140,30 @@ export default (): JSX.Element => {
             </a>
             <span className={styles.projectStack}>React, GraphQL, Sass</span>
           </div>
+          <div className={styles.projectCard}>
+            <a
+              href="https://chat.4life.work/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.projectLink}
+            >
+              <Image src="/icons/external-link.svg" alt="Group chat" width={20} height={20} />
+              Group chat app
+            </a>
+            <span className={styles.projectStack}>React, Socket.io, MUI, GCP, e2e tests</span>
+          </div>
+          <div className={styles.projectCard}>
+            <a
+              href="https://github.com/4-life/storybook-boilerplate"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.projectLink}
+            >
+              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              Storybook boilerplate
+            </a>
+            <span className={styles.projectStack}>Storybook, NPM, React, Sass</span>
+          </div>
         </div>
       </div>
 
@@ -182,6 +173,17 @@ export default (): JSX.Element => {
           applications. Comfortable across the entire stack — from database design and backend APIs
           to frontend UIs.
         </p>
+        <p>My recent achievements:</p>
+        <ul className="achievements-list">
+          <li>
+            IoT service (website + dashboard) in 20 hours from scratch to prod (CRUD, SEO, charts,
+            sensor map, CI/CD, SOC2 ready) — meshintex.com
+          </li>
+          <li>
+            ERP/CMMS system in 2 business days from scratch to prod (inventory, invoices, orders,
+            payment processing, CI/CD, ghcr)
+          </li>
+        </ul>
         <p>
           I have a deep expertise in <b>React</b> (hooks, RSC) with <b>Next.js</b> for full-stack
           and SSR/SSG/ISR workflows. <b>Vue</b> experience including <b>Nuxt</b>. Production{' '}
@@ -532,7 +534,7 @@ export default (): JSX.Element => {
         <div className={styles.milestone}>
           <div className={styles.milestoneLeft}>
             <h2>
-              2013<span className={styles.month}>.05</span> - 2017
+              2015<span className={styles.month}>.05</span> - 2017
               <span className={styles.month}>.05</span>
             </h2>
           </div>
@@ -546,47 +548,6 @@ export default (): JSX.Element => {
               Automated build and deployment processes using <b>Grunt</b> and <b>Gulp</b>, which
               improved development consistency across environments.
             </p>
-          </div>
-        </div>
-
-        <div className={styles.milestone}>
-          <div className={styles.milestoneLeft}>
-            <h2>
-              2008<span className={styles.month}>.09</span> - 2013
-              <span className={styles.month}>.09</span>
-            </h2>
-          </div>
-          <div className={styles.text}>
-            <p>
-              Studied at Moscow State Mining University – Faculty of Information Systems. Degree:
-              Specialist in Software Engineering.
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Completed a five-year Specialist program, equivalent to a combined Bachelor&apos;s
-                  and Master&apos;s level education.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Focused on software development, with specialization in C# and WPF desktop
-                  application programming.
-                </p>
-              </li>
-              <li>
-                <p>Developed various web projects using PHP, HTML, CSS, and MySQL.</p>
-              </li>
-              <li>
-                <p>
-                  Gained a strong foundation in algorithms, databases, and system architecture
-                  through coursework and practical lab work.
-                </p>
-              </li>
-              <li>
-                <p>Graduated with a Specialist degree in Software Engineering.</p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
