@@ -88,9 +88,9 @@ export default (): JSX.Element => {
               className={styles.projectLink}
             >
               <Image src="/icons/external-link.svg" alt="Meshintex" width={20} height={20} />
-              Meshintex
+              Enterprise IoT solutions
             </a>
-            <span className={styles.projectStack}>Nextjs, React, Tailwind</span>
+            <span className={styles.projectStack}>Next.js, React, MapBox, AWS, Tailwind</span>
           </div>
           <div className={styles.projectCard}>
             <a
@@ -102,19 +102,19 @@ export default (): JSX.Element => {
               <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
               GraphQL boilerplate
             </a>
-            <span className={styles.projectStack}>TypeGraphQL, TypeORM, Apollo, NextJS</span>
+            <span className={styles.projectStack}>TypeGraphQL, TypeORM, Apollo, Next.js</span>
           </div>
           <div className={styles.projectCard}>
             <a
-              href="https://github.com/4-life/ad-dashboard"
+              href="https://genscience.com/genr8r/"
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}
             >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              AD Dashboard
+              <Image src="/icons/external-link.svg" alt="Github" width={20} height={20} />
+              Human genes explorer
             </a>
-            <span className={styles.projectStack}>Vite, React, Sass</span>
+            <span className={styles.projectStack}>AWS, Next.js, React, Node.js, PostgresSQL</span>
           </div>
           <div className={styles.projectCard}>
             <a
@@ -130,39 +130,15 @@ export default (): JSX.Element => {
           </div>
           <div className={styles.projectCard}>
             <a
-              href="https://github.com/4-life/lambda-digital-client"
+              href="https://xn--wxa.digital/"
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}
             >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              NFT Marketplace
+              <Image src="/icons/external-link.svg" alt="Github" width={20} height={20} />
+              Crypto payment infrastructure
             </a>
-            <span className={styles.projectStack}>React, GraphQL, Sass</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://chat.4life.work/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/external-link.svg" alt="Group chat" width={20} height={20} />
-              Group chat app
-            </a>
-            <span className={styles.projectStack}>React, Socket.io, MUI, GCP, e2e tests</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://github.com/4-life/storybook-boilerplate"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              Storybook boilerplate
-            </a>
-            <span className={styles.projectStack}>Storybook, NPM, React, Sass</span>
+            <span className={styles.projectStack}>Next.js, React, GraphQL, Docker</span>
           </div>
         </div>
       </div>
@@ -171,36 +147,28 @@ export default (): JSX.Element => {
         <p>
           Full-stack web developer with 10+ years of experience building web and mobile
           applications. Comfortable across the entire stack — from database design and backend APIs
-          to frontend UIs.
+          to frontend UIs. Now builds software through autonomous AI agent cycles rather than
+          writing code line by line.
         </p>
-        <p>My recent achievements:</p>
-        <ul className="achievements-list">
-          <li>
-            IoT service (website + dashboard) in 20 hours from scratch to prod (CRUD, SEO, charts,
-            sensor map, CI/CD, SOC2 ready) — meshintex.com
-          </li>
-          <li>
-            ERP/CMMS system in 2 business days from scratch to prod (inventory, invoices, orders,
-            payment processing, CI/CD, ghcr)
-          </li>
-        </ul>
         <p>
-          I have a deep expertise in <b>React</b> (hooks, RSC) with <b>Next.js</b> for full-stack
-          and SSR/SSG/ISR workflows. <b>Vue</b> experience including <b>Nuxt</b>. Production{' '}
-          <b>Angular</b> apps with <b>RxJS</b>, reactive forms. Solid state management across
-          ecosystems (<b>Redux Toolkit</b>, <b>Zustand</b>) on the React side; <b>Vuex</b> for Vue;{' '}
-          <b>NgRx</b> for Angular. Graphics work using <b>SVG</b> (animations, data viz, custom UI)
-          and <b>Canvas</b> (real-time rendering, image manipulation). Real-time UX via sockets and
-          SSE. Styling & UI: CSS-in-JS, <b>Tailwind</b>, SCSS/CSS Modules, fluid typography, custom
-          animation with <b>Framer Motion</b> and CSS transitions. Built component libraries using{' '}
-          <b>Storybook</b>. Use <b>Vite</b>, <b>Webpack</b>. Experienced optimizing bundle size by
-          code splitting, tree-shaking, lazy loading, and analyzing bundle output. Testing: Unit and
-          integration tests with <b>Mocha</b>, <b>Jest</b>/<b>Vitest</b>. E2E with <b>Cypress</b>{' '}
-          and <b>Puppeteer</b>. Visual regression testing.
+          When needed I use my own AI orchestrator to manage agent cycles: set a goal → execute →
+          verify the result (evidence) → roll back on failure (rollback) → retry until the goal is
+          achieved. I run multiple agent harness systems (opencode, Claude, and others) in parallel
+          and compare them.
+        </p>
+        <p>
+          As a result, I build ERP-level web applications — the kind that usually take teams months
+          to develop — solo, in a matter of days. Full-stack experience plus my own agent
+          orchestration tools make that possible.
+        </p>
+        <p>
+          I created my own boilerplate to fast develop MVPs of any complexity quickly. Its key
+          feature is a single source of truth for all layers (backend, frontend, database/ORM,
+          swagger/playground).
         </p>
         <p>
           Develop APIs, data models, and system architecture. Production experience with high-load
-          systems built on microservices — including an SNS/SQS + Lambda pipeline processing 30k
+          systems built on microservices — including an SNS/SQS + Lambda pipeline processing 20k
           health-check requests per minute. <b>PostgreSQL</b> as the primary relational database —
           schema design, query optimization, indexing strategies, migrations. ORM experience with{' '}
           <b>TypeORM</b> and <b>Sequelize</b> across multiple production codebases. <b>DynamoDB</b>{' '}
@@ -211,24 +179,23 @@ export default (): JSX.Element => {
           providers.
         </p>
         <p>
-          <b>AWS</b> (S3, EC2, Lambda, Cognito, SNS, RDS, CloudFront) and <b>Google Cloud</b>. CI/CD
-          pipelines, automated testing, infrastructure-as-code. Experienced deploying and scaling
-          services in cloud-native environments.
+          Experienced with <b>AWS</b> (S3, EC2, Lambda, Cognito, SNS, SQS, RDS, CloudFront) and{' '}
+          <b>Google Cloud</b>. CI/CD pipelines, automated testing, infrastructure-as-code deploying
+          and scaling.
         </p>
         <p>
-          Shipped production mobile apps using <b>React Native</b>, <b>Flutter</b>, and <b>Ionic</b>{' '}
+          Shipped production mobile apps using <b>React Native</b>, <b>Flutter</b>, or <b>Ionic</b>{' '}
           — native-quality experiences from a shared codebase.
         </p>
         <p>
-          Maps and geospatial integrations (<b>Google Maps</b>, <b>Mapbox</b>, <b>Leaflet</b>) in
-          production.
+          Maps and geospatial integrations (<b>Google Maps API</b>, <b>Mapbox</b>, <b>Leaflet</b>)
+          in production.
         </p>
         <p>
-          Mentors and leads developers formally and informally. Fluent with AI-assisted development
-          tools with a clear methodology for using them to ship faster without losing quality or
-          security. Reviews teammates&apos; code to catch bugs and keep quality high. Writes clear
-          docs, branching policies, and linting rules. Good at detecting issues early using the
-          terminal, curl, logs, and native database queries.
+          Mentors and leads developers formally and informally. Reviews teammates&apos; code to
+          catch bugs and keep quality high. Writes clear docs, branching policies, and linting
+          rules. Good at detecting issues early using the terminal, curl, logs, and native database
+          queries.
         </p>
       </div>
 
@@ -236,8 +203,99 @@ export default (): JSX.Element => {
         <div className={styles.milestone}>
           <div className={styles.milestoneLeft}>
             <h2>
-              2022<span className={styles.month}>.07</span> -{' '}
+              2026<span className={styles.month}>.05</span> -{' '}
               <span className={styles['to-date']}>to date</span>
+            </h2>
+          </div>
+          <div className={styles.text}>
+            <p>
+              <a
+                href="https://meshintex.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.iconLink}
+              >
+                <Image
+                  src="/images/companies/meshintex.png"
+                  alt="Meshintex"
+                  width={28}
+                  height={28}
+                />
+                <span>Meshintex, Inc.</span>
+              </a>
+            </p>
+            <p>
+              At Meshintex, I built a dashboard that works for any kind of IoT setup, with a backend
+              API that takes in live sensor data. It shows real-time charts and maps with lots of
+              markers on them. The API and dashboard are highly customizable and scalable using AI.
+              Security was a priority the whole way through.
+            </p>
+            <ul>
+              <li className={styles.improvementItem}>
+                <p>
+                  Kept the map view smooth with large numbers of sensors on screen, measured by
+                  lag-free pan and zoom, by implementing marker clustering.
+                  <span className={styles.impactLabel}>↑ Performance</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Kept ingestion fast and stable under bursty sensor traffic, measured by zero
+                  dropped readings during spikes, by buffering incoming messages through an{' '}
+                  <b>SQS</b> queue ahead of processing.
+                  <span className={styles.impactLabel}>↑ Performance</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Built role-based auth across the dashboard and API. Hardened the app against{' '}
+                  <b>XSS/CSRF</b>, and <b>SSRF</b> — sanitizing/escaping rendered input, validating
+                  request origins, and restricting outbound requests from the server.
+                  <span className={styles.impactLabel}>↑ Security</span>
+                </p>
+              </li>
+            </ul>
+            <p>
+              I also designed the full architecture for Lambda Digital, a crypto payment service.
+              Each chain gets watched by its own container, which picks up transactions and sends
+              webhooks to merchants — built with security in mind. On top of that sits a GraphQL API
+              backed by Postgres. Everything runs in Docker and gets built and deployed
+              automatically from one infra repo that manages all the containers.
+            </p>
+            <ul>
+              <li className={styles.improvementItem}>
+                <p>
+                  Made each blockchain integration independently deployable and restartable,
+                  measured by one chain&apos;s outage never affecting the others, by running a
+                  dedicated watcher container per chain (<b>EVM</b>, <b>TRON</b>, <b>TON</b>, etc),
+                  orchestrated from a single infra repo with health checks and per-service memory
+                  limits. <span className={styles.impactLabel}>↑ Reliability</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Ensured merchant webhooks aren&apos;t lost or duplicated under load, measured by
+                  consistent delivery during chain re-syncs, by moving webhook dispatch into a
+                  dedicated worker backed by a <b>BullMQ</b>/<b>Redis</b> queue instead of firing
+                  requests inline. <span className={styles.impactLabel}>↑ Reliability</span>
+                </p>
+              </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Cut manual deploy steps to zero, measured by every push building and shipping on
+                  its own, by wiring up CI/CD that builds each service&apos;s Docker image and
+                  publishes it to <b>GHCR</b> for the whole container fleet.
+                  <span className={styles.impactLabel}>↑ Dev Speed</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={styles.milestone}>
+          <div className={styles.milestoneLeft}>
+            <h2>
+              2022<span className={styles.month}>.07</span> - 2026
+              <span className={styles.month}>.05</span>
             </h2>
           </div>
           <div className={styles.text}>
