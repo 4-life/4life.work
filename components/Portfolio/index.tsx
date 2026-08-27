@@ -23,7 +23,7 @@ export default (): JSX.Element => {
 
       <div className={styles.profile}>
         <h3>Pavel Ovchinnikov</h3>
-        <p className={styles.subtitle}>Full-Stack Web Developer</p>
+        <p className={styles.subtitle}>Senior Full-Stack / Product Engineer + AI</p>
         <div className={styles.meta}>
           <span className={styles.metaItem}>
             <span className={styles.commonTitle}>Based in</span>
@@ -145,51 +145,23 @@ export default (): JSX.Element => {
 
       <div className={styles.intro}>
         <p>
-          Full-stack web developer with 10+ years of experience building web and mobile
-          applications. Comfortable across the entire stack — from database design and backend APIs
-          to frontend UIs. Now builds software through autonomous AI agent cycles rather than
-          writing code line by line.
+          Senior Software Engineer with 10+ years of experience building production web
+          applications, backend services, IoT platforms, and high load systems. Experienced across
+          the full software lifecycle, from system architecture and APIs to frontend applications,
+          databases, cloud infrastructure, and CI/CD.
         </p>
         <p>
-          When needed I use my own AI orchestrator to manage agent cycles: set a goal → execute →
-          verify the result (evidence) → roll back on failure (rollback) → retry until the goal is
-          achieved. I run multiple agent harness systems (opencode, Claude, and others) in parallel
-          and compare them.
+          My background includes frontend, backend and mobile frameworks, API and communication
+          patterns, relational and NoSQL databases, ORMs, cloud platforms and managed services,
+          containerization and orchestration, CI/CD and infrastructure automation, authentication
+          and authorization systems, caching and messaging, testing, monitoring, and observability.
+          I have worked on both product and enterprise systems, including complex data platforms and
+          applications handling large datasets.
         </p>
         <p>
-          As a result, I build ERP-level web applications — the kind that usually take teams months
-          to develop — solo, in a matter of days. Full-stack experience plus my own agent
-          orchestration tools make that possible.
-        </p>
-        <p>
-          I created my own boilerplate to fast develop MVPs of any complexity quickly. Its key
-          feature is a single source of truth for all layers (backend, frontend, database/ORM,
-          swagger/playground).
-        </p>
-        <p>
-          Develop APIs, data models, and system architecture. Production experience with high-load
-          systems built on microservices — including an SNS/SQS + Lambda pipeline processing 20k
-          health-check requests per minute. <b>PostgreSQL</b> as the primary relational database —
-          schema design, query optimization, indexing strategies, migrations. ORM experience with{' '}
-          <b>TypeORM</b> and <b>Sequelize</b> across multiple production codebases. <b>DynamoDB</b>{' '}
-          for high-performance, low-latency workloads. Builds APIs in REST (with <b>OpenAPI</b>/
-          <b>Swagger</b> schemas as the contract) and <b>GraphQL</b> (schema design, resolvers,
-          subscriptions). Production experience with multiple auth approaches: <b>OpenID</b>,{' '}
-          <b>Auth0</b>, <b>AWS Amplify</b> (Cognito-based auth), and <b>next-auth</b> with different
-          providers.
-        </p>
-        <p>
-          Experienced with <b>AWS</b> (S3, EC2, Lambda, Cognito, SNS, SQS, RDS, CloudFront) and{' '}
-          <b>Google Cloud</b>. CI/CD pipelines, automated testing, infrastructure-as-code deploying
-          and scaling.
-        </p>
-        <p>
-          Shipped production mobile apps using <b>React Native</b>, <b>Flutter</b>, or <b>Ionic</b>{' '}
-          — native-quality experiences from a shared codebase.
-        </p>
-        <p>
-          Maps and geospatial integrations (<b>Google Maps API</b>, <b>Mapbox</b>, <b>Leaflet</b>)
-          in production.
+          Currently focused on applying this engineering experience to AI-powered products and
+          modern software systems, combining established software engineering practices with
+          emerging AI technologies.
         </p>
         <p>
           Mentors and leads developers formally and informally. Reviews teammates&apos; code to
@@ -226,9 +198,11 @@ export default (): JSX.Element => {
             </p>
             <p>
               At Meshintex, I built a dashboard that works for any kind of IoT setup, with a backend
-              API that takes in live sensor data. It shows real-time charts and maps with lots of
-              markers on them. The API and dashboard are highly customizable and scalable using AI.
-              Security was a priority the whole way through.
+              API that takes in live sensor data and designed the data-processing architecture to
+              scale to thousands of connected sensors using asynchronous queues and background
+              processing (<b>SNS/SQS</b> + <b>Lambda</b>). It shows real-time charts and maps with
+              lots of markers on them using <b>MapBox</b>. The API and dashboard are highly
+              customizable and scalable using AI. Security was a priority the whole way through.
             </p>
             <ul>
               <li className={styles.improvementItem}>
@@ -256,11 +230,16 @@ export default (): JSX.Element => {
               </li>
             </ul>
             <p>
-              I also designed the full architecture for Lambda Digital, a crypto payment service.
-              Each chain gets watched by its own container, which picks up transactions and sends
-              webhooks to merchants — built with security in mind. On top of that sits a GraphQL API
-              backed by Postgres. Everything runs in Docker and gets built and deployed
-              automatically from one infra repo that manages all the containers.
+              Also designed the full architecture for{' '}
+              <a href="https://xn--wxa.digital/" target="_blank" rel="noreferrer">
+                Lambda Digital
+              </a>
+              , a crypto payment service. Each chain gets watched by its own container, which picks
+              up transactions and sends webhooks to merchants — built with security in mind. On top
+              of that sits a <b>GraphQL API</b> backed by <b>PostgreSQL</b>. Everything runs in
+              <b>Docker</b> and gets built and deployed automatically from one infra repo that
+              manages all the containers. Developed AI assistant bot with <b>RAG</b> and{' '}
+              <b>LangChain</b> to help merchants with their questions and issues.
             </p>
             <ul>
               <li className={styles.improvementItem}>
@@ -288,6 +267,14 @@ export default (): JSX.Element => {
                   <span className={styles.impactLabel}>↑ Dev Speed</span>
                 </p>
               </li>
+              <li className={styles.improvementItem}>
+                <p>
+                  Optimized AI bot under free-tier limits by implementing caching and using the{' '}
+                  <b>Grok</b> model, reducing redundant API requests and overall usage while
+                  maintaining a responsive user experience.
+                  <span className={styles.impactLabel}>↓ Cost</span>
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -311,13 +298,23 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              At Kupsilla I worked on two client projects: <b>Strateos</b>, a cloud lab automation
-              platform, and a <b>Genetic Science</b> research application.
+              At Kupsilla I worked on a cloud chemical lab automation platform, and a human genetic
+              research application.
             </p>
             <p>
               Conducted <b>technical interviews</b> for junior and mid-level candidates, performed{' '}
               <b>code reviews</b>, and <b>mentored</b> developers to keep code quality high and
               support team growth.
+            </p>
+            <p>
+              Created boilerplate to fast develop MVPs of any complexity quickly with a focus on
+              scalability. Its key feature is a single source of truth for all layers (backend,
+              frontend, database/ORM, swagger/playground)
+            </p>
+            <p>
+              Had an experience with <b>Python</b> and <b>Java</b>. While they are not my primary
+              langs, I have used them for application development, integrations, and maintaining
+              existing projects.
             </p>
             <p>
               <b>Strateos</b> – A <b>Cloud Lab Automation-as-a-Service</b> platform where users
@@ -350,8 +347,20 @@ export default (): JSX.Element => {
               </li>
             </ul>
             <p>
-              <b>Genetic Science</b> – A web application for searching and visualizing scientific
-              parameters related to <b>human genes</b>.
+              <a href="https://genscience.com/genr8r/" target="_blank" rel="noreferrer">
+                GeneScience
+              </a>{' '}
+              – A web application for searching, analyzing, and visualizing scientific parameters
+              related to human genes. I designed the application architecture and developed complex
+              data visualization components capable of handling large datasets and data-intensive
+              rendering.
+            </p>
+            <p>
+              Built the application using <b>Next.js</b> with SSR, <b>React</b>,{' '}
+              <b>TanStack Query</b>, <b>TanStack Table</b>, and <b>SVG</b>-based visualizations.
+              Implemented efficient data loading and pagination, optimized database queries and data
+              access patterns, and improved rendering performance for complex visualizations and
+              large datasets.
             </p>
             <ul>
               <li className={styles.improvementItem}>
@@ -407,7 +416,10 @@ export default (): JSX.Element => {
               </a>
             </p>
             <p>
-              At Strata I worked on <b>gmb.io</b> and <b>Praxis</b> — a fitness video training
+              At Strata I worked on a{' '}
+              <a href="https://gmb.io/" target="_blank" rel="noreferrer">
+                video training
+              </a>{' '}
               platform for North American users. Stack: <b>Next.js</b>, <b>NestJS</b>,{' '}
               <b>PostgreSQL</b>, <b>TypeORM</b>, <b>Auth0</b>, <b>AWS Lambda</b>, <b>MUX</b>.
             </p>
@@ -454,7 +466,11 @@ export default (): JSX.Element => {
               </a>
             </div>
             <p>
-              Also maintained an admin panel built with <b>react-admin</b>.
+              Maintained and enhanced an admin panel built with <b>React Admin</b>, improving
+              application performance and optimizing data-intensive workflows. Refactored existing
+              code and architecture, upgraded core libraries and dependencies, resolved
+              compatibility issues, and introduced improvements to maintainability, stability, and
+              overall user experience.
             </p>
           </div>
         </div>
@@ -482,6 +498,22 @@ export default (): JSX.Element => {
               At Nwave, an IoT company building smart parking sensors for UK clients, I worked as a
               Full Stack Web Developer on both frontend and backend systems managing{' '}
               <b>20,000 IoT devices</b>.
+            </p>
+
+            <p>
+              I designed and developed a new REST API service for device management, using{' '}
+              <b>PostgreSQL</b> on <b>AWS RDS</b>, <b>API Gateway</b>, <b>AWS Lambda</b>,{' '}
+              <b>Amazon SNS</b>, <b>CloudWatch</b>, <b>Swagger/OpenAPI</b>, and automated client
+              code generation. I designed the infrastructure and deployment pipeline using{' '}
+              <b>AWS CDK</b> with <b>TypeScript</b>, supporting multiple environments and automated
+              deployments. I also analyzed infrastructure costs and optimized the architecture using
+              the AWS Pricing Calculator to reduce operational expenses.
+            </p>
+            <p>
+              On the frontend, I developed an administrative dashboard for managing IoT devices and
+              monitoring sensor statistics using <b>React</b>, <b>React Charts</b>, and{' '}
+              <b>Google Maps</b>. I also upgraded the company&apos;s mobile application to the
+              latest <b>Ionic</b> version and migrated the app to <b>Capacitor</b>.
             </p>
             <ul>
               <li className={styles.improvementItem}>
@@ -512,13 +544,7 @@ export default (): JSX.Element => {
                 </p>
               </li>
             </ul>
-            <p>
-              Also developed and maintained an admin dashboard for monitoring sensor statuses, built
-              with <b>React</b>, <b>Redux-Saga</b>, <b>TypeScript</b>, <b>Material-UI</b>,{' '}
-              <b>AWS Amplify</b>, and the <b>Google Maps API</b>. The app had full unit and
-              end-to-end test coverage, integrated with <b>Bitbucket CI/CD</b> and <b>Sentry</b>.
-            </p>
-            <p className={styles.flowLabel}>Architecture diagram</p>
+            <p className={styles.flowLabel}>Architecture diagram that I developed</p>
             <div className={styles.flowImage}>
               <a href={dmFlow.src} target="_blank" rel="noreferrer">
                 <Image src={dmFlow} alt="dm" width={400} height={370} layout="responsive" />
