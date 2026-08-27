@@ -168,6 +168,7 @@
   font-size: 15px;
   color: var(--color-text-soft);
   margin: 0;
+  white-space: nowrap;
 }
 
 .techBadges {
@@ -177,8 +178,34 @@
   gap: 6px;
 }
 
-.techBadges img {
-  border-radius: 3px;
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  line-height: 1.4;
+}
+
+.techChip img {
+  display: block;
+}
+
+/* Hidden machine-readable keyword vocabulary (ATS/crawlers only) */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Timeline */
