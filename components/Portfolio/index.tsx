@@ -6,6 +6,89 @@ import oldFlow from '../../public/images/aws-flow/old.png';
 import newFlow from '../../public/images/aws-flow/new.png';
 import dmFlow from '../../public/images/aws-flow/dm.png';
 
+type Technology = {
+  name: string;
+  file: string;
+};
+
+const TECH_GROUPS: { title: string; items: Technology[] }[] = [
+  {
+    title: 'Languages',
+    items: [
+      { name: 'JavaScript', file: 'javascript' },
+      { name: 'TypeScript', file: 'typescript' },
+      { name: 'Python', file: 'python' },
+      { name: 'Java', file: 'java' },
+      { name: 'PHP', file: 'php' },
+    ],
+  },
+  {
+    title: 'Frontend',
+    items: [
+      { name: 'React', file: 'react' },
+      { name: 'Vue.js', file: 'vuejs' },
+      { name: 'AngularJS', file: 'angularjs' },
+      { name: 'Sass', file: 'sass' },
+      { name: 'Tailwind CSS', file: 'tailwindcss' },
+      { name: 'MUI', file: 'mui' },
+      { name: 'TanStack', file: 'tanstack' },
+    ],
+  },
+  {
+    title: 'Backend',
+    items: [
+      { name: 'Next.js', file: 'nextjs' },
+      { name: 'Node.js', file: 'nodejs' },
+      { name: 'NestJS', file: 'nestjs' },
+      { name: 'GraphQL', file: 'graphql' },
+      { name: 'Apollo', file: 'apollo' },
+      { name: 'Swagger', file: 'swagger' },
+      { name: 'TypeORM', file: 'typeorm' },
+      { name: 'Sequelize', file: 'sequelize' },
+    ],
+  },
+  {
+    title: 'Databases & Caching',
+    items: [
+      { name: 'PostgreSQL', file: 'postgresql' },
+      { name: 'Redis', file: 'redis' },
+    ],
+  },
+  {
+    title: 'Cloud & DevOps',
+    items: [
+      { name: 'AWS', file: 'aws' },
+      { name: 'GCP', file: 'gcp' },
+      { name: 'Docker', file: 'docker' },
+      { name: 'Git', file: 'git' },
+    ],
+  },
+  {
+    title: 'AI & Automation',
+    items: [
+      { name: 'Claude', file: 'claude' },
+      { name: 'Grok', file: 'grok' },
+      { name: 'Codex', file: 'codex' },
+    ],
+  },
+  {
+    title: 'Mobile',
+    items: [
+      { name: 'Ionic', file: 'ionic' },
+      { name: 'Capacitor', file: 'capacitor' },
+      { name: 'React Native', file: 'reactnative' },
+    ],
+  },
+  {
+    title: 'Tools & Collaboration',
+    items: [
+      { name: 'Sentry', file: 'sentry' },
+      { name: 'Storybook', file: 'storybook' },
+      { name: 'Playwright', file: 'playwright' },
+    ],
+  },
+];
+
 export default (): JSX.Element => {
   return (
     <main className={styles.main}>
@@ -22,123 +105,68 @@ export default (): JSX.Element => {
       </div>
 
       <div className={styles.profile}>
-        <h3>Pavel Ovchinnikov</h3>
-        <p className={styles.subtitle}>Senior Full-Stack / Product Engineer + AI</p>
-        <div className={styles.meta}>
-          <span className={styles.metaItem}>
-            <span className={styles.commonTitle}>Based in</span>
-            <span className={styles.metaValue}>Georgia (PE)</span>
-          </span>
-          <span className={styles.metaItem}>
-            <span className={styles.commonTitle}>English</span>
-            <span className={styles.metaValue}>B2</span>
-          </span>
-          <span className={styles.metaItem}>
-            <span className={styles.commonTitle}>Education</span>
-            <span className={styles.metaValue}>B.S. Computer Science</span>
-          </span>
-          <span className={styles.metaItem}>
-            <a href="mailto:hello@4life.work" className={styles.contactLink} title="Email">
-              <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
-            </a>
-            <a
-              href="https://t.me/js4life"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contactLink}
-              title="Telegram"
-            >
-              <Image src="/icons/tg.svg" alt="Telegram" width={20} height={20} />
-            </a>
-            <a
-              href="http://linkedin.com/in/4-life"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contactLink}
-              title="LinkedIn"
-            >
-              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-            </a>
-            <a
-              href="https://github.com/4-life/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contactLink}
-              title="Github"
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-            </a>
-          </span>
-          <span className={styles.metaItem}>
-            <a href="/Pavel Ovchinnikov cv.pdf" download className={styles.downloadBtn}>
-              ↓ Download CV
-            </a>
-          </span>
-        </div>
-      </div>
-
-      <div className={styles.section}>
-        <p className={styles.sectionLabel}>My examples</p>
-        <div className={styles.projectGrid}>
-          <div className={styles.projectCard}>
-            <a
-              href="https://meshintex.com"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/external-link.svg" alt="Meshintex" width={20} height={20} />
-              Enterprise IoT solutions
-            </a>
-            <span className={styles.projectStack}>Next.js, React, MapBox, AWS, Tailwind</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://github.com/4-life/hello-world"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
-              GraphQL boilerplate
-            </a>
-            <span className={styles.projectStack}>TypeGraphQL, TypeORM, Apollo, Next.js</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://genscience.com/genr8r/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/external-link.svg" alt="Github" width={20} height={20} />
-              Human genes explorer
-            </a>
-            <span className={styles.projectStack}>AWS, Next.js, React, Node.js, PostgresSQL</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/play.svg" alt="Google Play" width={20} height={20} />
-              PWA Mobile app
-            </a>
-            <span className={styles.projectStack}>Ionic, Angular, Google Maps API</span>
-          </div>
-          <div className={styles.projectCard}>
-            <a
-              href="https://xn--wxa.digital/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.projectLink}
-            >
-              <Image src="/icons/external-link.svg" alt="Github" width={20} height={20} />
-              Crypto payment infrastructure
-            </a>
-            <span className={styles.projectStack}>Next.js, React, GraphQL, Docker</span>
+        <Image
+          src="/images/avatar.png"
+          alt="Pavel Ovchinnikov"
+          width={96}
+          height={96}
+          className={styles.avatar}
+        />
+        <div className={styles.profileInfo}>
+          <h3>Pavel Ovchinnikov</h3>
+          <p className={styles.subtitle}>
+            Senior Software Engineer | Full-Stack · Backend · IoT · Cloud · AI
+          </p>
+          <div className={styles.meta}>
+            <span className={styles.metaItem}>
+              <span className={styles.commonTitle}>Based in</span>
+              <span className={styles.metaValue}>Georgia (PE)</span>
+            </span>
+            <span className={styles.metaItem}>
+              <span className={styles.commonTitle}>English</span>
+              <span className={styles.metaValue}>B2</span>
+            </span>
+            <span className={styles.metaItem}>
+              <span className={styles.commonTitle}>Education</span>
+              <span className={styles.metaValue}>B.S. Computer Science</span>
+            </span>
+            <span className={styles.metaItem}>
+              <a href="mailto:hello@4life.work" className={styles.contactLink} title="Email">
+                <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
+              </a>
+              <a
+                href="https://t.me/js4life"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactLink}
+                title="Telegram"
+              >
+                <Image src="/icons/tg.svg" alt="Telegram" width={20} height={20} />
+              </a>
+              <a
+                href="http://linkedin.com/in/4-life"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactLink}
+                title="LinkedIn"
+              >
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+              </a>
+              <a
+                href="https://github.com/4-life/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactLink}
+                title="Github"
+              >
+                <Image src="/icons/git.svg" alt="Github" width={20} height={20} />
+              </a>
+            </span>
+            <span className={styles.metaItem}>
+              <a href="/Pavel Ovchinnikov cv.pdf" download className={styles.downloadBtn}>
+                ↓ Download CV
+              </a>
+            </span>
           </div>
         </div>
       </div>
@@ -146,9 +174,9 @@ export default (): JSX.Element => {
       <div className={styles.intro}>
         <p>
           Senior Software Engineer with 10+ years of experience building production web
-          applications, backend services, IoT platforms, and high load systems. Experienced across
-          the full software lifecycle, from system architecture and APIs to frontend applications,
-          databases, cloud infrastructure, and CI/CD.
+          applications, backend services, PWA/mobile, IoT platforms, and high load systems.
+          Experienced across the full software lifecycle, from system architecture and APIs to
+          frontend applications, databases, cloud infrastructure, and CI/CD.
         </p>
         <p>
           My background includes frontend, backend and mobile frameworks, API and communication
@@ -169,6 +197,27 @@ export default (): JSX.Element => {
           rules. Good at detecting issues early using the terminal, curl, logs, and native database
           queries.
         </p>
+      </div>
+
+      <div className={styles.techSection}>
+        <p className={styles.sectionLabel}>Technologies</p>
+        {TECH_GROUPS.map((group) => (
+          <div key={group.title} className={styles.techGroup}>
+            <p className={styles.techGroupTitle}>{group.title}: </p>
+            <div className={styles.techBadges}>
+              {group.items.map((tech) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={tech.name}
+                  src={`/images/badges/${tech.file}.svg`}
+                  alt={tech.name}
+                  height={20}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className={styles.timeline}>
@@ -202,7 +251,19 @@ export default (): JSX.Element => {
               scale to thousands of connected sensors using asynchronous queues and background
               processing (<b>SNS/SQS</b> + <b>Lambda</b>). It shows real-time charts and maps with
               lots of markers on them using <b>MapBox</b>. The API and dashboard are highly
-              customizable and scalable using AI. Security was a priority the whole way through.
+              customizable and scalable supporting different sensor configurations. Security was a
+              priority the whole way through.
+            </p>
+            <p>
+              Implemented an <b>MCP</b>-based AI service for automated <b>CI/CD</b> error
+              resolution. The service receives <b>Sentry</b> errors and <b>CI/CD</b> test failures,
+              uses the <b>Claude AI API</b> to analyze errors, retrieves relevant application
+              documentation from <b>Confluence</b>, and attempts to implement a fix in a dedicated{' '}
+              <b>Git</b> branch. Also MCP creates <b>Jira</b> tickets with the error description,
+              proposed fix, and links to the branch and documentation. Implemented configurable
+              retry limits and cost controls to prevent excessive AI API usage and runaway automated
+              attempts. Once the pipeline succeeds, the changes are pushed to the branch for
+              developer review, keeping humans in the loop before merging.
             </p>
             <ul>
               <li className={styles.improvementItem}>
@@ -231,12 +292,23 @@ export default (): JSX.Element => {
             </ul>
             <p>
               Also designed the full architecture for{' '}
-              <a href="https://xn--wxa.digital/" target="_blank" rel="noreferrer">
+              <a
+                href="https://xn--wxa.digital/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.inlineLink}
+              >
+                <Image
+                  src="/images/companies/lambda-digital.png"
+                  alt="Lambda Digital"
+                  width={14}
+                  height={14}
+                />
                 Lambda Digital
               </a>
               , a crypto payment service. Each chain gets watched by its own container, which picks
               up transactions and sends webhooks to merchants — built with security in mind. On top
-              of that sits a <b>GraphQL API</b> backed by <b>PostgreSQL</b>. Everything runs in
+              of that sits a <b>GraphQL API</b> backed by <b>PostgreSQL</b>. Everything runs in{' '}
               <b>Docker</b> and gets built and deployed automatically from one infra repo that
               manages all the containers. Developed AI assistant bot with <b>RAG</b> and{' '}
               <b>LangChain</b> to help merchants with their questions and issues.
@@ -307,14 +379,24 @@ export default (): JSX.Element => {
               support team growth.
             </p>
             <p>
-              Created boilerplate to fast develop MVPs of any complexity quickly with a focus on
-              scalability. Its key feature is a single source of truth for all layers (backend,
-              frontend, database/ORM, swagger/playground)
+              Created a{' '}
+              <a
+                href="https://github.com/4-life/hello-world"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.inlineLink}
+              >
+                <Image src="/icons/git.svg" alt="GitHub" width={14} height={14} />
+                GraphQL boilerplate
+              </a>{' '}
+              to fast develop MVPs of any complexity quickly with a focus on scalability. Its key
+              feature is a single source of truth for all layers (backend, frontend, database/ORM,
+              swagger/playground)
             </p>
             <p>
-              Had an experience with <b>Python</b> and <b>Java</b>. While they are not my primary
-              langs, I have used them for application development, integrations, and maintaining
-              existing projects.
+              Worked with <b>Python</b> and <b>Java</b>. While they are not my primary langs, I have
+              used them for application development, integrations, and maintaining existing
+              projects.
             </p>
             <p>
               <b>Strateos</b> – A <b>Cloud Lab Automation-as-a-Service</b> platform where users
@@ -347,7 +429,13 @@ export default (): JSX.Element => {
               </li>
             </ul>
             <p>
-              <a href="https://genscience.com/genr8r/" target="_blank" rel="noreferrer">
+              <a
+                href="https://genscience.com/genr8r/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.inlineLink}
+              >
+                <Image src="/icons/external-link.svg" alt="GeneScience" width={14} height={14} />
                 GeneScience
               </a>{' '}
               – A web application for searching, analyzing, and visualizing scientific parameters
@@ -537,7 +625,16 @@ export default (): JSX.Element => {
               </li>
               <li className={styles.improvementItem}>
                 <p>
-                  Improved rendering performance of 20,000 map markers in the <b>SPlace PWA</b>{' '}
+                  Improved rendering performance of 20,000 map markers in the{' '}
+                  <a
+                    href="https://play.google.com/store/apps/details?id=io.nwave.splacing2&hl=en_US"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.inlineLink}
+                  >
+                    <Image src="/icons/play.svg" alt="Google Play" width={14} height={14} />
+                    <b>SPlace PWA</b>
+                  </a>{' '}
                   mobile app, eliminating lag on low-end devices, by implementing marker clustering,
                   removing unnecessary recalculations, and optimizing the <b>Ionic/Angular</b>{' '}
                   rendering pipeline. <span className={styles.impactLabel}>↑ Performance</span>
