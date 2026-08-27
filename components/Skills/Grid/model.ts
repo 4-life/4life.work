@@ -51,7 +51,7 @@ const model: { content: SkillModel[]; layout: number[] } = {
       gridImage: ['me.png'],
       copy: '',
       story:
-        'Hi, I\'m Pavel\n\nFull-stack web developer with 10+ years of experience building web and mobile applications.\n\nComfortable across the entire stack — from database design and backend APIs to frontend UIs. Check out my portfolio for selected projects.',
+        'Hi, I\'m Pavel\n\nSenior Full-Stack / Product Engineer + AI with 10+ years of experience building web and mobile applications.\n\nComfortable across the entire stack — from database design and backend APIs to frontend UIs. Check out my portfolio by clicking on a link below',
       color: '#fff',
       textColor: '#000000',
       scale: 1,

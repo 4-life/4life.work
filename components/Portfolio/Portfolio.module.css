@@ -34,7 +34,23 @@
 
 /* Profile */
 .profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   padding: 28px 0 16px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.profileInfo {
+  min-width: 0;
 }
 
 .subtitle {
@@ -129,8 +145,8 @@
   margin-bottom: 6px;
 }
 
-/* Projects section */
-.section {
+/* Technologies section */
+.techSection {
   margin: 8px 0 32px;
 }
 
@@ -140,46 +156,56 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-primary);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 8px;
-}
-
-.projectCard {
+.techGroup {
+  margin-bottom: 14px;
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 10px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-bg-subtle);
-  transition: border-color 0.15s, background 0.15s;
 }
 
-.projectCard:hover {
-  border-color: var(--color-primary);
-  background: #f0faf4;
+.techGroupTitle {
+  font-size: 15px;
+  color: var(--color-text-soft);
+  margin: 0;
+  white-space: nowrap;
 }
 
-.projectLink {
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.techChip {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 700;
+  gap: 5px;
+  font-size: 12px;
   color: var(--color-text);
-  text-decoration: none;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  line-height: 1.4;
 }
 
-.projectStack {
-  font-size: 11px;
-  color: var(--color-text-muted);
-  padding-left: 28px;
-  font-weight: 400;
+.techChip img {
+  display: block;
+}
+
+/* Hidden machine-readable keyword vocabulary (ATS/crawlers only) */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Timeline */
@@ -262,6 +288,17 @@
   gap: 8px;
 }
 
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+.inlineLink img {
+  vertical-align: middle;
+}
+
 /* Improvement bullet rows */
 .text ul {
   padding-left: 20px;
@@ -304,6 +341,15 @@
 }
 
 @media screen and (max-width: 700px) {
+  .profile {
+    align-items: flex-start;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
   .milestone {
     flex-direction: column;
   }
