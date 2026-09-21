@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './Portfolio.module.css';
+import { TechStack } from './Technologies';
 
 import oldFlow from '../../public/images/aws-flow/old.png';
 import newFlow from '../../public/images/aws-flow/new.png';
@@ -11,7 +12,7 @@ export default (): JSX.Element => (
       <div className={styles.milestoneLeft}>
         <h2>
           2026<span className={styles.month}>.05</span> -{' '}
-          <span className={styles['to-date']}>to date</span>
+          <span className={styles['to-date']}>present</span>
         </h2>
       </div>
       <div className={styles.text}>
@@ -25,7 +26,25 @@ export default (): JSX.Element => (
             <Image src="/images/companies/meshintex.png" alt="Meshintex" width={28} height={28} />
             <span>Meshintex, Inc.</span>
           </a>
+          <span className={styles.companyTag}>IoT device management platform</span>
         </p>
+        <TechStack
+          items={[
+            'React',
+            'TypeScript',
+            'Python',
+            'Node.js',
+            'PostgreSQL',
+            'Next.js',
+            'AWS',
+            'Mapbox',
+            'MCP',
+            'Claude API',
+            'Sentry',
+            'CI/CD',
+            'Git',
+          ]}
+        />
         <p>
           At Meshintex, I built a dashboard that works for any kind of IoT setup, with a backend API
           that takes in live sensor data and designed the data-processing architecture to scale to
@@ -148,7 +167,26 @@ export default (): JSX.Element => (
             <Image src="/images/companies/kupsilla.png" alt="Kupsilla" width={20} height={22} />
             <span>Kupsilla LLC</span>
           </a>
+          <span className={styles.companyTag}>
+            Biotech — cloud lab automation &amp; genetic research
+          </span>
         </p>
+        <TechStack
+          items={[
+            'React',
+            'AngularJS',
+            'TypeScript',
+            'Sass',
+            'Storybook',
+            'Next.js',
+            'TanStack',
+            'Python',
+            'Java',
+            'GraphQL',
+            'AWS',
+            'Git',
+          ]}
+        />
         <p>
           At Kupsilla I worked on a cloud chemical lab automation platform, and a human genetic
           research application.
@@ -279,7 +317,9 @@ export default (): JSX.Element => (
             <Image src="/images/companies/strata.png" alt="Strata" width={30} height={30} />
             <span>Strata K.K.</span>
           </a>
+          <span className={styles.companyTag}>Video training platform</span>
         </p>
+        <TechStack items={['Next.js', 'NestJS', 'PostgreSQL', 'TypeORM', 'AWS', 'Auth0', 'MUX']} />
         <p>
           At Strata I worked on a{' '}
           <a href="https://gmb.io/" target="_blank" rel="noreferrer">
@@ -344,7 +384,11 @@ export default (): JSX.Element => (
             <Image src="/images/companies/nwave.png" alt="Nwave" width={30} height={30} />
             <span>Nwave Technologies Ltd.</span>
           </a>
+          <span className={styles.companyTag}>IoT — smart parking sensors</span>
         </p>
+        <TechStack
+          items={['AngularJS', 'React', 'TypeScript', 'AWS', 'Google Maps', 'Ionic', 'Capacitor']}
+        />
         <p>
           At Nwave, an IoT company building smart parking sensors for UK clients, I worked as a Full
           Stack Web Developer on both frontend and backend systems managing{' '}
@@ -429,7 +473,9 @@ export default (): JSX.Element => (
             <Image src="/images/companies/adguard.png" alt="Adguard" width={30} height={30} />
             <span>AdGuard</span>
           </a>
+          <span className={styles.companyTag}>Ad blocker and browser extensions</span>
         </p>
+        <TechStack items={['JavaScript', 'Vue.js', 'Vuex', 'PostCSS']} />
         <p>
           At AdGuard, one of the most popular ad blockers, I contributed to both the main product
           and additional browser extensions, written in <b>JavaScript (ES6)</b>:
@@ -472,19 +518,19 @@ export default (): JSX.Element => (
     <div className={styles.milestone}>
       <div className={styles.milestoneLeft}>
         <h2>
-          2015<span className={styles.month}>.05</span> - 2017
+          2013<span className={styles.month}>.05</span> - 2017
           <span className={styles.month}>.05</span>
         </h2>
       </div>
       <div className={styles.text}>
         <p>
-          Worked as a Web Developer for several companies, building and maintaining websites using{' '}
-          <b>PHP</b>, <b>WordPress</b>, <b>JavaScript</b>, and <b>jQuery</b>. Started working with
-          modern JavaScript frameworks, including <b>AngularJS</b> (Angular 1), and built
-          single-page applications. Gained experience with real-time features using{' '}
-          <b>WebSockets</b> and created interactive <b>SVG</b> animations for various projects.
-          Automated build and deployment processes using <b>Grunt</b> and <b>Gulp</b>, which
-          improved development consistency across environments.
+          Worked as a Junior and Middle Web Developer for several companies, building and
+          maintaining websites using <b>PHP</b>, <b>WordPress</b>, <b>JavaScript</b>, and{' '}
+          <b>jQuery</b>. Started working with modern JavaScript frameworks, including{' '}
+          <b>Angular 1</b>, and built single-page applications. Gained experience with real-time
+          features using <b>WebSockets</b> and created interactive <b>SVG</b> animations for various
+          projects. Automated build and deployment processes using <b>Grunt</b> and <b>Gulp</b>,
+          which improved development consistency across environments.
         </p>
       </div>
     </div>

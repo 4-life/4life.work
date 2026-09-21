@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Portfolio.module.css';
-import Technologies from './Technologies';
 import HiddenKeywords from './HiddenKeywords';
 import Companies from './Companies';
 
@@ -114,8 +113,6 @@ export default (): JSX.Element => {
           queries.
         </p>
       </div>
-
-      <Technologies />
 
       <HiddenKeywords />
 
