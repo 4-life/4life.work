@@ -5,7 +5,7 @@ type Technology = {
   file?: string;
 };
 
-const TECH_GROUPS: { title: string; items: Technology[] }[] = [
+export const TECH_GROUPS: { title: string; items: Technology[] }[] = [
   {
     title: 'Languages',
     items: [
@@ -117,6 +117,33 @@ const TECH_GROUPS: { title: string; items: Technology[] }[] = [
     ],
   },
 ];
+
+export const TECH_ICONS: Record<string, string | undefined> = Object.fromEntries(
+  TECH_GROUPS.flatMap((group) => group.items.map((item) => [item.name, item.file])),
+);
+
+export function TechStack({ items }: { items: string[] }): JSX.Element {
+  return (
+    <div className={styles.companyStack}>
+      <div className={styles.techBadges}>
+        {items.map((name) => (
+          <span key={name} className={styles.techChip}>
+            {TECH_ICONS[name] && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={`/images/badges/${TECH_ICONS[name]}.svg`}
+                alt=""
+                height={14}
+                loading="lazy"
+              />
+            )}
+            {name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default (): JSX.Element => (
   <div className={styles.techSection}>

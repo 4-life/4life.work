@@ -288,6 +288,18 @@
   gap: 8px;
 }
 
+.companyTag {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.companyStack {
+  margin: 6px 0 14px;
+}
+
 .inlineLink {
   display: inline-flex;
   align-items: center;
