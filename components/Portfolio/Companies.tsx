@@ -90,27 +90,13 @@ export default (): JSX.Element => (
           </li>
         </ul>
         <p>
-          Also designed the full architecture for{' '}
-          <a
-            href="https://xn--wxa.digital/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.inlineLink}
-          >
-            <Image
-              src="/images/companies/lambda-digital.png"
-              alt="Lambda Digital"
-              width={14}
-              height={14}
-            />
-            Lambda Digital
-          </a>
-          , a crypto payment service. Each chain gets watched by its own container, which picks up
-          transactions and sends webhooks to merchants — built with security in mind. On top of that
-          sits a <b>GraphQL API</b> backed by <b>PostgreSQL</b>. Everything runs in <b>Docker</b>{' '}
-          and gets built and deployed automatically from one infra repo that manages all the
-          containers. Developed AI assistant bot with <b>RAG</b> and <b>LangChain</b> to help
-          merchants with their questions and issues.
+          Also designed the full architecture for a crypto payment service where each chain gets
+          watched by its own container, which picks up transactions and sends webhooks to merchants
+          — built with security in mind. On top of that sits a <b>GraphQL API</b> backed by{' '}
+          <b>PostgreSQL</b>. Everything runs in <b>Docker</b> and gets built and deployed
+          automatically from one infra repo that manages all the containers. Developed AI assistant
+          bot with <b>RAG</b> and <b>LangChain</b> to help merchants with their questions and
+          issues.
         </p>
         <ul>
           <li className={styles.improvementItem}>
